@@ -23,9 +23,19 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
+        'business_id',
         'name',
         'email',
         'password',
+        'role',
+        'phone',
+        'emergency_contact_name',
+        'emergency_contact_phone',
+        'emergency_contact_relationship',
+        'id_number',
+        'address',
+        'avatar',
+        'is_active',
     ];
 
     /**
@@ -66,18 +76,19 @@ class User extends Authenticatable
         return $this->hasOne(Tenant::class);
     }
 
-    protected static function boot() :void
+    protected static function boot(): void
     {
         parent::boot();
 
-        static::creating(function ($model){
-            if(empty($model->id)){
+        static::creating(function ($model) {
+            if (empty($model->id)) {
                 $model->id = self::generateRandomID();
             }
         });
-    } 
+    }
 
-    private static function generateRandomID(){
+    private static function generateRandomID()
+    {
         return bin2hex(random_bytes(6));
     }
 }

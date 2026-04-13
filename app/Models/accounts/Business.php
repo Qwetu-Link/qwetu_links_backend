@@ -16,7 +16,24 @@ class Business extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        
+        'name',
+        'slug',
+        'email',
+        'phone',
+        'website',
+        'country',
+        'city',
+        'address',
+        'logo_url',
+        'bank_name',
+        'bank_account_number',
+        'mpesa_paybill',
+        'mpesa_account_number',
+        'mpesa_till_no',
+        'industry',
+        'description',
+        'is_active',
+        'owner_id',
     ];
 
     public function user()
@@ -29,18 +46,19 @@ class Business extends Model
         return $this->belongsTo(User::class, 'owner_id');
     }
 
-    protected static function boot() :void
+    protected static function boot(): void
     {
         parent::boot();
 
-        static::creating(function ($model){
-            if(empty($model->id)){
+        static::creating(function ($model) {
+            if (empty($model->id)) {
                 $model->id = self::generateRandomID();
             }
         });
-    } 
+    }
 
-    private static function generateRandomID(){
+    private static function generateRandomID()
+    {
         return bin2hex(random_bytes(6));
     }
 }

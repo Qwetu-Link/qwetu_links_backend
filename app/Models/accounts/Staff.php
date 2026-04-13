@@ -2,12 +2,13 @@
 
 namespace App\Models\accounts;
 
+use Database\Factories\Accounts\StaffFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Staff extends Model
 {
-    /** @use HasFactory<\Database\Factories\Accounts\StaffFactory> */
+    /** @use HasFactory<StaffFactory> */
     use HasFactory;
 
     public $incrementing = false;
@@ -15,21 +16,27 @@ class Staff extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        
+        'user_id',
+        'position',
+        'department',
+        'salary',
+        'hire_date',
+        'employment_type',
     ];
 
-    protected static function boot() :void
+    protected static function boot(): void
     {
         parent::boot();
 
-        static::creating(function ($model){
-            if(empty($model->id)){
+        static::creating(function ($model) {
+            if (empty($model->id)) {
                 $model->id = self::generateRandomID();
             }
         });
-    } 
+    }
 
-    private static function generateRandomID(){
+    private static function generateRandomID()
+    {
         return bin2hex(random_bytes(6));
     }
 }

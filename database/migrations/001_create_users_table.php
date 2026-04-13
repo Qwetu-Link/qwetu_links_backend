@@ -12,11 +12,40 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->primary();
+
+            // Business Relation
+            $table->string('business');
+            $table->foreign('business')->references('id')->on('businesses')->onDelete('cascade');
+
+            // Basic Info
             $table->string('name');
+            $table->string('username')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            // Role System (IMPORTANT)
+            // $table->enum('role', ['owner', 'admin', 'staff', 'tenant'])->default('tenant');
+            $table->string('role')->default('tenant');
+
+            // Profile
+            $table->string('phone')->nullable();
+            $table->string('avatar')->nullable();
+
+            // Emergency Contact
+            $table->string('emergency_contact_name')->nullable();
+            $table->string('emergency_contact_phone')->nullable();
+            $table->string('emergency_contact_relationship')->nullable();
+
+            // Address / Identity
+            $table->string('id_number')->nullable();
+            $table->string('address')->nullable();
+            $table->date('date_of_birth')->nullable();
+
+            // Status
+            $table->boolean('is_active')->default(true);
+
             $table->rememberToken();
             $table->timestamps();
         });

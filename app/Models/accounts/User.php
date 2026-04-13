@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\accounts;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
@@ -12,6 +12,10 @@ class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
+
+    public $incrementing = false;
+
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -45,5 +49,35 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
+    }
+
+    public function staff()
+    {
+        return $this->hasOne(Staff::class);
+    }
+
+    public function tenant()
+    {
+        return $this->hasOne(Tenant::class);
+    }
+
+    protected static function boot() :void
+    {
+        parent::boot();
+
+        static::creating(function ($model){
+            if(empty($model->id)){
+                $model->id = self::generateRandomID();
+            }
+        });
+    } 
+
+    private static function generateRandomID(){
+        return bin2hex(random_bytes(6));
     }
 }

@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use App\Models\accounts\Staff;
-use App\Http\Requests\StoreStaffRequest;
-use App\Http\Requests\UpdateStaffRequest;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\accounts\User;
 
-class StaffController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return User::all();
     }
 
     /**
@@ -27,7 +27,7 @@ class StaffController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreStaffRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class StaffController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Staff $staff)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class StaffController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Staff $staff)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class StaffController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateStaffRequest $request, Staff $staff)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class StaffController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Staff $staff)
+    public function destroy(string $id)
     {
         //
     }

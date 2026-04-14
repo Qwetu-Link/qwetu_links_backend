@@ -33,8 +33,14 @@ class Business extends Model
         'industry',
         'description',
         'is_active',
-        'owner_id',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'is_active' => 'boolean',
+        ];
+    }
 
     public function user()
     {

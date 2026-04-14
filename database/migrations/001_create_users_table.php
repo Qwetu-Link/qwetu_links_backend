@@ -15,8 +15,8 @@ return new class extends Migration
             $table->string('id')->primary();
 
             // Business Relation
-            $table->string('business');
-            $table->foreign('business')->references('id')->on('businesses')->onDelete('cascade');
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
 
             // Basic Info
             $table->string('name');

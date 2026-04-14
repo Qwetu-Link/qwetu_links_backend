@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\accounts\Staff;
+use App\Models\accounts\User;
 use Illuminate\Database\Seeder;
 
 class StaffSeeder extends Seeder
@@ -12,6 +13,12 @@ class StaffSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $staffUsers = User::where('role', 'staff')->get();
+
+        foreach ($staffUsers as $user) {
+            Staff::factory()->create([
+                'user_id' => $user->id,
+            ]);
+        }
     }
 }

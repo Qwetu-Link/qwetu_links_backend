@@ -24,6 +24,13 @@ class Staff extends Model
         'employment_type',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            'hire_date' => 'date',
+        ];
+    }
+
     protected static function boot(): void
     {
         parent::boot();

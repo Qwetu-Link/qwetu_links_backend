@@ -43,9 +43,7 @@ return new class extends Migration
             $table->text('description')->nullable();
 
             $table->boolean('is_active')->default(true);
-
-            $table->string('owner_id');
-            $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

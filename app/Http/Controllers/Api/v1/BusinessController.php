@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use App\Models\accounts\Tenant;
-use App\Http\Requests\StoreTenantRequest;
-use App\Http\Requests\UpdateTenantRequest;
+use App\Models\accounts\Business;
+use App\Http\Requests\StoreBusinessRequest;
+use App\Http\Requests\UpdateBusinessRequest;
+use App\Http\Controllers\Controller;
 
-class TenantController extends Controller
+class BusinessController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Business::all();
     }
 
     /**
@@ -27,7 +28,7 @@ class TenantController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTenantRequest $request)
+    public function store(StoreBusinessRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class TenantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Tenant $tenant)
+    public function show(Business $business)
     {
         //
     }
@@ -43,7 +44,7 @@ class TenantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Tenant $tenant)
+    public function edit(Business $business)
     {
         //
     }
@@ -51,7 +52,7 @@ class TenantController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTenantRequest $request, Tenant $tenant)
+    public function update(UpdateBusinessRequest $request, Business $business)
     {
         //
     }
@@ -59,7 +60,7 @@ class TenantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Tenant $tenant)
+    public function destroy(Business $business)
     {
         //
     }

@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use App\Models\accounts\Business;
-use App\Http\Requests\StoreBusinessRequest;
-use App\Http\Requests\UpdateBusinessRequest;
+use App\Models\accounts\Staff;
+use App\Http\Requests\StoreStaffRequest;
+use App\Http\Requests\UpdateStaffRequest;
+use App\Http\Controllers\Controller;
 
-class BusinessController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Staff::all();
     }
 
     /**
@@ -27,7 +28,7 @@ class BusinessController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreBusinessRequest $request)
+    public function store(StoreStaffRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class BusinessController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Business $business)
+    public function show(Staff $staff)
     {
         //
     }
@@ -43,7 +44,7 @@ class BusinessController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Business $business)
+    public function edit(Staff $staff)
     {
         //
     }
@@ -51,7 +52,7 @@ class BusinessController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateBusinessRequest $request, Business $business)
+    public function update(UpdateStaffRequest $request, Staff $staff)
     {
         //
     }
@@ -59,7 +60,7 @@ class BusinessController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Business $business)
+    public function destroy(Staff $staff)
     {
         //
     }

@@ -26,6 +26,16 @@ class Tenant extends Model
         'is_active',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            'is_active' => 'boolean',
+            'lease_start' => 'date',
+            'lease_end' => 'date',
+            'rent_amount' => 'decimal:2',
+        ];
+    }
+
     protected static function boot(): void
     {
         parent::boot();

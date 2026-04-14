@@ -1,8 +1,9 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\Accounts;
 
-use App\Models\User;
+use App\Models\accounts\Business;
+use App\Models\accounts\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -25,6 +26,27 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
+            'id' => fake()->regexify('[A-F0-9]{12}'),
+            'business_id' => Business::factory(),
+            'role' => fake()->randomElement([
+                'owner',
+                'tenant',
+                'staff',
+            ]),
+            'username' => fake()->unique()->name(),
+            'phone' => fake()->phoneNumber(),
+            'emergency_contact_name' => fake()->name(),
+            'emergency_contact_phone' => fake()->phoneNumber(),
+            'emergency_contact_relationship' => fake()->randomElement([
+                'mother',
+                'father',
+                'guardian',
+                'sibling',
+            ]),
+            'id_number' => fake()->numerify('#######'),
+            'address' => fake()->address(),
+            'avatar' => fake()->imageUrl(50, 50, 'people', true),
+            'is_active' => fake()->boolean(),
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),

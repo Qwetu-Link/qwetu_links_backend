@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use Illuminate\Http\Request;
+use App\Models\accounts\Tenant;
+use App\Http\Requests\StoreTenantRequest;
+use App\Http\Requests\UpdateTenantRequest;
+use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class TenantController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Tenant::all();
     }
 
     /**
@@ -25,7 +28,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreTenantRequest $request)
     {
         //
     }
@@ -33,7 +36,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Tenant $tenant)
     {
         //
     }
@@ -41,7 +44,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Tenant $tenant)
     {
         //
     }
@@ -49,7 +52,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateTenantRequest $request, Tenant $tenant)
     {
         //
     }
@@ -57,7 +60,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Tenant $tenant)
     {
         //
     }

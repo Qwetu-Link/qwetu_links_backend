@@ -3,18 +3,30 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Models\accounts\Staff;
-use App\Http\Requests\StoreStaffRequest;
-use App\Http\Requests\UpdateStaffRequest;
+use App\Http\Requests\accounts\StoreStaffRequest;
+use App\Http\Requests\accounts\UpdateStaffRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\v1\accounts\StaffCollection;
+use App\Http\Resources\v1\accounts\StaffResource;
+use App\Filters\v1\accounts\StaffFilter;
+use Illuminate\Http\Request;
 
 class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Staff::all();
+        $filter = new StaffFilter();
+        $filterItems = $filter->transform($request); //[['column', 'operator', 'value']]
+
+        if(count($filterItems) == 0){
+            return new StaffCollection(Staff::paginate());
+        }else{
+            $staff = Staff::where($filterItems)->paginate();
+            return new StaffCollection($staff->appends($request->query()));
+        } 
     }
 
     /**
@@ -38,7 +50,7 @@ class StaffController extends Controller
      */
     public function show(Staff $staff)
     {
-        //
+        return new StaffResource($staff);
     }
 
     /**

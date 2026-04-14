@@ -3,18 +3,30 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Models\accounts\Tenant;
-use App\Http\Requests\StoreTenantRequest;
-use App\Http\Requests\UpdateTenantRequest;
+use App\Http\Requests\accounts\StoreTenantRequest;
+use App\Http\Requests\accounts\UpdateTenantRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\v1\accounts\TenantCollection;
+use App\Http\Resources\v1\accounts\TenantResource;
+use App\Filters\v1\accounts\TenantFilter;
+use Illuminate\Http\Request;
 
 class TenantController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Tenant::all();
+        $filter = new TenantFilter();
+        $filterItems = $filter->transform($request); //[['column', 'operator', 'value']]
+
+        if(count($filterItems) == 0){
+            return new TenantCollection(Tenant::paginate());
+        }else{
+            $tenant = Tenant::where($filterItems)->paginate();
+            return new TenantCollection($tenant->appends($request->query()));
+        }
     }
 
     /**
@@ -38,7 +50,7 @@ class TenantController extends Controller
      */
     public function show(Tenant $tenant)
     {
-        //
+        return new TenantResource($tenant);
     }
 
     /**

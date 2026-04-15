@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\accounts;
+namespace App\Http\Requests\v1\accounts;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreStaffRequest extends FormRequest
+class UpdateTenantRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

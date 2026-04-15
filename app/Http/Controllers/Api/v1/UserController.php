@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api\v1;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\accounts\StoreUserRequest;
-use App\Http\Requests\accounts\UpdateUserRequest;
+use App\Http\Requests\v1\accounts\StoreUserRequest;
+use App\Http\Requests\v1\accounts\UpdateUserRequest;
 use App\Http\Resources\v1\accounts\UserCollection;
 use App\Http\Resources\v1\accounts\UserResource;
 use App\Models\accounts\User;

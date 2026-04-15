@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Models\accounts\Staff;
-use App\Http\Requests\accounts\StoreStaffRequest;
-use App\Http\Requests\accounts\UpdateStaffRequest;
+use App\Http\Requests\v1\accounts\StoreStaffRequest;
+use App\Http\Requests\v1\accounts\UpdateStaffRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\v1\accounts\StaffCollection;
 use App\Http\Resources\v1\accounts\StaffResource;

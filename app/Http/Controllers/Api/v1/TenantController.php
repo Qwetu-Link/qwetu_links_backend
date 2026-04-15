@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Models\accounts\Tenant;
-use App\Http\Requests\accounts\StoreTenantRequest;
-use App\Http\Requests\accounts\UpdateTenantRequest;
+use App\Http\Requests\v1\accounts\StoreTenantRequest;
+use App\Http\Requests\v1\accounts\UpdateTenantRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\v1\accounts\TenantCollection;
 use App\Http\Resources\v1\accounts\TenantResource;

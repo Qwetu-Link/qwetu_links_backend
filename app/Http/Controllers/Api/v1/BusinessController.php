@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Models\accounts\Business;
-use App\Http\Requests\accounts\StoreBusinessRequest;
-use App\Http\Requests\accounts\UpdateBusinessRequest;
+use App\Http\Requests\v1\accounts\StoreBusinessRequest;
+use App\Http\Requests\v1\accounts\UpdateBusinessRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\v1\accounts\BusinessResource;
 use App\Http\Resources\v1\accounts\BusinessCollection;
@@ -46,7 +46,8 @@ class BusinessController extends Controller
      */
     public function store(StoreBusinessRequest $request)
     {
-        //
+        return new BusinessResource(Business::create($request->all()));
+
     }
 
     /**
@@ -76,7 +77,7 @@ class BusinessController extends Controller
      */
     public function update(UpdateBusinessRequest $request, Business $business)
     {
-        //
+        $business->update($request->all());
     }
 
     /**

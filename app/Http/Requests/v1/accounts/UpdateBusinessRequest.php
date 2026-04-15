@@ -73,31 +73,31 @@ class UpdateBusinessRequest extends FormRequest
     {
         $data = [];
 
-        if ($this->has('logoUrl')) {
+        if ($this->exists('logoUrl')) {
             $data['logo_url'] = $this->logoUrl;
         }
 
-        if ($this->has('bankName')) {
+        if ($this->exists('bankName')) {
             $data['bank_name'] = $this->bankName;
         }
 
-        if ($this->has('bankAccountNumber')) {
+        if ($this->exists('bankAccountNumber')) {
             $data['bank_account_number'] = $this->bankAccountNumber;
         }
 
-        if ($this->has('mpesaPaybill')) {
+        if ($this->exists('mpesaPaybill')) {
             $data['mpesa_paybill'] = $this->mpesaPaybill;
         }
 
-        if ($this->has('mpesaAccountNumber')) {
+        if ($this->exists('mpesaAccountNumber')) {
             $data['mpesa_account_number'] = $this->mpesaAccountNumber;
         }
 
-        if ($this->has('mpesaTillNo')) {
+        if ($this->exists('mpesaTillNo')) {
             $data['mpesa_till_no'] = $this->mpesaTillNo;
         }
 
-        if ($this->has('isActive')) {
+        if ($this->exists('isActive')) {
             $data['is_active'] = $this->isActive;
         }
 
@@ -114,7 +114,7 @@ class UpdateBusinessRequest extends FormRequest
             ]);
         }
 
-        if ($this->has('website')) {
+        if ($this->exists('website')) {
 
             if ($this->filled('website')) {
                 $website = trim($this->website);

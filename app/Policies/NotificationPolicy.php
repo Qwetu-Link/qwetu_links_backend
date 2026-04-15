@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\Notification;
-use App\Models\User;
+use App\Models\accounts\User;
 use Illuminate\Auth\Access\Response;
 
 class NotificationPolicy

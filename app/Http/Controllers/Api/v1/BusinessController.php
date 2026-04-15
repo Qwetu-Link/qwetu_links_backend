@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers\Api\v1;
 
-use App\Models\accounts\Business;
+use App\Events\v1\accounts\BusinessCreated;
+use App\Filters\v1\accounts\BusinessFilter;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\v1\accounts\StoreBusinessRequest;
 use App\Http\Requests\v1\accounts\UpdateBusinessRequest;
-use App\Http\Controllers\Controller;
-use App\Http\Resources\v1\accounts\BusinessResource;
 use App\Http\Resources\v1\accounts\BusinessCollection;
-use App\Filters\v1\accounts\BusinessFilter;
+use App\Http\Resources\v1\accounts\BusinessResource;
+use App\Models\accounts\Business;
+use App\Models\accounts\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class BusinessController extends Controller
 {
@@ -18,19 +23,20 @@ class BusinessController extends Controller
      */
     public function index(Request $request)
     {
-        $filter = new BusinessFilter();
-        $filterItems = $filter->transform($request); //[['column', 'operator', 'value']]
+        $filter = new BusinessFilter;
+        $filterItems = $filter->transform($request); // [['column', 'operator', 'value']]
 
         $includeUsers = $request->query('includeUsers');
 
-        //This applies filters to your query. and Split it into pages 
+        // This applies filters to your query. and Split it into pages
         $business = Business::where($filterItems);
 
-        if($includeUsers){
+        if ($includeUsers) {
             $business->with('users');
         }
-            //Appends -> It keeps your filters when switching pages.
-        return new BusinessCollection($business->paginate()->appends($request->query())); 
+
+        // Appends -> It keeps your filters when switching pages.
+        return new BusinessCollection($business->paginate()->appends($request->query()));
     }
 
     /**
@@ -46,8 +52,18 @@ class BusinessController extends Controller
      */
     public function store(StoreBusinessRequest $request)
     {
-        return new BusinessResource(Business::create($request->all()));
+        return DB::transaction(function () use ($request) {
 
+            $business = Business::create($request->validated());
+
+            $event = new BusinessCreated($business, $request->password);
+
+            event($event);
+
+            return response()->json([
+                'business' => new BusinessResource($business),
+            ], 201);
+        });
     }
 
     /**
@@ -57,7 +73,7 @@ class BusinessController extends Controller
     {
         $includeUsers = request()->query('includeUsers');
 
-        if($includeUsers){
+        if ($includeUsers) {
             return new BusinessResource($business->loadMissing('users'));
         }
 

@@ -51,7 +51,14 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        //
+        // $user = User::create($request->validated());
+
+        // $token = $user->createToken('mobile')->plainTextToken;
+
+        // return response()->json([
+        //     'user' => new UserResource($user),
+        //     'token' => $token
+        // ], 201);
     }
 
     /**

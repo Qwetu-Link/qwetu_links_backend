@@ -6,13 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\v1\accounts\UserResource;
 use App\Models\accounts\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
     /**
-     * .
+     * User Login.
      */
     public function login(Request $request)
     {
@@ -23,15 +22,15 @@ class AuthController extends Controller
 
         $user = User::where('email', $credentials['email'])->first();
 
-        if(!$user || !Hash::check($credentials['password'], $user->password)){
+        if (! $user || ! Hash::check($credentials['password'], $user->password)) {
             return response([
                 'message' => 'Invalid credentials',
             ], 401);
         }
 
-        if (!$user->is_active) {
+        if (! $user->is_active) {
             return response()->json([
-                'message' => 'Account is inactive'
+                'message' => 'Account is inactive',
             ], 403);
         }
 
@@ -42,59 +41,33 @@ class AuthController extends Controller
 
         return response([
             'user' => new UserResource($user),
-            'token' => $token
+            'token' => $token,
         ]);
     }
 
     /**
-     * 
+     * User Log Out.
      */
     public function logout(Request $request)
     {
-        $request->user()->currentAccessToken()->delete();
+        try {
+            $user = $request->user();
 
-        return response()->json([
-            'message' => 'Logged out successfully',
-        ]);
-    }
+            if ($user && $user->currentAccessToken()) {
+                $user->currentAccessToken()?->delete();
+            }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+            return response()->json([
+                'status' => true,
+                'message' => 'Logged out successfully',
+            ], 200);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        } catch (\Throwable $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Logout failed',
+                'error' => config('app.debug') ? $e->getMessage() : null,
+            ], 500);
+        }
     }
 }

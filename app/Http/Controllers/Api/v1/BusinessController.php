@@ -10,11 +10,8 @@ use App\Http\Requests\v1\accounts\UpdateBusinessRequest;
 use App\Http\Resources\v1\accounts\BusinessCollection;
 use App\Http\Resources\v1\accounts\BusinessResource;
 use App\Models\accounts\Business;
-use App\Models\accounts\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
 class BusinessController extends Controller
 {
@@ -52,18 +49,28 @@ class BusinessController extends Controller
      */
     public function store(StoreBusinessRequest $request)
     {
-        return DB::transaction(function () use ($request) {
+        try {
+            return DB::transaction(function () use ($request) {
 
-            $business = Business::create($request->validated());
+                $business = Business::create($request->validated());
 
-            $event = new BusinessCreated($business, $request->password);
+                $event = new BusinessCreated($business, $request->password);
 
-            event($event);
+                event($event);
 
+                return response()->json([
+                    'business' => new BusinessResource($business),
+                    'status' => true,
+                    'message' => 'Business Created successfully',
+                ], 201);
+            });
+        } catch (\Exception $e) {
             return response()->json([
-                'business' => new BusinessResource($business),
-            ], 201);
-        });
+                'status' => false,
+                'message' => 'Failed to Create business',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     /**
@@ -93,7 +100,20 @@ class BusinessController extends Controller
      */
     public function update(UpdateBusinessRequest $request, Business $business)
     {
-        $business->update($request->all());
+        try {
+            $business->update($request->all());
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Business Updated successfully',
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Update business',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     /**
@@ -101,6 +121,20 @@ class BusinessController extends Controller
      */
     public function destroy(Business $business)
     {
-        //
+        try {
+            $business->delete();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Business Deleted successfully',
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Delete business',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 }

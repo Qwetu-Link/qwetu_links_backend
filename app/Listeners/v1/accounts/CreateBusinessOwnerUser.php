@@ -32,6 +32,7 @@ class CreateBusinessOwnerUser
             'username' => $business->name,
             'email' => $business->email,
             'phone' => $business->phone,
+            'avatar' => $business->logo_url,
             'address' => $business->address,
             'role' => 'owner',
             'password' => Hash::make($password),

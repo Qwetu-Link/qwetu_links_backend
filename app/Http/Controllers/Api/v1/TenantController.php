@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Api\v1;
 
-use App\Models\accounts\Tenant;
+use App\Events\v1\accounts\TenantCreated;
+use App\Filters\v1\accounts\TenantFilter;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\v1\accounts\StoreTenantRequest;
 use App\Http\Requests\v1\accounts\UpdateTenantRequest;
-use App\Http\Controllers\Controller;
 use App\Http\Resources\v1\accounts\TenantCollection;
 use App\Http\Resources\v1\accounts\TenantResource;
-use App\Filters\v1\accounts\TenantFilter;
+use App\Models\accounts\Tenant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TenantController extends Controller
 {
@@ -18,13 +20,14 @@ class TenantController extends Controller
      */
     public function index(Request $request)
     {
-        $filter = new TenantFilter();
-        $filterItems = $filter->transform($request); //[['column', 'operator', 'value']]
+        $filter = new TenantFilter;
+        $filterItems = $filter->transform($request); // [['column', 'operator', 'value']]
 
-        if(count($filterItems) == 0){
+        if (count($filterItems) == 0) {
             return new TenantCollection(Tenant::paginate());
-        }else{
+        } else {
             $tenant = Tenant::where($filterItems)->paginate();
+
             return new TenantCollection($tenant->appends($request->query()));
         }
     }
@@ -42,7 +45,31 @@ class TenantController extends Controller
      */
     public function store(StoreTenantRequest $request)
     {
-        //
+        // explicit guard
+        // $user = auth('api')->user();
+
+        try {
+            return DB::transaction(function () use ($request) {
+
+                $user = request()->user();
+
+                $event = new TenantCreated($user, $request->validated());
+
+                event($event);
+
+                return response()->json([
+                    'tenant' => new TenantResource($event->tenant),
+                    'status' => true,
+                    'message' => 'Tenant Created Successfully',
+                ], 201);
+            });
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Create Tenant',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     /**
@@ -74,6 +101,20 @@ class TenantController extends Controller
      */
     public function destroy(Tenant $tenant)
     {
-        //
+        try {
+            $tenant->delete();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Tenant Deleted successfully',
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Delete Tenant',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 }

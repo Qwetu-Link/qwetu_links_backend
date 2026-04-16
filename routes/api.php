@@ -13,18 +13,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1'], function () {
-    Route::apiResource('businesses', BusinessController::class);
+
+    Route::post('businesses', [BusinessController::class, 'store']);
     
     Route::post('/login', [AuthController::class, 'login']);
 
-    // Route::prefix('businesses/{business}')->group(function () {
-    //     Route::apiResource('users', UserController::class);
-    //     Route::apiResource('staff', StaffController::class);
-    //     Route::apiResource('tenants', TenantController::class);
-    // });
 });
 
 Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'middleware' => ['auth:sanctum']], function () {
+    
+    Route::post('/logout', [AuthController::class, 'logout']);
+
+    Route::apiResource('businesses', BusinessController::class)->except(['store']);
+
     Route::prefix('businesses/{business}')->group(function () {
         Route::apiResource('users', UserController::class);
         Route::apiResource('staff', StaffController::class);

@@ -12,7 +12,7 @@ class StoreStaffRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +23,22 @@ class StoreStaffRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'user_id' => 'required|exists:users,id',
+            'position' => 'required|string|max:255',
+            'department' => 'required|string|max:255',
+            'salary' => 'required|numeric|min:0|max:100000000',
+            'hire_date' => 'required|date|before_or_equal:today',
+            'employment_type' => 'required|in:full_time,part_time,contract,intern,temporary',
+            // Add User Details
         ];
+    }
+
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'user_id' => $this->userID,
+            'hire_date' => $this->hireDate,
+            'employment_type' => $this->employmentType,
+        ]);
     }
 }

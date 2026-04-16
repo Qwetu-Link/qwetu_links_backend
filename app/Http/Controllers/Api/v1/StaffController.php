@@ -74,6 +74,20 @@ class StaffController extends Controller
      */
     public function destroy(Staff $staff)
     {
-        //
+        try {
+            $staff->delete();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Staff Deleted successfully',
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Delete Staff',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 }

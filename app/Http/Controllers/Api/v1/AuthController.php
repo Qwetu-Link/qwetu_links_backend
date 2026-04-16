@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\v1\email\StoreEmailVerificationRequest;
 use App\Http\Resources\v1\accounts\UserResource;
 use App\Models\accounts\User;
+use App\Models\email\EmailVerification;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -69,5 +72,48 @@ class AuthController extends Controller
                 'error' => config('app.debug') ? $e->getMessage() : null,
             ], 500);
         }
+    }
+
+    public function verify(StoreEmailVerificationRequest $request)
+    {
+        $record = EmailVerification::where('token', $request->token)
+            ->where('email', $request->email)
+            ->first();
+
+        if (!$record) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Invalid verification link'
+            ], 400);
+        }
+
+        // check expiry (optional)
+        if ($record->expires_at && Carbon::now()->isAfter($record->expires_at)) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Verification link expired'
+            ], 400);
+        }
+
+        $user = User::find($record->user_id);
+
+        if (!$user) {
+            return response()->json([
+                'status' => false,
+                'message' => 'User not found'
+            ], 404);
+        }
+
+        $user->email_verified_at = now();
+        $user->is_active = true;
+        $user->save();
+
+        // delete token after verification
+        $record->delete();
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Email verified successfully'
+        ]);
     }
 }

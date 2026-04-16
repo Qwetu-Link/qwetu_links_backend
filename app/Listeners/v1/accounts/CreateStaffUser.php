@@ -2,17 +2,17 @@
 
 namespace App\Listeners\v1\accounts;
 
-use App\Events\v1\accounts\TenantCreated;
+use App\Events\v1\accounts\StaffCreated;
 use App\Mail\UserVerifyMail;
 use App\Models\accounts\Business;
-use App\Models\accounts\Tenant;
+use App\Models\accounts\Staff;
 use App\Models\accounts\User;
 use App\Models\email\EmailVerification;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
-class CreateTenantUser
+class CreateStaffUser
 {
     /**
      * Create the event listener.
@@ -25,7 +25,7 @@ class CreateTenantUser
     /**
      * Handle the event.
      */
-    public function handle(TenantCreated $event): void
+    public function handle(StaffCreated $event): void
     {
         $owner = $event->user;
         $data = $event->data;
@@ -36,7 +36,7 @@ class CreateTenantUser
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => $data['password'],
-            'role' => 'tenant',
+            'role' => 'staff',
             'phone' => $data['phone'],
             'emergency_contact_name' => $data['emergency_contact_name'],
             'emergency_contact_phone' => $data['emergency_contact_phone'],
@@ -47,23 +47,22 @@ class CreateTenantUser
             'is_active' => true,
         ]);
 
-        // 2. Create tenant
-        $tenant = Tenant::create([
+        $staff = Staff::create([
             'user_id' => $user->id,
-            'unit_number' => $data['unit_number'],
-            'rent_amount' => $data['rent_amount'],
-            'lease_start' => $data['lease_start'],
-            'lease_end' => $data['lease_end'],
-            'next_of_kin_name' => $data['next_of_kin_name'],
-            'next_of_kin_phone' => $data['next_of_kin_phone'],
-            'is_active' => true,
+            'position' => $data['position'],
+            'department' => $data['department'],
+            'salary' => $data['salary'],
+            'hire_date' => $data['hire_date'],
+            'employment_type' => $data['employment_type'],
         ]);
+
+        $event->staff = $staff;
 
         $business = Business::findOrFail($owner->business_id);
 
         $record = EmailVerification::create([
             'business' => $business->name,
-            'role' => 'Tenant',
+            'role' => 'Staff',
             'user_id' => $user->id,
             'email' => $user->email,
             'token' => Str::random(64),
@@ -71,8 +70,5 @@ class CreateTenantUser
         ]);
 
         Mail::to($user->email)->send(new UserVerifyMail($record));
-
-        $event->tenant = $tenant;
-        $event->user = $user;
     }
 }

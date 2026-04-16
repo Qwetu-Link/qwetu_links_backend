@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Events\v1\accounts\BusinessCreated;
+use App\Events\v1\accounts\BusinessUpdate;
 use App\Filters\v1\accounts\BusinessFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\v1\accounts\StoreBusinessRequest;
@@ -61,7 +62,7 @@ class BusinessController extends Controller
                 return response()->json([
                     'business' => new BusinessResource($business),
                     'status' => true,
-                    'message' => 'Business Created successfully',
+                    'message' => 'Business has been created successfully and a verification email has been sent.',
                 ], 201);
             });
         } catch (\Exception $e) {
@@ -101,12 +102,19 @@ class BusinessController extends Controller
     public function update(UpdateBusinessRequest $request, Business $business)
     {
         try {
-            $business->update($request->all());
+            return DB::transaction(function () use ($request, $business){
+
+            $event = new BusinessUpdate($business, $request->validated());
+
+            event($event);
 
             return response()->json([
+                'bussiness' => new BusinessResource($business->fresh()),
                 'status' => true,
                 'message' => 'Business Updated successfully',
             ], 200);
+            });
+            
         } catch (\Exception $e) {
             return response()->json([
                 'status' => false,

@@ -3,10 +3,13 @@
 namespace App\Listeners\v1\accounts;
 
 use App\Events\v1\accounts\BusinessCreated;
+use App\Mail\UserVerifyMail;
 use App\Models\accounts\User;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Models\email\EmailVerification;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class CreateBusinessOwnerUser
 {
@@ -26,7 +29,7 @@ class CreateBusinessOwnerUser
         $business = $event->business;
         $password = $event->password;
 
-        User::create([
+        $user = User::create([
             'business_id' => $business->id,
             'name' => $business->name,
             'username' => $business->name,
@@ -36,7 +39,18 @@ class CreateBusinessOwnerUser
             'address' => $business->address,
             'role' => 'owner',
             'password' => Hash::make($password),
-            'is_active' => 1,
+            'is_active' => false,
         ]);
+
+        $record = EmailVerification::create([
+            'business' => $business->name,
+            'role' => 'Business',
+            'user_id' => $user->id,
+            'email' => $user->email,
+            'token' => Str::random(64),
+            'expires_at' => Carbon::now()->addHours(24),
+        ]);
+
+        Mail::to($user->email)->send(new UserVerifyMail($record));
     }
 }

@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Events\v1\accounts\TenantCreated;
+use App\Events\v1\accounts\TenantUpdate;
 use App\Filters\v1\accounts\TenantFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\v1\accounts\StoreTenantRequest;
 use App\Http\Requests\v1\accounts\UpdateTenantRequest;
 use App\Http\Resources\v1\accounts\TenantCollection;
 use App\Http\Resources\v1\accounts\TenantResource;
+use App\Models\accounts\Business;
 use App\Models\accounts\Tenant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -75,7 +77,7 @@ class TenantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Tenant $tenant)
+    public function show(Business $business, Tenant $tenant)
     {
         return new TenantResource($tenant);
     }
@@ -93,16 +95,35 @@ class TenantController extends Controller
      */
     public function update(UpdateTenantRequest $request, Tenant $tenant)
     {
-        //
+        try {
+            return DB::transaction(function () use ($request, $tenant) {
+
+                $event = new TenantUpdate($tenant, $request->validated());
+
+                event($event);
+
+                return response()->json([
+                    'tenant' => new TenantResource($tenant->fresh()),
+                    'status' => true,
+                    'message' => 'Tenant Updated successfully',
+                ], 200);
+            });
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Update Tenant',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Tenant $tenant)
+    public function destroy(Business $business, Tenant $tenant)
     {
         try {
-            $tenant->delete();
+            $tenant->user?->delete();
 
             return response()->json([
                 'status' => true,

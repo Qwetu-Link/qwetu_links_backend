@@ -28,18 +28,18 @@ body {
 }
 
 /* Left icon */
-.logo-circle {
+/* .logo-circle {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #34d399, #60a5fa);
+    background: linear-gradient(135deg, #fff7ed, #e0f2fe, #fff7ed);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 130px;
     color: white;
     animation: float 3s ease-in-out infinite;
-}
+} */
 
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -51,15 +51,15 @@ body {
 .title {
     font-size: 4.5rem;
     font-weight: 700;
-    background: linear-gradient(to right, #059669, #2563eb);
+    background: linear-gradient(to right, #ea580c, #2563eb);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 /* Badge */
 .badge-soft {
-    background: #ecfdf5;
-    color: #047857;
+    background: #fff7ed;
+    color: #c2410c;
     padding: 6px 14px;
     border-radius: 999px;
     font-size: 12px;
@@ -73,7 +73,7 @@ body {
 
 /* CTA */
 .cta-btn {
-    background: linear-gradient(to right, #059669, #10b981);
+    background: linear-gradient(to right, #ea580c, #f97316);
     border: none;
     border-radius: 12px;
     transition: 0.3s;
@@ -89,15 +89,13 @@ body {
 <body>
 
 <div class="container">
-    <div class="card-glass p-4 p-md-5 mx-auto" style="max-width: 950px;">
+    <div class="card-glass p-4 p-md-5 mx-auto" style="max-width: 1050px;">
 
         <div class="row align-items-center">
 
             <!-- LEFT ICON -->
-            <div class="col-md-5 text-center mb-4 mb-md-0">
-                <div class="logo-circle mx-auto">
-                    🏠
-                </div>
+            <div class="col-md-5 text-center mb-4">
+                <img src="{{ asset('image/logo.png') }}" alt="Qwetu Links Logo" width="450">
             </div>
 
             <!-- RIGHT CONTENT -->

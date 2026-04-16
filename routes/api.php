@@ -15,20 +15,28 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1'], function () {
 
     Route::post('businesses', [BusinessController::class, 'store']);
-    
+
     Route::post('/login', [AuthController::class, 'login']);
+
+    Route::get('/verify-email', [AuthController::class, 'verify'])->name('verify.email');
 
 });
 
 Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'middleware' => ['auth:sanctum']], function () {
-    
-    Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::apiResource('businesses', BusinessController::class)->except(['store']);
 
+    // Table likely does have business_id
     Route::prefix('businesses/{business}')->group(function () {
         Route::apiResource('users', UserController::class);
+    });
+
+    // Table likely does NOT have business_id
+    Route::prefix('businesses')->group(function () {
         Route::apiResource('staff', StaffController::class);
         Route::apiResource('tenants', TenantController::class);
+
+        Route::post('/logout', [AuthController::class, 'logout']);
+
     });
 });

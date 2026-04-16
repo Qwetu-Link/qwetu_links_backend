@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Models\accounts;
+namespace App\Models\email;
 
-use Database\Factories\Accounts\StaffFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Staff extends Model
+class EmailVerification extends Model
 {
-    /** @use HasFactory<StaffFactory> */
+    /** @use HasFactory<\Database\Factories\Email\EmailVerificationFactory> */
     use HasFactory;
 
     public $incrementing = false;
@@ -16,20 +15,8 @@ class Staff extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'user_id',
-        'position',
-        'department',
-        'salary',
-        'hire_date',
-        'employment_type',
+        'user_id', 'token', 'email', 'expires_at', 'business', 'role'
     ];
-
-    protected function casts(): array
-    {
-        return [
-            'hire_date' => 'date',
-        ];
-    }
 
     protected static function boot(): void
     {
@@ -47,13 +34,10 @@ class Staff extends Model
         return bin2hex(random_bytes(6));
     }
 
-    public function user()
+    protected function casts(): array
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function getRouteKeyName()
-    {
-        return 'id'; // or uuid
+        return [
+            'expires_at' => 'datetime',
+        ];
     }
 }

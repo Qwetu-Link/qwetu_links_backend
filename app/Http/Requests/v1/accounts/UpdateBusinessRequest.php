@@ -35,16 +35,27 @@ class UpdateBusinessRequest extends FormRequest
                 'country' => 'nullable|string|max:100',
                 'city' => 'required|string|max:100',
                 'address' => 'nullable|string|max:255',
-                'logoUrl' => 'nullable|url|max:255',
+                'logo_url' => 'nullable|url|max:255',
                 // 'logoUrl' => 'nullable|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
-                'bankName' => 'nullable|string|max:255',
-                'bankAccountNumber' => 'nullable|string|max:50',
-                'mpesaPaybill' => 'nullable|string|max:20',
-                'mpesaAccountNumber' => 'nullable|string|max:50',
-                'mpesaTillNo' => 'nullable|string|max:20',
+                'bank_name' => 'nullable|string|max:255',
+                'bank_account_number' => 'nullable|string|max:50',
+                'mpesa_paybill' => 'nullable|string|max:20',
+                'mpesa_account_number' => 'nullable|string|max:50',
+                'mpesa_till_no' => 'nullable|string|max:20',
                 'industry' => 'required|string|max:255',
                 'description' => 'nullable|string',
-                'isActive' => 'nullable|boolean',
+                'is_active' => 'nullable|boolean',
+
+                // User Details
+                'username' => 'required|string|max:255',
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|max:255|unique:users,email',
+                'phone' => [
+                    'required',
+                    'regex:/^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/',
+                ],
+                'address' => 'nullable|string|max:500',
+                'avatar' => 'nullable|url|max:255',
             ];
         } else {
             return [
@@ -56,15 +67,27 @@ class UpdateBusinessRequest extends FormRequest
                 'country' => 'sometimes|nullable|string|max:100',
                 'city' => 'sometimes|required|string|max:100',
                 'address' => 'sometimes|nullable|string|max:255',
-                'logoUrl' => 'sometimes|nullable|url|max:255',
+                'logo_url' => 'sometimes|nullable|url|max:255',
                 // 'logoUrl' => 'sometimes|nullable|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
-                'bankName' => 'sometimes|nullable|string|max:255',
-                'bankAccountNumber' => 'sometimes|nullable|string|max:50',
-                'mpesaPaybill' => 'sometimes|nullable|string|max:20',
-                'mpesaAccountNumber' => 'sometimes|nullable|string|max:50',
-                'mpesaTillNo' => 'sometimes|nullable|string|max:20',
+                'bank_name' => 'sometimes|nullable|string|max:255',
+                'bank_account_number' => 'sometimes|nullable|string|max:50',
+                'mpesa_paybill' => 'sometimes|nullable|string|max:20',
+                'mpesa_account_number' => 'sometimes|nullable|string|max:50',
+                'mpesa_till_no' => 'sometimes|nullable|string|max:20',
                 'industry' => 'sometimes|required|string|max:255',
                 'description' => 'sometimes|nullable|string',
+
+                // User Details
+                'username' => 'sometimes|required|string|max:255',
+                'name' => 'sometimes|required|string|max:255',
+                'email' => 'sometimes|required|email|max:255|unique:users,email',
+                'phone' => [
+                    'sometimes',
+                    'required',
+                    'regex:/^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/',
+                ],
+                'address' => 'sometimes|nullable|string|max:500',
+                'avatar' => 'sometimes|nullable|url|max:255',
             ];
         }
     }

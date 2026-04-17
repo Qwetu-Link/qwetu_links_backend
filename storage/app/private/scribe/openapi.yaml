@@ -1,0 +1,1173 @@
+openapi: 3.0.3
+info:
+  title: 'Laravel API Documentation'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+tags:
+  -
+    name: Endpoints
+    description: ''
+paths:
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/businesses:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: andreanne00@example.org
+                phone:
+                  type: string
+                  description: 'Must match the regex /^\+254[71]\d{8}$/.'
+                  example: '+254756277171'
+                website:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: sufvyvddqamniihfqcoyn
+                  nullable: true
+                country:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: lazghdtqtqxbajwbpilpm
+                  nullable: true
+                city:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ufinllwloauydlsmsjury
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vojcybzvrbyickznkyglo
+                  nullable: true
+                logo_url:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: 'http://www.ferry.com/rerum-repudiandae-est-nostrum-et-voluptas'
+                  nullable: true
+                bank_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: azjrcnfbaqywuxhgjjmzu
+                  nullable: true
+                bank_account_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: xjubqouzswiwxtrkimfca
+                  nullable: true
+                mpesa_paybill:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: tbxspzmrazsroyjpx
+                  nullable: true
+                mpesa_account_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: mqesedyghenqcopwvownk
+                  nullable: true
+                mpesa_till_no:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: bamlnfngefbeilfzs
+                  nullable: true
+                industry:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: yuxoezbdtabptcyyerevr
+                description:
+                  type: string
+                  description: ''
+                  example: 'Dolores dolorum amet iste laborum eius est dolor.'
+                  nullable: true
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: 'e/dl4m{o'
+              required:
+                - name
+                - slug
+                - email
+                - phone
+                - city
+                - industry
+                - password
+      security: []
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/login:
+    post:
+      summary: 'User Login.'
+      operationId: userLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: qkunze@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/logout:
+    post:
+      summary: 'User Log Out.'
+      operationId: userLogOut
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/v1/businesses/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                slug:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: andreanne00@example.org
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                website:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                country:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                city:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+                logo_url:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: 'http://greenfelder.com/consequatur-delectus-autem-nam-sunt-provident-quia-et'
+                  nullable: true
+                bank_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: aqywuxhgjjmzuxjubqouz
+                  nullable: true
+                bank_account_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: swiwxtrkimfcatbxspzmr
+                  nullable: true
+                mpesa_paybill:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: azsroyjpxmqesedyg
+                  nullable: true
+                mpesa_account_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: henqcopwvownkbamlnfng
+                  nullable: true
+                mpesa_till_no:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: efbeilfzsyuxoezbd
+                  nullable: true
+                industry:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: tabptcyyerevrljcbwkth
+                description:
+                  type: string
+                  description: ''
+                  example: 'Dolores dolorum amet iste laborum eius est dolor.'
+                  nullable: true
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: dtdsufvyvddqamniihfqc
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: oynlazghdtqtqxbajwbpi
+                  nullable: true
+              required:
+                - name
+                - slug
+                - email
+                - phone
+                - city
+                - industry
+                - username
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the business.'
+        example: a357b10d2e2a
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/users':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                business_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the businesses table.'
+                  example: consequatur
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ablanda@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: "'YAKYLk4>SJIrIV#lz."
+                role:
+                  type: string
+                  description: ''
+                  example: tenant
+                  enum:
+                    - owner
+                    - tenant
+                    - staff
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergency_contact_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergency_contact_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergency_contact_relationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                id_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - business_id
+                - username
+                - name
+                - email
+                - password
+                - role
+                - phone
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/users/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                businessID:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the businesses table.'
+                  example: consequatur
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ablanda@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: "'YAKYLk4>SJIrIV#lz."
+                  nullable: true
+                role:
+                  type: string
+                  description: ''
+                  example: staff
+                  enum:
+                    - owner
+                    - tenant
+                    - staff
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergencyContactName:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergencyContactPhone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergencyContactRelationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                idNumber:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+                isActive:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - businessID
+                - name
+                - username
+                - email
+                - role
+                - phone
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 103721C6AFA7
+        required: true
+        schema:
+          type: string
+  /api/v1/businesses/staff:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                position:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                department:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                salary:
+                  type: number
+                  description: 'Must be at least 0. Must not be greater than 100000000.'
+                  example: 16
+                hire_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
+                  example: '2020-08-12'
+                employment_type:
+                  type: string
+                  description: ''
+                  example: part_time
+                  enum:
+                    - full_time
+                    - part_time
+                    - contract
+                    - intern
+                    - temporary
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ablanda@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: "'YAKYLk4>SJIrIV#lz."
+                role:
+                  type: string
+                  description: ''
+                  example: staff
+                  enum:
+                    - owner
+                    - tenant
+                    - staff
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergency_contact_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergency_contact_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergency_contact_relationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                id_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - position
+                - department
+                - salary
+                - hire_date
+                - employment_type
+                - username
+                - name
+                - email
+                - password
+                - role
+                - phone
+      security: []
+  '/api/v1/businesses/staff/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                position:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                department:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                salary:
+                  type: number
+                  description: 'Must be at least 0. Must not be greater than 100000000.'
+                  example: 16
+                hire_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
+                  example: '2020-08-12'
+                employment_type:
+                  type: string
+                  description: ''
+                  example: temporary
+                  enum:
+                    - full_time
+                    - part_time
+                    - contract
+                    - intern
+                    - temporary
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ablanda@example.org
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergency_contact_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergency_contact_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergency_contact_relationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                id_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - position
+                - department
+                - salary
+                - hire_date
+                - employment_type
+                - username
+                - name
+                - email
+                - phone
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the staff.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  /api/v1/businesses/tenants:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                rent_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 1
+                lease_start:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-16T13:27:47'
+                lease_end:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>lease_start</code>.'
+                  example: '2107-05-16'
+                next_of_kin_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                next_of_kin_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/.'
+                  example: '0777171772'
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vyvddqamniihfqcoynlaz
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ghdtqtqxbajwbpilpmufi
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: hilton86@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '#lz.KcLcDi`wmU'
+                role:
+                  type: string
+                  description: ''
+                  example: staff
+                  enum:
+                    - owner
+                    - tenant
+                    - staff
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergency_contact_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergency_contact_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergency_contact_relationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                id_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+              required:
+                - unit_number
+                - rent_amount
+                - lease_start
+                - lease_end
+                - next_of_kin_name
+                - next_of_kin_phone
+                - username
+                - name
+                - email
+                - password
+                - role
+                - phone
+      security: []
+  '/api/v1/businesses/tenants/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                rent_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 1
+                lease_start:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-16T13:27:47'
+                lease_end:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>lease_start</code>.'
+                  example: '2107-05-16'
+                next_of_kin_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                next_of_kin_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/.'
+                  example: '0777171772'
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: true
+                  nullable: true
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vyvddqamniihfqcoynlaz
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ghdtqtqxbajwbpilpmufi
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: hilton86@example.org
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergency_contact_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergency_contact_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergency_contact_relationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                id_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+              required:
+                - unit_number
+                - rent_amount
+                - lease_start
+                - lease_end
+                - next_of_kin_name
+                - next_of_kin_phone
+                - username
+                - name
+                - email
+                - phone
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the tenant.'
+        example: 9777c9283e2a
+        required: true
+        schema:
+          type: string

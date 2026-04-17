@@ -20,15 +20,11 @@ return new class extends Migration
             // Contact
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('website')->nullable();
 
             // Address
             $table->string('country')->default('Kenya');
             $table->string('city')->nullable();
             $table->string('address')->nullable();
-
-            // Branding
-            $table->string('logo_url')->nullable();
 
             // Financial Info
             $table->string('bank_name')->nullable();
@@ -37,10 +33,6 @@ return new class extends Migration
             $table->string('mpesa_paybill')->nullable();
             $table->string('mpesa_account_number')->nullable();
             $table->string('mpesa_till_no')->nullable();
-
-            // Extra
-            $table->string('industry')->nullable();
-            $table->text('description')->nullable();
 
             $table->boolean('is_active')->default(true);
             

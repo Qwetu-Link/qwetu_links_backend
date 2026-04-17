@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Models\property;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class PropertyAmenities extends Model
+{
+    /** @use HasFactory<\Database\Factories\Property\PropertyAmenitiesFactory> */
+    use HasFactory;
+
+    public $incrementing = false;
+
+    protected $keyType = 'string';
+
+    protected $fillable = [
+        'amenity_id',
+        'property_id'
+    ];
+
+    protected function casts(): array
+    {
+        return [
+            
+        ];
+    }
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            if (empty($model->id)) {
+                $model->id = self::generateRandomID();
+            }
+        });
+    }
+
+    private static function generateRandomID()
+    {
+        return bin2hex(random_bytes(6));
+    }
+
+    public function property()
+    {
+        return $this->belongsTo(Property::class);
+    }
+
+    public function amenity()
+    {
+        return $this->belongsTo(Amenity::class);
+    }
+}

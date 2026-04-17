@@ -17,13 +17,13 @@ return new class extends Migration
             $table->string('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            // Rental Info
-            $table->string('unit_number')->nullable();
-            $table->decimal('rent_amount', 10, 2)->nullable();
+            // // Rental Info
+            // $table->string('unit_number')->nullable();
+            // $table->decimal('rent_amount', 10, 2)->nullable();
 
-            // Lease
-            $table->date('lease_start')->nullable();
-            $table->date('lease_end')->nullable();
+            // // Lease
+            // $table->date('lease_start')->nullable();
+            // $table->date('lease_end')->nullable();
 
             // Emergency (Tenant-specific extra)
             $table->string('next_of_kin_name')->nullable();

@@ -17,10 +17,6 @@ class TenantResource extends JsonResource
         return [
             'id' => $this->id,
             'userID' => $this->user_id,
-            'unitNumber'=> $this->unit_number,
-            'rentAmount'=> $this->rent_amount,
-            'leaseStart'=> $this->lease_start,
-            'leaseEnd'=> $this->lease_end,
             'nextOfKinName'=> $this->next_of_kin_name,
             'nextOfKinPhone'=> $this->next_of_kin_phone,
             'isActive'=> $this->is_active,

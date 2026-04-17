@@ -22,11 +22,7 @@ class StoreTenantRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'unit_number' => 'required|string|max:50',
-            'rent_amount' => 'required|numeric|min:0',
-            'lease_start' => 'required|date',
-            'lease_end' => 'required|date|after_or_equal:lease_start',
+        return [  
             'next_of_kin_name' => 'required|string|max:255',
             'next_of_kin_phone' => ['required', 'regex:/^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/'],
             'is_active' => 'nullable|boolean',
@@ -58,10 +54,6 @@ class StoreTenantRequest extends FormRequest
     {
         $this->merge([
             'user_id' => $this->userID,
-            'unit_number' => $this->unitNumber,
-            'rent_amount' => $this->rentAmount,
-            'lease_start' => $this->leaseStart,
-            'lease_end' => $this->leaseEnd,
             'next_of_kin_name' => $this->nextOfKinName,
             'next_of_kin_phone' => $this->nextOfKinPhone,
             'is_active' => $this->isActive,

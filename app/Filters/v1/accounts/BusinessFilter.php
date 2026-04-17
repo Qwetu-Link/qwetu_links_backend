@@ -13,7 +13,6 @@ class BusinessFilter extends ApiFilter
         'slug' => ['eq', 'ne'],
         'email' => ['eq', 'ne'],
         'phone' => ['eq', 'ne'],
-        'website' => ['eq', 'ne'],
         'country' => ['eq', 'ne'],
         'city' => ['eq', 'ne'],
         'address' => ['eq', 'ne'],

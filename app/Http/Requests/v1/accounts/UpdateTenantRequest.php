@@ -26,10 +26,6 @@ class UpdateTenantRequest extends FormRequest
 
         if ($method == 'PUT') {
             return [
-                'unit_number' => 'required|string|max:50',
-                'rent_amount' => 'required|numeric|min:0',
-                'lease_start' => 'required|date',
-                'lease_end' => 'required|date|after_or_equal:lease_start',
                 'next_of_kin_name' => 'required|string|max:255',
                 'next_of_kin_phone' => ['required', 'regex:/^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/'],
                 'is_active' => 'nullable|boolean',
@@ -55,10 +51,6 @@ class UpdateTenantRequest extends FormRequest
             ];
         } else {
             return [
-                'unit_number' => 'sometimes|required|string|max:50',
-                'rent_amount' => 'sometimes|required|numeric|min:0',
-                'lease_start' => 'sometimes|required|date',
-                'lease_end' => 'sometimes|required|date|after_or_equal:lease_start',
                 'next_of_kin_name' => 'sometimes|required|string|max:255',
                 'next_of_kin_phone' => [
                     'sometimes',
@@ -96,22 +88,6 @@ class UpdateTenantRequest extends FormRequest
 
         if ($this->exists('userID')) {
             $data['user_id'] = $this->userID;
-        }
-
-        if ($this->exists('unitNumber')) {
-            $data['unit_number'] = $this->unitNumber;
-        }
-
-        if ($this->exists('rentAmount')) {
-            $data['rent_amount'] = $this->rentAmount;
-        }
-
-        if ($this->exists('leaseStart')) {
-            $data['lease_start'] = $this->leaseStart;
-        }
-
-        if ($this->exists('leaseEnd')) {
-            $data['lease_end'] = $this->leaseEnd;
         }
 
         if ($this->exists('next_of_kin_name')) {

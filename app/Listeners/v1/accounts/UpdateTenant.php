@@ -24,10 +24,6 @@ class UpdateTenant
         $tenant = $event->tenant;
 
         $tenant->update([
-            'unit_number' => $data['unit_number'],
-            'rent_amount' => $data['rent_amount'],
-            'lease_start' => $data['lease_start'],
-            'lease_end' => $data['lease_end'],
             'next_of_kin_name' => $data['next_of_kin_name'],
             'next_of_kin_phone' => $data['next_of_kin_phone'],
         ]);

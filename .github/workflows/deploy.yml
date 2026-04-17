@@ -1,0 +1,90 @@
+name: Deploy Laravel App to DirectAdmin via FTP
+
+# Run manually or on push to the main branch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Clone the latest code from GitHub
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📝 Write .env from GitHub Secret
+        run: |
+          echo "${{ secrets.RENTAL_ENV }}" | tr -d '\r' > .env
+
+      # Step 2: Upload code via FTP
+      - name: Deploy Laravel App to DirectAdmin via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /domains/rental.qwetulinks.co.ke/public_html # For addon domains
+          timeout: 86400000
+          log-level: standard
+
+
+# name: 🚀 Deploy Laravel App to DirectAdmin via FTP
+
+# on:
+#   push:
+#     branches:
+#       - main   # or your main branch
+
+# jobs:
+#   ftp-deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: 📥 Checkout Repository
+#         uses: actions/checkout@v3
+
+#       - name: 🧰 Set up PHP
+#         uses: shivammathur/setup-php@v2
+#         with:
+#           php-version: '8.2'
+#           extensions: mbstring, ctype, bcmath, xml, intl, zip, gd, mysql
+#           coverage: none
+
+#       - name: 📦 Install Composer Dependencies
+#         run: composer install --no-dev --optimize-autoloader
+
+#       - name: ⚡ Optimize Laravel
+#         run: |
+#           php artisan config:cache
+#           php artisan route:cache
+#           # php artisan view:cache
+
+      # - name: 📝 Write .env from GitHub Secret
+      #   run: |
+      #     echo "${{ secrets.LARAVEL_ENV }}" | tr -d '\r' > .env
+
+#       - name: 🚀 Deploy Laravel App
+#         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+#         with:
+#           server: ${{ secrets.FTP_SERVER }}
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           server-dir: /domains/wildnomads.co.ke/nomadtours/
+#           local-dir: ./
+#           exclude: |
+#             **/.git*
+#             **/.github*
+#             vendor/
+#             node_modules/
+#             tests/
+#             storage/logs/
+#             storage/framework/cache/
+#             storage/framework/sessions/
+#             storage/framework/views/
+
+

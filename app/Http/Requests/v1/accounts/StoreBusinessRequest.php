@@ -28,19 +28,14 @@ class StoreBusinessRequest extends FormRequest
             'slug' => 'required|string|max:255|unique:businesses,slug',
             'email' => 'required|email|max:255',
             'phone' => 'required|regex:/^\+254[71]\d{8}$/',
-            'website' => 'nullable|url|max:255',
             'country' => 'nullable|string|max:100',
             'city' => 'required|string|max:100',
             'address' => 'nullable|string|max:255',
-            'logo_url' => 'nullable|url|max:255',
-            // 'logoUrl' => 'nullable|image|mimes:jpeg,png,jpg,svg,webp|max:2048',
             'bank_name' => 'nullable|string|max:255',
             'bank_account_number' => 'nullable|string|max:50',
             'mpesa_paybill' => 'nullable|string|max:20',
             'mpesa_account_number' => 'nullable|string|max:50',
             'mpesa_till_no' => 'nullable|string|max:20',
-            'industry' => 'required|string|max:255',
-            'description' => 'nullable|string',
             'is_active' => 'nullable|boolean',
             'password' => 'required|string|min:8',
         ];
@@ -49,20 +44,12 @@ class StoreBusinessRequest extends FormRequest
     protected function prepareForValidation()
     {
         $this->merge([
-            'logo_url' => $this->logoUrl,
             'bank_name' => $this->bankName,
             'bank_account_number' => $this->bankAccountNumber,
             'mpesa_paybill' => $this->mpesaPaybill,
             'mpesa_account_number' => $this->mpesaAccountNumber,
             'mpesa_till_no' => $this->mpesaTillNo,
             'is_active' => $this->isActive,
-
-            // Normalize phone (Kenya format example)
-            // 'phone' => $this->phone ? $this->formatKenyanPhone($this->phone) : null,
-
-            'website' => $this->website && ! str_starts_with($this->website, 'http')
-            ? 'https://'.$this->website
-            : $this->website,
 
             // Auto-generate slug if not provided
             'slug' => $this->slug

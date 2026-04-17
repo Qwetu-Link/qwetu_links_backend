@@ -24,11 +24,9 @@ class BusinessFactory extends Factory
             'slug' => fake()->slug(),
             'email' => fake()->email(),
             'phone' => fake()->phoneNumber(),
-            'website' => fake()->url(),
             'country' => fake()->country(),
             'city' => fake()->city(),
             'address' => fake()->address(),
-            'logo_url' => fake()->imageUrl(50, 50, 'business', true),
             'bank_name' => fake()->randomElement([
                 'Equity Bank',
                 'KCB Bank',
@@ -40,16 +38,6 @@ class BusinessFactory extends Factory
             'mpesa_paybill' => fake()->numerify('######'),
             'mpesa_account_number' => fake()->numerify('##########'),
             'mpesa_till_no' => fake()->numerify('#######'),
-            'industry' => fake()->randomElement([
-                'Technology',
-                'Construction',
-                'Hospitality',
-                'Retail',
-                'Finance',
-                'Agriculture',
-                'Real Estate',
-            ]),
-            'description' => fake()->sentence(2),
             'is_active' => fake()->boolean(),
             // 'owner_id' => User::factory()->state([
             //     'role' => 'owner',

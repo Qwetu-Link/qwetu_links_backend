@@ -3762,10 +3762,30 @@ namespace App\Models\services {
     /**
      * App\Models\services\Lease
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property mixed $status
+     * @property float|null $deposit_amount
+     * @property float $rent_amount
+     * @property string|null $end_date
+     * @property string $start_date
+     * @property string $unit_id
+     * @property string $tenant_id
+     * @property string $id
      * @property-read \App\Models\accounts\Tenant $tenant
      * @property-read \App\Models\property\Units $unit
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\services\Payment> $payment
      * @property-read int|null $payment_count
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereTenantId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereUnitId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereStartDate($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereEndDate($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereRentAmount($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereDepositAmount($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Lease>|Lease query()
@@ -4084,6 +4104,20 @@ namespace App\Models\services {
     /**
      * App\Models\services\Maintainance
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property mixed $status
+     * @property string $issue
+     * @property string|null $tenant_id
+     * @property string $unit_id
+     * @property string $id
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereUnitId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereTenantId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereIssue($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Maintainance>|Maintainance query()

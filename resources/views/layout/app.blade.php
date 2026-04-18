@@ -14,7 +14,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('image/logo.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('image/qwetu_link_rent.png') }}" type="image/png">
 
     <!-- Google Fonts + Font Awesome -->
     <link

@@ -12,7 +12,7 @@
 
         <!-- Logo -->
         <header style="margin-bottom: 20px;">
-            <img src="" alt="Qwetu Link" height="50px">
+            <img src="http://rental.qwetulinks.co.ke/image/qwetu_link_rent.png" alt="Qwetu Link" height="50px">
         </header>
 
         <!-- Greeting -->

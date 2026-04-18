@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\Api\v1\AuthController;
-use App\Http\Controllers\Api\v1\BusinessController;
-use App\Http\Controllers\Api\v1\StaffController;
-use App\Http\Controllers\Api\v1\TenantController;
-use App\Http\Controllers\Api\v1\UserController;
+use App\Http\Controllers\Api\v1\accounts\AuthController;
+use App\Http\Controllers\Api\v1\accounts\BusinessController;
+use App\Http\Controllers\Api\v1\accounts\StaffController;
+use App\Http\Controllers\Api\v1\accounts\TenantController;
+use App\Http\Controllers\Api\v1\accounts\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

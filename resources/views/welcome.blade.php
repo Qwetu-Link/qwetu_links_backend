@@ -1,159 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qwetu Links — Coming Soon</title>
+@section('title', $seo['title'])
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+@section('meta')
+    <meta name="description" content="{{ $seo['description'] }}">
+    <meta name="keywords" content="{{ $seo['keywords'] }}">
+    <meta property="og:title" content="{{ $seo['og_title'] }}">
+    <meta property="og:description" content="{{ $seo['og_description'] }}">
+@endsection
 
-    <style>
-        @font-face {
-            font-family: 'Aptos';
-            src: url('/Aptos/Aptos.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
+@section('content')
 
-        body {
-            /* font-family: 'Plus Jakarta Sans', sans-serif; */
-            font-family: 'Aptos', sans-serif;
-            line-height: 1.5;
-            font-size: 0.9rem;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #d1fae5, #e0f2fe, #f0fdf4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Card */
-        .card-glass {
-            backdrop-filter: blur(15px);
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        /* Title */
-        .title {
-            font-size: 4.5rem;
-            font-weight: 700;
-            background: linear-gradient(to right, #ea580c, #2563eb);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        /* Badge */
-        .badge-soft {
-            background: #fff7ed;
-            color: #c2410c;
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: 12px;
-        }
-
-        /* Features */
-        .feature {
-            font-size: 14px;
-            color: #6b7280;
-        }
-
-        /* CTA */
-        .cta-btn {
-            background: linear-gradient(to right, #ea580c, #f97316);
-            border: none;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-2px) scale(1.03);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container">
-        <div class="card-glass p-4 p-md-5 mx-auto" style="max-width: 1050px;">
-
-            <div class="row align-items-center">
-
-                <!-- LEFT ICON -->
-                <div class="col-md-5 text-center mb-4">
-                    <img src="{{ asset('image/logo.png') }}" alt="Qwetu Links Logo" width="450">
-                </div>
-
-                <!-- RIGHT CONTENT -->
-                <div class="col-md-7 text-center">
-
-                    <h1 class="title mb-1">Qwetu Links</h1>
-                    <h5 class="text-primary mb-3">Rent Management System</h5>
-
-                    <div class="badge-soft d-inline-flex align-items-center gap-2 mb-3">
-                        <span class="spinner-grow spinner-grow-sm"></span>
-                        Coming Soon
-                    </div>
-
-                    <p class="text-muted mb-3">
-                        Smart property management for landlords & tenants.
-                        Automate rent, track tenants, and grow effortlessly.
-                    </p>
-
-                    <div class="d-flex flex-wrap gap-3 justify-content-center mb-3">
-                        <div class="feature">📊 Analytics</div>
-                        <div class="feature">💳 Payments</div>
-                        <div class="feature">🔔 Alerts</div>
-                    </div>
-
-                    <p class="small text-muted mb-3">
-                        Be the first to experience smarter renting
-                    </p>
-
-                    <button class="btn text-white px-4 py-2 cta-btn">
-                        🚀 Get Early Access
-                    </button>
-
-                </div>
+    <!-- Fixed Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <a href="#home" style="display: flex; align-items: center;">
+                <img class="logo-img" src="image/qwetu_link_rent.png" alt="Qwetu Link Rental Management Logo">
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about-us">About Us</a>
+                <a href="#features">Features</a>
+                <a href="#pricing-plans">Pricing</a>
+                <a href="#why">Why Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="btn-outline">Login / Sign Up</a>
             </div>
-
-            <!-- FOOTER -->
-            <hr class="mt-4">
-            <div class="text-center small text-muted">
-                📧 qwetulinks@gmail.com • Follow updates
-                <br>
-                ✨ qwetu Links — empowering property ecosystems
-            </div>
-
         </div>
     </div>
 
-    <script>
-        document.querySelector('.cta-btn').addEventListener('click', function() {
-            alert('🚀 qwetu Links is launching soon!');
-        });
-    </script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content fade-up">
+                <div class="hero-badge"><i class="fas fa-building"></i> All-in-One Property Management</div>
+                <h1>Qwetu Link Rental Management</h1>
+                <h2>Streamline Properties, Simplify Tenancy</h2>
+                <p>Centralize rent collection, maintenance, leases, and financial reporting. The smart platform for
+                    landlords, property managers, and tenants.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10k+</h3>
+                        <p>units managed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>on-time rent</p>
+                    </div>
+                </div>
+                <button class="btn-primary"
+                    onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Demo <i
+                        class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="hero-image fade-up">
+                <i class="fas fa-building"></i>
+            </div>
+        </div>
+    </section>
 
-</body>
+    <!-- About Us Section (Mission & Vision) -->
+    <div class="container" id="about-us">
+        <div class="section-title">About Us</div>
+        <div class="about-us-grid fade-up">
+            <div class="mission-vision-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Our Mission</h3>
+                <p>To empower property owners and managers with an intuitive, automated rental platform that reduces
+                    vacancies, streamlines operations, and maximizes returns.</p>
+            </div>
+            <div class="mission-vision-card">
+                <i class="fas fa-eye"></i>
+                <h3>Our Vision</h3>
+                <p>To become the leading rental management ecosystem in Africa, creating seamless connections between
+                    landlords and tenants through innovative technology.</p>
+            </div>
+        </div>
+        <div class="about-wrapper fade-up" style="margin-top: 0;">
+            <div class="about-text">
+                <h3 style="margin-bottom: 16px; color: var(--rental-primary);">Who We Are</h3>
+                <p>Qwetu Link Rental Management is part of Qwetu Links, dedicated to transforming the real estate
+                    sector. We combine local market understanding with world-class technology to help you manage
+                    properties effortlessly — from a single unit to hundreds.</p>
+            </div>
+            <div class="about-image">
+                <img src="image/qwetu_link_rent.png" alt="Team Qwetu Rental Management">
+            </div>
+        </div>
+    </div>
 
-</html>
+    <!-- Features Section -->
+    <div class="container" id="features">
+        <div class="section-title">Powerful Features</div>
+        <div class="features-grid fade-up">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <h4>Automated Rent Collection</h4>
+                <p>Online payments, auto-reminders, and late fee tracking – never chase rent again.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                <h4>Maintenance Portal</h4>
+                <p>Tenants submit requests, assign vendors, track status – all in one place.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-file-signature"></i></div>
+                <h4>Digital Lease Management</h4>
+                <p>E-signatures, lease renewals, document storage – paperless and secure.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                <h4>Financial Dashboards</h4>
+                <p>Real-time P&L, expense tracking, and tax-ready reports.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== NEW PRICING PLANS SECTION: 4 PACKAGES (cheapest → most expensive) ========== -->
+    <div class="container" id="pricing-plans">
+        <div class="section-title">Transparent Rental Plans</div>
+        <div class="pricing-grid fade-up">
+            <!-- PACKAGE 1: BASIC (Cheapest) -->
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="pricing-price">$29<span>/month</span></div>
+                <div class="pricing-description">Perfect for small landlords starting out</div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Up to 15 rental units</li>
+                    <li><i class="fas fa-check-circle"></i> Rent collection & reminders</li>
+                    <li><i class="fas fa-check-circle"></i> Basic financial reports</li>
+                    <li><i class="fas fa-check-circle"></i> Tenant database</li>
+                    <li><i class="fas fa-times-circle"></i> Maintenance portal</li>
+                    <li><i class="fas fa-times-circle"></i> Priority support</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="alert('✨ Starter plan: start managing your properties with ease. Contact us to activate.')">Get
+                    Started →</button>
+            </div>
+
+            <!-- PACKAGE 2: STANDARD -->
+            <div class="pricing-card">
+                <h3>Professional</h3>
+                <div class="pricing-price">$59<span>/month</span></div>
+                <div class="pricing-description">Ideal for growing portfolios</div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Up to 50 rental units</li>
+                    <li><i class="fas fa-check-circle"></i> Automated rent + late fees</li>
+                    <li><i class="fas fa-check-circle"></i> Maintenance request portal</li>
+                    <li><i class="fas fa-check-circle"></i> Digital lease templates</li>
+                    <li><i class="fas fa-check-circle"></i> Email & chat support</li>
+                    <li><i class="fas fa-times-circle"></i> Advanced analytics</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="alert('📈 Professional plan: unlock maintenance portal and leases. Get full control.')">Choose
+                    Plan</button>
+            </div>
+
+            <!-- PACKAGE 3: PREMIUM (MOST POPULAR + RIBBON) -->
+            <div class="pricing-card">
+                <div class="popular-ribbon"><i class="fas fa-star"></i> Most Popular</div>
+                <h3>Elite</h3>
+                <div class="pricing-price">$99<span>/month</span></div>
+                <div class="pricing-description">Everything you need to scale</div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Unlimited rental units</li>
+                    <li><i class="fas fa-check-circle"></i> Full maintenance + vendor management</li>
+                    <li><i class="fas fa-check-circle"></i> Advanced financial dashboard & P&L</li>
+                    <li><i class="fas fa-check-circle"></i> Tenant mobile app access</li>
+                    <li><i class="fas fa-check-circle"></i> Priority 24/7 support (Swahili/Eng)</li>
+                    <li><i class="fas fa-check-circle"></i> E-sign & automated renewals</li>
+                </ul>
+                <button class="pricing-btn btn-premium"
+                    onclick="alert('🔥 Elite plan (Most Popular) – unlimited units + premium support. Get the best value!')">Upgrade
+                    Now</button>
+            </div>
+
+            <!-- PACKAGE 4: ENTERPRISE (Most expensive) -->
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="pricing-price">$179<span>/month</span></div>
+                <div class="pricing-description">Custom solutions for large estates</div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Unlimited units + multi-property</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
+                    <li><i class="fas fa-check-circle"></i> API access & custom integrations</li>
+                    <li><i class="fas fa-check-circle"></i> White-glove onboarding & training</li>
+                    <li><i class="fas fa-check-circle"></i> SLA-based support 24/7</li>
+                    <li><i class="fas fa-check-circle"></i> Bulk tenant SMS & email campaigns</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="alert('🏢 Enterprise plan: contact our team for custom deployment & premium features.')">Contact
+                    Sales</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="container" id="why">
+        <div class="section-title">Why Qwetu Link Rental Management?</div>
+        <div class="why-grid fade-up">
+            <div class="why-card"><i class="fas fa-shield-alt"></i>
+                <h4>Secure & Compliant</h4>
+                <p>Bank-grade security, data encryption, and compliance with local tenancy laws.</p>
+            </div>
+            <div class="why-card"><i class="fas fa-charging-station"></i>
+                <h4>Automated Workflows</h4>
+                <p>Reduce manual work with automated rent reminders, invoice generation, and late fee calculation.</p>
+            </div>
+            <div class="why-card"><i class="fas fa-mobile-alt"></i>
+                <h4>Tenant & Owner Apps</h4>
+                <p>Dedicated mobile apps for tenants to pay rent and report issues, and for owners to track performance.
+                </p>
+            </div>
+            <div class="why-card"><i class="fas fa-headset"></i>
+                <h4>Local Support</h4>
+                <p>24/7 customer support in English and Swahili, plus dedicated account managers for large portfolios.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing CTA (original early access) -->
+    <div class="container">
+        <div class="pricing-cta fade-up">
+            <i class="fas fa-gem" style="font-size: 3rem; color: var(--rental-primary); margin-bottom: 16px;"></i>
+            <h3>Launching Soon – Be Among the First</h3>
+            <p>Sign up for early access and get 3 months free + premium onboarding.</p>
+            <button class="btn-large"
+                onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Reserve Your Spot <i
+                    class="fas fa-calendar-check"></i></button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+        <div class="section-title">Get In Touch</div>
+        <div class="contact-wrapper fade-up">
+            <div class="contact-info">
+                <h3>Let’s discuss your properties</h3>
+                <p>Need help managing your rentals? Our team is ready to show you how Qwetu Link Rental Management can
+                    save you time and increase your profits.</p>
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> rentals@qwetulinks.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya · Westlands Rd</p>
+                </div>
+                <div class="social-icons" style="justify-content: flex-start; margin-top: 20px;">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" placeholder="Full name" required>
+                    <input type="email" placeholder="Email address" required>
+                    <input type="text" placeholder="Phone number">
+                    <textarea rows="3" placeholder="Tell us about your properties or inquiry..."></textarea>
+                    <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="container">
+        <div class="newsletter fade-up">
+            <i class="fas fa-envelope-open-text"
+                style="font-size: 2.5rem; color: var(--rental-primary); margin-bottom: 12px;"></i>
+            <h3>Get rental management updates & offers</h3>
+            <p>Subscribe to receive product news, landlord tips, and exclusive launch discounts.</p>
+            <form class="news-form" id="subscribeForm">
+                <input type="email" placeholder="Your email address" required id="subEmail">
+                <button type="submit">Notify Me <i class="fas fa-bell"></i></button>
+            </form>
+        </div>
+    </div>
+
+
+@endsection

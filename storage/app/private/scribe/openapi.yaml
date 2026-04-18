@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: 'Laravel API Documentation'
+  title: 'Qwetu Links Rental API Documentation'
   description: ''
   version: 1.0.0
 servers:
@@ -65,63 +65,44 @@ paths:
                   type: string
                   description: 'Must match the regex /^\+254[71]\d{8}$/.'
                   example: '+254756277171'
-                website:
-                  type: string
-                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: sufvyvddqamniihfqcoyn
-                  nullable: true
                 country:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: lazghdtqtqxbajwbpilpm
+                  example: sufvyvddqamniihfqcoyn
                   nullable: true
                 city:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: ufinllwloauydlsmsjury
+                  example: lazghdtqtqxbajwbpilpm
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vojcybzvrbyickznkyglo
-                  nullable: true
-                logo_url:
-                  type: string
-                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: 'http://www.ferry.com/rerum-repudiandae-est-nostrum-et-voluptas'
+                  example: ufinllwloauydlsmsjury
                   nullable: true
                 bank_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: azjrcnfbaqywuxhgjjmzu
+                  example: vojcybzvrbyickznkyglo
                   nullable: true
                 bank_account_number:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: xjubqouzswiwxtrkimfca
+                  example: igmkwxphlvazjrcnfbaqy
                   nullable: true
                 mpesa_paybill:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: tbxspzmrazsroyjpx
+                  example: wuxhgjjmzuxjubqou
                   nullable: true
                 mpesa_account_number:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: mqesedyghenqcopwvownk
+                  example: zswiwxtrkimfcatbxspzm
                   nullable: true
                 mpesa_till_no:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: bamlnfngefbeilfzs
-                  nullable: true
-                industry:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: yuxoezbdtabptcyyerevr
-                description:
-                  type: string
-                  description: ''
-                  example: 'Dolores dolorum amet iste laborum eius est dolor.'
+                  example: razsroyjpxmqesedy
                   nullable: true
                 is_active:
                   type: boolean
@@ -131,14 +112,13 @@ paths:
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'e/dl4m{o'
+                  example: ;0R\+UYpo
               required:
                 - name
                 - slug
                 - email
                 - phone
                 - city
-                - industry
                 - password
       security: []
     get:
@@ -190,15 +170,49 @@ paths:
                 - email
                 - password
       security: []
-  /api/v1/logout:
-    post:
-      summary: 'User Log Out.'
-      operationId: userLogOut
+  /api/v1/verify-email:
+    get:
+      summary: ''
+      operationId: getApiV1VerifyEmail
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  message: 'Invalid verification link'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: 'Invalid verification link'
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  description: ''
+                  example: consequatur
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: carolyne.luettgen@example.org
+              required:
+                - token
+                - email
       security: []
   '/api/v1/businesses/{id}':
     get:
@@ -348,7 +362,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the business.'
-        example: a357b10d2e2a
+        example: a308064a7802
         required: true
         schema:
           type: string
@@ -412,7 +426,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: tenant
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -534,7 +548,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -607,7 +621,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: 103721C6AFA7
+        example: '677785261077'
         required: true
         schema:
           type: string
@@ -663,11 +677,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-12'
+                  example: '2020-08-14'
                 employment_type:
                   type: string
                   description: ''
-                  example: part_time
+                  example: contract
                   enum:
                     - full_time
                     - part_time
@@ -693,7 +707,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -801,11 +815,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-12'
+                  example: '2020-08-14'
                 employment_type:
                   type: string
                   description: ''
-                  example: temporary
+                  example: full_time
                   enum:
                     - full_time
                     - part_time
@@ -928,26 +942,10 @@ paths:
             schema:
               type: object
               properties:
-                unit_number:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: vmqeopfuudtdsufvyvddq
-                rent_amount:
-                  type: number
-                  description: 'Must be at least 0.'
-                  example: 1
-                lease_start:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2026-04-16T13:27:47'
-                lease_end:
-                  type: string
-                  description: 'Must be a valid date. Must be a date after or equal to <code>lease_start</code>.'
-                  example: '2107-05-16'
                 next_of_kin_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
+                  example: vmqeopfuudtdsufvyvddq
                 next_of_kin_phone:
                   type: string
                   description: 'Must match the regex /^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/.'
@@ -955,7 +953,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 username:
                   type: string
@@ -976,7 +974,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: tenant
                   enum:
                     - owner
                     - tenant
@@ -1016,10 +1014,6 @@ paths:
                   example: zvrbyickznkygloigmkwx
                   nullable: true
               required:
-                - unit_number
-                - rent_amount
-                - lease_start
-                - lease_end
                 - next_of_kin_name
                 - next_of_kin_phone
                 - username
@@ -1066,26 +1060,10 @@ paths:
             schema:
               type: object
               properties:
-                unit_number:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: vmqeopfuudtdsufvyvddq
-                rent_amount:
-                  type: number
-                  description: 'Must be at least 0.'
-                  example: 1
-                lease_start:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2026-04-16T13:27:47'
-                lease_end:
-                  type: string
-                  description: 'Must be a valid date. Must be a date after or equal to <code>lease_start</code>.'
-                  example: '2107-05-16'
                 next_of_kin_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
+                  example: vmqeopfuudtdsufvyvddq
                 next_of_kin_phone:
                   type: string
                   description: 'Must match the regex /^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/.'
@@ -1142,10 +1120,6 @@ paths:
                   example: zvrbyickznkygloigmkwx
                   nullable: true
               required:
-                - unit_number
-                - rent_amount
-                - lease_start
-                - lease_end
                 - next_of_kin_name
                 - next_of_kin_phone
                 - username
@@ -1167,7 +1141,17 @@ paths:
         in: path
         name: id
         description: 'The ID of the tenant.'
-        example: 9777c9283e2a
+        example: consequatur
         required: true
         schema:
           type: string
+  /api/v1/businesses/logout:
+    post:
+      summary: 'User Log Out.'
+      operationId: userLogOut
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []

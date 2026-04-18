@@ -108,23 +108,12 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      website:
-        custom: []
-        name: website
-        description: 'Must be a valid URL. Must not be greater than 255 characters.'
-        required: false
-        example: sufvyvddqamniihfqcoyn
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
       country:
         custom: []
         name: country
         description: 'Must not be greater than 100 characters.'
         required: false
-        example: lazghdtqtqxbajwbpilpm
+        example: sufvyvddqamniihfqcoyn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,7 +124,7 @@ endpoints:
         name: city
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: ufinllwloauydlsmsjury
+        example: lazghdtqtqxbajwbpilpm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -146,18 +135,7 @@ endpoints:
         name: address
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: vojcybzvrbyickznkyglo
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      logo_url:
-        custom: []
-        name: logo_url
-        description: 'Must be a valid URL. Must not be greater than 255 characters.'
-        required: false
-        example: 'http://www.ferry.com/rerum-repudiandae-est-nostrum-et-voluptas'
+        example: ufinllwloauydlsmsjury
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -168,7 +146,7 @@ endpoints:
         name: bank_name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: azjrcnfbaqywuxhgjjmzu
+        example: vojcybzvrbyickznkyglo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -179,7 +157,7 @@ endpoints:
         name: bank_account_number
         description: 'Must not be greater than 50 characters.'
         required: false
-        example: xjubqouzswiwxtrkimfca
+        example: igmkwxphlvazjrcnfbaqy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -190,7 +168,7 @@ endpoints:
         name: mpesa_paybill
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: tbxspzmrazsroyjpx
+        example: wuxhgjjmzuxjubqou
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -201,7 +179,7 @@ endpoints:
         name: mpesa_account_number
         description: 'Must not be greater than 50 characters.'
         required: false
-        example: mqesedyghenqcopwvownk
+        example: zswiwxtrkimfcatbxspzm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -212,29 +190,7 @@ endpoints:
         name: mpesa_till_no
         description: 'Must not be greater than 20 characters.'
         required: false
-        example: bamlnfngefbeilfzs
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      industry:
-        custom: []
-        name: industry
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: yuxoezbdtabptcyyerevr
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      description:
-        custom: []
-        name: description
-        description: ''
-        required: false
-        example: 'Dolores dolorum amet iste laborum eius est dolor.'
+        example: razsroyjpxmqesedy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -256,7 +212,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'e/dl4m{o'
+        example: ;0R\+UYpo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -267,20 +223,16 @@ endpoints:
       slug: amniihfqcoynlazghdtqt
       email: andreanne00@example.org
       phone: '+254756277171'
-      website: sufvyvddqamniihfqcoyn
-      country: lazghdtqtqxbajwbpilpm
-      city: ufinllwloauydlsmsjury
-      address: vojcybzvrbyickznkyglo
-      logo_url: 'http://www.ferry.com/rerum-repudiandae-est-nostrum-et-voluptas'
-      bank_name: azjrcnfbaqywuxhgjjmzu
-      bank_account_number: xjubqouzswiwxtrkimfca
-      mpesa_paybill: tbxspzmrazsroyjpx
-      mpesa_account_number: mqesedyghenqcopwvownk
-      mpesa_till_no: bamlnfngefbeilfzs
-      industry: yuxoezbdtabptcyyerevr
-      description: 'Dolores dolorum amet iste laborum eius est dolor.'
+      country: sufvyvddqamniihfqcoyn
+      city: lazghdtqtqxbajwbpilpm
+      address: ufinllwloauydlsmsjury
+      bank_name: vojcybzvrbyickznkyglo
+      bank_account_number: igmkwxphlvazjrcnfbaqy
+      mpesa_paybill: wuxhgjjmzuxjubqou
+      mpesa_account_number: zswiwxtrkimfcatbxspzm
+      mpesa_till_no: razsroyjpxmqesedy
       is_active: false
-      password: 'e/dl4m{o'
+      password: ;0R\+UYpo
     fileParameters: []
     responses: []
     responseFields: []
@@ -346,15 +298,15 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - POST
-    uri: api/v1/logout
+      - GET
+    uri: api/v1/verify-email
     metadata:
       custom: []
       groupName: Endpoints
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'User Log Out.'
+      title: ''
       description: ''
       authenticated: false
       deprecated: false
@@ -365,10 +317,43 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      token:
+        custom: []
+        name: token
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      email:
+        custom: []
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: carolyne.luettgen@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      token: consequatur
+      email: carolyne.luettgen@example.org
     fileParameters: []
-    responses: []
+    responses:
+      -
+        custom: []
+        status: 400
+        content: '{"status":false,"message":"Invalid verification link"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
     responseFields: []
     auth: []
     controller: null
@@ -438,14 +423,14 @@ endpoints:
         name: id
         description: 'The ID of the business.'
         required: true
-        example: a357b10d2e2a
+        example: a308064a7802
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: a357b10d2e2a
+      id: a308064a7802
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -491,14 +476,14 @@ endpoints:
         name: id
         description: 'The ID of the business.'
         required: true
-        example: a357b10d2e2a
+        example: a308064a7802
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: a357b10d2e2a
+      id: a308064a7802
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -762,14 +747,14 @@ endpoints:
         name: id
         description: 'The ID of the business.'
         required: true
-        example: a357b10d2e2a
+        example: a308064a7802
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: a357b10d2e2a
+      id: a308064a7802
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -928,7 +913,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: tenant
+        example: owner
         type: string
         enumValues:
           - owner
@@ -1031,7 +1016,7 @@ endpoints:
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: tenant
+      role: owner
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -1082,7 +1067,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 103721C6AFA7
+        example: '677785261077'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1090,7 +1075,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 103721C6AFA7
+      id: '677785261077'
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1147,7 +1132,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 103721C6AFA7
+        example: '677785261077'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1155,7 +1140,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 103721C6AFA7
+      id: '677785261077'
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1219,7 +1204,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: staff
+        example: owner
         type: string
         enumValues:
           - owner
@@ -1322,7 +1307,7 @@ endpoints:
       username: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: staff
+      role: owner
       phone: '+254771772898'
       emergencyContactName: ddqamniihfqcoynlazghd
       emergencyContactPhone: '+254771772898'
@@ -1373,7 +1358,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 103721C6AFA7
+        example: '677785261077'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1381,7 +1366,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 103721C6AFA7
+      id: '677785261077'
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1494,7 +1479,7 @@ endpoints:
         name: hire_date
         description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
         required: true
-        example: '2020-08-12'
+        example: '2020-08-14'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1505,7 +1490,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: part_time
+        example: contract
         type: string
         enumValues:
           - full_time
@@ -1565,7 +1550,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: staff
+        example: owner
         type: string
         enumValues:
           - owner
@@ -1666,13 +1651,13 @@ endpoints:
       position: vmqeopfuudtdsufvyvddq
       department: amniihfqcoynlazghdtqt
       salary: 16
-      hire_date: '2020-08-12'
-      employment_type: part_time
+      hire_date: '2020-08-14'
+      employment_type: contract
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: staff
+      role: owner
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -1814,7 +1799,7 @@ endpoints:
         name: hire_date
         description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
         required: true
-        example: '2020-08-12'
+        example: '2020-08-14'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1825,7 +1810,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: temporary
+        example: full_time
         type: string
         enumValues:
           - full_time
@@ -1961,8 +1946,8 @@ endpoints:
       position: vmqeopfuudtdsufvyvddq
       department: amniihfqcoynlazghdtqt
       salary: 16
-      hire_date: '2020-08-12'
-      employment_type: temporary
+      hire_date: '2020-08-14'
+      employment_type: full_time
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
@@ -2087,56 +2072,12 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      unit_number:
-        custom: []
-        name: unit_number
-        description: 'Must not be greater than 50 characters.'
-        required: true
-        example: vmqeopfuudtdsufvyvddq
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      rent_amount:
-        custom: []
-        name: rent_amount
-        description: 'Must be at least 0.'
-        required: true
-        example: 1
-        type: number
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      lease_start:
-        custom: []
-        name: lease_start
-        description: 'Must be a valid date.'
-        required: true
-        example: '2026-04-16T13:27:47'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      lease_end:
-        custom: []
-        name: lease_end
-        description: 'Must be a valid date. Must be a date after or equal to <code>lease_start</code>.'
-        required: true
-        example: '2107-05-16'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
       next_of_kin_name:
         custom: []
         name: next_of_kin_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: mqeopfuudtdsufvyvddqa
+        example: vmqeopfuudtdsufvyvddq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2158,7 +2099,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2213,7 +2154,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: staff
+        example: tenant
         type: string
         enumValues:
           - owner
@@ -2300,18 +2241,14 @@ endpoints:
         nullable: true
         deprecated: false
     cleanBodyParameters:
-      unit_number: vmqeopfuudtdsufvyvddq
-      rent_amount: 1
-      lease_start: '2026-04-16T13:27:47'
-      lease_end: '2107-05-16'
-      next_of_kin_name: mqeopfuudtdsufvyvddqa
+      next_of_kin_name: vmqeopfuudtdsufvyvddq
       next_of_kin_phone: '0777171772'
-      is_active: false
+      is_active: true
       username: vyvddqamniihfqcoynlaz
       name: ghdtqtqxbajwbpilpmufi
       email: hilton86@example.org
       password: '#lz.KcLcDi`wmU'
-      role: staff
+      role: tenant
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -2350,14 +2287,14 @@ endpoints:
         name: id
         description: 'The ID of the tenant.'
         required: true
-        example: 9777c9283e2a
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 9777c9283e2a
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2403,67 +2340,23 @@ endpoints:
         name: id
         description: 'The ID of the tenant.'
         required: true
-        example: 9777c9283e2a
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 9777c9283e2a
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      unit_number:
-        custom: []
-        name: unit_number
-        description: 'Must not be greater than 50 characters.'
-        required: true
-        example: vmqeopfuudtdsufvyvddq
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      rent_amount:
-        custom: []
-        name: rent_amount
-        description: 'Must be at least 0.'
-        required: true
-        example: 1
-        type: number
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      lease_start:
-        custom: []
-        name: lease_start
-        description: 'Must be a valid date.'
-        required: true
-        example: '2026-04-16T13:27:47'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      lease_end:
-        custom: []
-        name: lease_end
-        description: 'Must be a valid date. Must be a date after or equal to <code>lease_start</code>.'
-        required: true
-        example: '2107-05-16'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
       next_of_kin_name:
         custom: []
         name: next_of_kin_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: mqeopfuudtdsufvyvddqa
+        example: vmqeopfuudtdsufvyvddq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2602,11 +2495,7 @@ endpoints:
         nullable: true
         deprecated: false
     cleanBodyParameters:
-      unit_number: vmqeopfuudtdsufvyvddq
-      rent_amount: 1
-      lease_start: '2026-04-16T13:27:47'
-      lease_end: '2107-05-16'
-      next_of_kin_name: mqeopfuudtdsufvyvddqa
+      next_of_kin_name: vmqeopfuudtdsufvyvddq
       next_of_kin_phone: '0777171772'
       is_active: true
       username: vyvddqamniihfqcoynlaz
@@ -2650,14 +2539,45 @@ endpoints:
         name: id
         description: 'The ID of the tenant.'
         required: true
-        example: 9777c9283e2a
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 9777c9283e2a
+      id: consequatur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/businesses/logout
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'User Log Out.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

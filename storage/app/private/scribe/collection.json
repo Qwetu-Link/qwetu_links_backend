@@ -9,8 +9,8 @@
         }
     ],
     "info": {
-        "name": "Laravel API Documentation",
-        "_postman_id": "cb659e3d-1914-4ec3-86b2-000b3d7ad74a",
+        "name": "Qwetu Links Rental API Documentation",
+        "_postman_id": "7feda25e-1d2c-419f-848d-012fc0e98c7a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -89,7 +89,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"vmqeopfuudtdsufvyvddq\",\"slug\":\"amniihfqcoynlazghdtqt\",\"email\":\"andreanne00@example.org\",\"phone\":\"+254756277171\",\"website\":\"sufvyvddqamniihfqcoyn\",\"country\":\"lazghdtqtqxbajwbpilpm\",\"city\":\"ufinllwloauydlsmsjury\",\"address\":\"vojcybzvrbyickznkyglo\",\"logo_url\":\"http:\\\/\\\/www.ferry.com\\\/rerum-repudiandae-est-nostrum-et-voluptas\",\"bank_name\":\"azjrcnfbaqywuxhgjjmzu\",\"bank_account_number\":\"xjubqouzswiwxtrkimfca\",\"mpesa_paybill\":\"tbxspzmrazsroyjpx\",\"mpesa_account_number\":\"mqesedyghenqcopwvownk\",\"mpesa_till_no\":\"bamlnfngefbeilfzs\",\"industry\":\"yuxoezbdtabptcyyerevr\",\"description\":\"Dolores dolorum amet iste laborum eius est dolor.\",\"is_active\":false,\"password\":\"e\\\/dl4m{o\"}"
+                            "raw": "{\"name\":\"vmqeopfuudtdsufvyvddq\",\"slug\":\"amniihfqcoynlazghdtqt\",\"email\":\"andreanne00@example.org\",\"phone\":\"+254756277171\",\"country\":\"sufvyvddqamniihfqcoyn\",\"city\":\"lazghdtqtqxbajwbpilpm\",\"address\":\"ufinllwloauydlsmsjury\",\"bank_name\":\"vojcybzvrbyickznkyglo\",\"bank_account_number\":\"igmkwxphlvazjrcnfbaqy\",\"mpesa_paybill\":\"wuxhgjjmzuxjubqou\",\"mpesa_account_number\":\"zswiwxtrkimfcatbxspzm\",\"mpesa_till_no\":\"razsroyjpxmqesedy\",\"is_active\":false,\"password\":\";0R\\\\+UYpo\"}"
                         },
                         "description": "",
                         "auth": {
@@ -130,15 +130,15 @@
                     "response": []
                 },
                 {
-                    "name": "User Log Out.",
+                    "name": "GET api\/v1\/verify-email",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/logout",
+                            "path": "api\/v1\/verify-email",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/logout"
+                            "raw": "{{baseUrl}}\/api\/v1\/verify-email"
                         },
-                        "method": "POST",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -149,13 +149,36 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"token\":\"consequatur\",\"email\":\"carolyne.luettgen@example.org\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"status\":false,\"message\":\"Invalid verification link\"}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "Display a listing of the resource.",
@@ -217,7 +240,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "a357b10d2e2a",
+                                    "value": "a308064a7802",
                                     "description": "The ID of the business."
                                 }
                             ]
@@ -273,7 +296,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "a357b10d2e2a",
+                                    "value": "a308064a7802",
                                     "description": "The ID of the business."
                                 }
                             ]
@@ -312,7 +335,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "a357b10d2e2a",
+                                    "value": "a308064a7802",
                                     "description": "The ID of the business."
                                 }
                             ]
@@ -422,7 +445,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"business_id\":\"consequatur\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"tenant\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
+                            "raw": "{\"business_id\":\"consequatur\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -449,7 +472,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "103721C6AFA7",
+                                    "value": "677785261077",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -511,7 +534,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "103721C6AFA7",
+                                    "value": "677785261077",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -529,7 +552,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"businessID\":\"consequatur\",\"name\":\"mqeopfuudtdsufvyvddqa\",\"username\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergencyContactName\":\"ddqamniihfqcoynlazghd\",\"emergencyContactPhone\":\"+254771772898\",\"emergencyContactRelationship\":\"ddqamniihfqcoynlazghd\",\"idNumber\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"isActive\":false}"
+                            "raw": "{\"businessID\":\"consequatur\",\"name\":\"mqeopfuudtdsufvyvddqa\",\"username\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergencyContactName\":\"ddqamniihfqcoynlazghd\",\"emergencyContactPhone\":\"+254771772898\",\"emergencyContactRelationship\":\"ddqamniihfqcoynlazghd\",\"idNumber\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"isActive\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -556,7 +579,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "103721C6AFA7",
+                                    "value": "677785261077",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -650,7 +673,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-12\",\"employment_type\":\"part_time\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
+                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-14\",\"employment_type\":\"contract\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -745,7 +768,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-12\",\"employment_type\":\"temporary\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
+                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-14\",\"employment_type\":\"full_time\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -860,7 +883,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"unit_number\":\"vmqeopfuudtdsufvyvddq\",\"rent_amount\":1,\"lease_start\":\"2026-04-16T13:27:47\",\"lease_end\":\"2107-05-16\",\"next_of_kin_name\":\"mqeopfuudtdsufvyvddqa\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":false,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"password\":\"#lz.KcLcDi`wmU\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
+                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":true,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"password\":\"#lz.KcLcDi`wmU\",\"role\":\"tenant\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -881,7 +904,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9777c9283e2a",
+                                    "value": "consequatur",
                                     "description": "The ID of the tenant."
                                 }
                             ]
@@ -937,7 +960,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9777c9283e2a",
+                                    "value": "consequatur",
                                     "description": "The ID of the tenant."
                                 }
                             ]
@@ -955,7 +978,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"unit_number\":\"vmqeopfuudtdsufvyvddq\",\"rent_amount\":1,\"lease_start\":\"2026-04-16T13:27:47\",\"lease_end\":\"2107-05-16\",\"next_of_kin_name\":\"mqeopfuudtdsufvyvddqa\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":true,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
+                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":true,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -976,12 +999,40 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9777c9283e2a",
+                                    "value": "consequatur",
                                     "description": "The ID of the tenant."
                                 }
                             ]
                         },
                         "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User Log Out.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/logout"
+                        },
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",

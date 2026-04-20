@@ -201,7 +201,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -231,7 +231,7 @@ endpoints:
       mpesa_paybill: wuxhgjjmzuxjubqou
       mpesa_account_number: zswiwxtrkimfcatbxspzm
       mpesa_till_no: razsroyjpxmqesedy
-      is_active: true
+      is_active: false
       password: ;0R\+UYpo
     fileParameters: []
     responses: []
@@ -668,7 +668,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -713,7 +713,7 @@ endpoints:
       mpesa_till_no: efbeilfzsyuxoezbd
       industry: tabptcyyerevrljcbwkth
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      is_active: false
+      is_active: true
       username: dtdsufvyvddqamniihfqc
       avatar: oynlazghdtqtqxbajwbpi
     fileParameters: []
@@ -1204,7 +1204,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: staff
+        example: tenant
         type: string
         enumValues:
           - owner
@@ -1307,7 +1307,7 @@ endpoints:
       username: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: staff
+      role: tenant
       phone: '+254771772898'
       emergencyContactName: ddqamniihfqcoynlazghd
       emergencyContactPhone: '+254771772898'
@@ -1705,7 +1705,7 @@ endpoints:
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       business:
@@ -1794,20 +1794,21 @@ endpoints:
       description:
         custom: []
         name: description
-        description: 'Must not be greater than 50 characters.'
-        required: true
-        example: 'Ratione voluptas doloremque illo.'
-        type: string
+        description: ''
+        required: false
+        example:
+          - consequatur
+        type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
+        nullable: true
         deprecated: false
       bedrooms:
         custom: []
         name: bedrooms
         description: 'Must be at least 0 characters.'
         required: true
-        example: ptcyyerevrljcbwkthjnescwsestcouxpqsydkigioyoyprjkfdjsneawgaavuiwlezlcraoo
+        example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1818,7 +1819,7 @@ endpoints:
         name: bathrooms
         description: 'Must not be greater than 50 characters.'
         required: true
-        example: oxrrjhbduowtbaqrrtgxi
+        example: yvojcybzvrbyickznkygl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1829,7 +1830,7 @@ endpoints:
         name: square_meters
         description: 'Must be at least 0 characters.'
         required: true
-        example: uvujtzcirplnfqsaymxpayeblqozckazplqjijwkuzgpjfumffsmqnmbekhsobzoqisjmbiuq
+        example: oigmkwxphlvazjrcnfbaqywuxhgjjmzuxjubqouzswiwxtrkimfcatbxspzmrazsroyjpxmqe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1846,18 +1847,72 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      images:
+        custom: []
+        name: images
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example:
+          - null
+        type: 'file[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      title:
+        custom: []
+        name: title
+        description: ''
+        required: false
+        example:
+          - consequatur
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_highlight:
+        custom: []
+        name: is_highlight
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      amenity_id:
+        custom: []
+        name: amenity_id
+        description: 'The <code>id</code> of an existing record in the amenities table.'
+        required: true
+        example:
+          - consequatur
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
     cleanBodyParameters:
       name: vmqeopfuudtdsufvyvddq
       slug: amniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvojcybzvrbyickznkyg
       address: loigmkwxphlvazjrcnfba
       location: qywuxhgjjmzuxjubqouzs
       apartment_type: wiwxtrkimfcatbxspzmrazsroyjpxmqesedyghenqcopwvownkbamlnfngefbeilfzsyuxoez
-      description: 'Ratione voluptas doloremque illo.'
-      bedrooms: ptcyyerevrljcbwkthjnescwsestcouxpqsydkigioyoyprjkfdjsneawgaavuiwlezlcraoo
-      bathrooms: oxrrjhbduowtbaqrrtgxi
-      square_meters: uvujtzcirplnfqsaymxpayeblqozckazplqjijwkuzgpjfumffsmqnmbekhsobzoqisjmbiuq
+      description:
+        - consequatur
+      bedrooms: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+      bathrooms: yvojcybzvrbyickznkygl
+      square_meters: oigmkwxphlvazjrcnfbaqywuxhgjjmzuxjubqouzswiwxtrkimfcatbxspzmrazsroyjpxmqe
       business_id: consequatur
-    fileParameters: []
+      title:
+        - consequatur
+      amenity_id:
+        - consequatur
+    fileParameters:
+      images:
+        - null
     responses: []
     responseFields: []
     auth: []
@@ -1908,324 +1963,6 @@ endpoints:
     cleanUrlParameters:
       business: consequatur
       id: 5c8207d62da1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - GET
-    uri: 'api/v1/businesses/{business}/property-amenities'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: 'api/v1/businesses/{business}/property-amenities'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      amenity_id:
-        custom: []
-        name: amenity_id
-        description: 'The <code>id</code> of an existing record in the amenities table.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      property_id:
-        custom: []
-        name: property_id
-        description: 'The <code>id</code> of an existing record in the properties table.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanBodyParameters:
-      amenity_id: consequatur
-      property_id: consequatur
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - GET
-    uri: 'api/v1/businesses/{business}/property-amenities/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the property amenity.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-      id: consequatur
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/v1/businesses/{business}/property-amenities/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the property amenity.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-      id: consequatur
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      amenity_id:
-        custom: []
-        name: amenity_id
-        description: 'The <code>id</code> of an existing record in the amenities table.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      property_id:
-        custom: []
-        name: property_id
-        description: 'The <code>id</code> of an existing record in the properties table.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanBodyParameters:
-      amenity_id: consequatur
-      property_id: consequatur
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - DELETE
-    uri: 'api/v1/businesses/{business}/property-amenities/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the property amenity.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2373,7 +2110,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: contract
+        example: temporary
         type: string
         enumValues:
           - full_time
@@ -2535,7 +2272,7 @@ endpoints:
       department: amniihfqcoynlazghdtqt
       salary: 16
       hire_date: '2020-08-16'
-      employment_type: contract
+      employment_type: temporary
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
@@ -2717,7 +2454,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: part_time
+        example: contract
         type: string
         enumValues:
           - full_time
@@ -2843,7 +2580,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2854,7 +2591,7 @@ endpoints:
       department: amniihfqcoynlazghdtqt
       salary: 16
       hire_date: '2020-08-16'
-      employment_type: part_time
+      employment_type: contract
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
@@ -2865,7 +2602,7 @@ endpoints:
       id_number: tqtqxbajwbpilpmufinll
       address: wloauydlsmsjuryvojcyb
       avatar: zvrbyickznkygloigmkwx
-      is_active: true
+      is_active: false
     fileParameters: []
     responses: []
     responseFields: []
@@ -3042,7 +2779,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -3186,7 +2923,7 @@ endpoints:
     cleanBodyParameters:
       next_of_kin_name: vmqeopfuudtdsufvyvddq
       next_of_kin_phone: '0777171772'
-      is_active: true
+      is_active: false
       username: vyvddqamniihfqcoynlaz
       name: ghdtqtqxbajwbpilpmufi
       email: hilton86@example.org
@@ -4306,396 +4043,6 @@ endpoints:
     cleanUrlParameters:
       business: consequatur
       id: 6d29d42e9619
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - GET
-    uri: 'api/v1/businesses/{business}/gallery'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of the resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: 'api/v1/businesses/{business}/gallery'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: multipart/form-data
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      image_url:
-        custom: []
-        name: image_url
-        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
-        required: true
-        example: null
-        type: file
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      property_id:
-        custom: []
-        name: property_id
-        description: 'The <code>id</code> of an existing record in the properties table.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      title:
-        custom: []
-        name: title
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: mqeopfuudtdsufvyvddqa
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      description:
-        custom: []
-        name: description
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: 'Molestias ipsam sit veniam sed fuga aspernatur.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      is_highlight:
-        custom: []
-        name: is_highlight
-        description: ''
-        required: false
-        example: true
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-    cleanBodyParameters:
-      property_id: consequatur
-      title: mqeopfuudtdsufvyvddqa
-      description: 'Molestias ipsam sit veniam sed fuga aspernatur.'
-      is_highlight: true
-    fileParameters:
-      image_url: null
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - GET
-    uri: 'api/v1/businesses/{business}/gallery/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the gallery.'
-        required: true
-        example: 0221a920057a
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-      id: 0221a920057a
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/v1/businesses/{business}/gallery/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: multipart/form-data
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the gallery.'
-        required: true
-        example: 0221a920057a
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-      id: 0221a920057a
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      image_url:
-        custom: []
-        name: image_url
-        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
-        required: true
-        example: null
-        type: file
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      property_id:
-        custom: []
-        name: property_id
-        description: 'The <code>id</code> of an existing record in the properties table.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      title:
-        custom: []
-        name: title
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: mqeopfuudtdsufvyvddqa
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      description:
-        custom: []
-        name: description
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: 'Molestias ipsam sit veniam sed fuga aspernatur.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      is_highlight:
-        custom: []
-        name: is_highlight
-        description: ''
-        required: false
-        example: false
-        type: boolean
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-    cleanBodyParameters:
-      property_id: consequatur
-      title: mqeopfuudtdsufvyvddqa
-      description: 'Molestias ipsam sit veniam sed fuga aspernatur.'
-      is_highlight: false
-    fileParameters:
-      image_url: null
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - DELETE
-    uri: 'api/v1/businesses/{business}/gallery/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      business:
-        custom: []
-        name: business
-        description: 'The business.'
-        required: true
-        example: consequatur
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the gallery.'
-        required: true
-        example: 0221a920057a
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      business: consequatur
-      id: 0221a920057a
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

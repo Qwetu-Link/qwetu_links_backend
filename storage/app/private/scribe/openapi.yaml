@@ -107,7 +107,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: true
                 password:
                   type: string
@@ -328,7 +328,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 username:
                   type: string
@@ -548,7 +548,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: tenant
                   enum:
                     - owner
                     - tenant
@@ -777,7 +777,7 @@ paths:
       requestBody:
         required: true
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
@@ -802,36 +802,67 @@ paths:
                   description: 'Must be at least 0 characters.'
                   example: wiwxtrkimfcatbxspzmrazsroyjpxmqesedyghenqcopwvownkbamlnfngefbeilfzsyuxoez
                 description:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: 'Ratione voluptas doloremque illo.'
+                  type: array
+                  description: ''
+                  example:
+                    - consequatur
+                  items:
+                    type: string
+                    nullable: true
                 bedrooms:
                   type: string
                   description: 'Must be at least 0 characters.'
-                  example: ptcyyerevrljcbwkthjnescwsestcouxpqsydkigioyoyprjkfdjsneawgaavuiwlezlcraoo
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
                 bathrooms:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: oxrrjhbduowtbaqrrtgxi
+                  example: yvojcybzvrbyickznkygl
                 square_meters:
                   type: string
                   description: 'Must be at least 0 characters.'
-                  example: uvujtzcirplnfqsaymxpayeblqozckazplqjijwkuzgpjfumffsmqnmbekhsobzoqisjmbiuq
+                  example: oigmkwxphlvazjrcnfbaqywuxhgjjmzuxjubqouzswiwxtrkimfcatbxspzmrazsroyjpxmqe
                 business_id:
                   type: string
                   description: 'The <code>id</code> of an existing record in the businesses table.'
                   example: consequatur
+                images:
+                  type: array
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  items:
+                    type: string
+                    format: binary
+                title:
+                  type: array
+                  description: ''
+                  example:
+                    - consequatur
+                  items:
+                    type: string
+                    nullable: true
+                is_highlight:
+                  type: object
+                  description: ''
+                  example: null
+                  properties: {  }
+                  nullable: true
+                amenity_id:
+                  type: array
+                  description: 'The <code>id</code> of an existing record in the amenities table.'
+                  example:
+                    - consequatur
+                  items:
+                    type: string
               required:
                 - name
                 - slug
                 - address
                 - location
                 - apartment_type
-                - description
                 - bedrooms
                 - bathrooms
                 - square_meters
                 - business_id
+                - amenity_id
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -856,139 +887,6 @@ paths:
         name: id
         description: 'The ID of the property.'
         example: 5c8207d62da1
-        required: true
-        schema:
-          type: string
-  '/api/v1/businesses/{business}/property-amenities':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                amenity_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the amenities table.'
-                  example: consequatur
-                property_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the properties table.'
-                  example: consequatur
-              required:
-                - amenity_id
-                - property_id
-      security: []
-    parameters:
-      -
-        in: path
-        name: business
-        description: 'The business.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-  '/api/v1/businesses/{business}/property-amenities/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                amenity_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the amenities table.'
-                  example: consequatur
-                property_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the properties table.'
-                  example: consequatur
-              required:
-                - amenity_id
-                - property_id
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: business
-        description: 'The business.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: id
-        description: 'The ID of the property amenity.'
-        example: consequatur
         required: true
         schema:
           type: string
@@ -1048,7 +946,7 @@ paths:
                 employment_type:
                   type: string
                   description: ''
-                  example: contract
+                  example: temporary
                   enum:
                     - full_time
                     - part_time
@@ -1222,7 +1120,7 @@ paths:
                 employment_type:
                   type: string
                   description: ''
-                  example: part_time
+                  example: contract
                   enum:
                     - full_time
                     - part_time
@@ -1278,7 +1176,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - position
                 - department
@@ -1355,7 +1253,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: true
                 username:
                   type: string
@@ -1905,169 +1803,6 @@ paths:
         name: id
         description: 'The ID of the amenity.'
         example: 6d29d42e9619
-        required: true
-        schema:
-          type: string
-  '/api/v1/businesses/{business}/gallery':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                image_url:
-                  type: string
-                  format: binary
-                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
-                property_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the properties table.'
-                  example: consequatur
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
-                description:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: 'Molestias ipsam sit veniam sed fuga aspernatur.'
-                  nullable: true
-                is_highlight:
-                  type: boolean
-                  description: ''
-                  example: true
-                  nullable: true
-              required:
-                - image_url
-                - property_id
-                - title
-      security: []
-    parameters:
-      -
-        in: path
-        name: business
-        description: 'The business.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-  '/api/v1/businesses/{business}/gallery/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                image_url:
-                  type: string
-                  format: binary
-                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
-                property_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the properties table.'
-                  example: consequatur
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
-                description:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: 'Molestias ipsam sit veniam sed fuga aspernatur.'
-                  nullable: true
-                is_highlight:
-                  type: boolean
-                  description: ''
-                  example: false
-                  nullable: true
-              required:
-                - image_url
-                - property_id
-                - title
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: business
-        description: 'The business.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: id
-        description: 'The ID of the gallery.'
-        example: 0221a920057a
         required: true
         schema:
           type: string

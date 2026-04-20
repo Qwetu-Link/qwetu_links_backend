@@ -24,6 +24,10 @@ return new class extends Migration
             // Employment
             $table->date('hire_date')->nullable();
             $table->string('employment_type')->nullable(); // full-time, part-time
+
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

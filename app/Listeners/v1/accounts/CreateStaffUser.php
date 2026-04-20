@@ -54,6 +54,7 @@ class CreateStaffUser
             'salary' => $data['salary'],
             'hire_date' => $data['hire_date'],
             'employment_type' => $data['employment_type'],
+            'business_id' => $owner->business_id,
         ]);
 
         $event->staff = $staff;

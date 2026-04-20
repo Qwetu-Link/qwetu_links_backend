@@ -24,6 +24,8 @@ return new class extends Migration
             // // Lease
             // $table->date('lease_start')->nullable();
             // $table->date('lease_end')->nullable();
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
 
             // Emergency (Tenant-specific extra)
             $table->string('next_of_kin_name')->nullable();

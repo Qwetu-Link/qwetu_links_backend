@@ -33,8 +33,10 @@ class BusinessController extends Controller
             $business->with('users');
         }
 
+        $business = $business->paginate(5)->withQueryString();
+
         // Appends -> It keeps your filters when switching pages.
-        return new BusinessCollection($business->paginate()->appends($request->query()));
+        return new BusinessCollection($business);
     }
 
     /**

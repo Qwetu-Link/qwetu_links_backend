@@ -16,8 +16,9 @@ class PropertyAmenityResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'amenity_id' => $this->amenity_id,
-            'property_id' => $this->property_id,
+            'amenityID' => $this->amenity_id,
+            'propertyID' => $this->property_id,
+            'businessID' => $this->business_id,
         ];
     }
 }

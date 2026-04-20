@@ -15,8 +15,10 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('name');
             $table->string('icon');
-            $table->enum('category', ['indoor', 'outdoor', 'security', 'luxury']);
+            $table->string('category');
             $table->string('description');
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
             $table->timestamps();
         });
     }

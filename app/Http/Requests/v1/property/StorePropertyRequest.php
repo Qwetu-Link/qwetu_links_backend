@@ -4,6 +4,7 @@ namespace App\Http\Requests\v1\property;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class StorePropertyRequest extends FormRequest
 {
@@ -24,15 +25,28 @@ class StorePropertyRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:50',
-            'slug' => 'required|string|min:0',
             'address' => 'required|string|max:50',
             'location' => 'required|string|max:50',
             'apartment_type' => 'required|string|min:0',
-            'description' => 'required|string|max:50',
+            'description' => 'nullable|string|max:50',
             'bedrooms' => 'required|string|min:0',
             'bathrooms' => 'required|string|max:50',
-            'square_meters' => 'required|string|min:0',
-            'business_id' => 'required|string|exists:businesses,id',
+            'square_meters' => 'nullable|string|min:0',
+
+            // 'image_url' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'title' => 'nullable|array',
+            'title.*' => 'nullable|string',
+
+            'description' => 'nullable|array',
+            'description.*' => 'nullable|string',
+
+            'is_highlight' => 'nullable|array',
+
+            'images' => 'required|array',
+            'images.*' => 'image|mimes:jpg,jpeg,png|max:2048',
+
+            'amenity_id' => 'nullable|array',
+            'amenity_id.*' => 'required|string|exists:amenities,id',
         ];
     }
 
@@ -42,6 +56,10 @@ class StorePropertyRequest extends FormRequest
             'apartment_type' => $this->apartmentType,
             'square_meters' => $this->squareMeters,
             'business_id' => $this->businessID,
+
+            'slug' => $this->slug
+                ? Str::slug($this->slug)
+                : Str::slug($this->name),
         ]);
     }
 }

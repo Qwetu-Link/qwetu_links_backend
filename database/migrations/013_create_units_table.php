@@ -15,9 +15,11 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('unit_number');
             $table->string('unit_floor')->nullable();
-            $table->enum('status', ['available', 'occupied', 'maintenance'])->default('available');
+            $table->enum('status', ['available', 'occupied', 'maintenance', 'reserved'])->default('available');
             $table->decimal('rent_amount',10, 2);
             $table->decimal('deposit_amount',10, 2)->nullable();
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
             $table->string('property_id');
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->timestamps();

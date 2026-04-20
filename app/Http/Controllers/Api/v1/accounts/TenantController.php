@@ -28,9 +28,8 @@ class TenantController extends Controller
         if (count($filterItems) == 0) {
             return new TenantCollection(Tenant::paginate());
         } else {
-            $tenant = Tenant::where($filterItems)->paginate();
-
-            return new TenantCollection($tenant->appends($request->query()));
+            $tenant = Tenant::where($filterItems)->paginate(5)->withQueryString();
+            return new TenantCollection($tenant);
         }
     }
 

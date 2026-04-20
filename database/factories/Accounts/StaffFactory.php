@@ -2,6 +2,7 @@
 
 namespace Database\Factories\Accounts;
 
+use App\Models\accounts\Business;
 use App\Models\accounts\Staff;
 use App\Models\accounts\User as AccountsUser;
 use App\Models\User;
@@ -20,7 +21,7 @@ class StaffFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => fake()->regexify('[A-F0-9]{12}'),
+            'id' => bin2hex(random_bytes(6)),
             'user_id' => AccountsUser::factory()->state([
                 'role' => 'staff',
             ]),
@@ -41,6 +42,7 @@ class StaffFactory extends Factory
                 'part-time',
                 'contract',
             ]),
+            'business_id' => Business::inRandomOrder()->value('id'),
         ];
     }
 }

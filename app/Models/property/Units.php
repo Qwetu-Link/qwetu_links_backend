@@ -2,6 +2,7 @@
 
 namespace App\Models\property;
 
+use App\Models\accounts\Business;
 use App\Models\services\Lease;
 use App\Models\services\Maintainance;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,7 +23,8 @@ class Units extends Model
         'status',
         'rent_amount',
         'deposit_amount',
-        'property_id'
+        'property_id',
+        'business_id',
     ];
 
     protected function casts(): array
@@ -62,5 +64,10 @@ class Units extends Model
     public function maintainance()
     {
         return $this->hasMany(Maintainance::class);
+    }
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
     }
 }

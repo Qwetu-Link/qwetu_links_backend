@@ -2,6 +2,7 @@
 
 namespace App\Models\property;
 
+use App\Models\accounts\Business;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,7 +17,8 @@ class PropertyAmenities extends Model
 
     protected $fillable = [
         'amenity_id',
-        'property_id'
+        'property_id',
+        'business_id',
     ];
 
     protected function casts(): array
@@ -50,5 +52,10 @@ class PropertyAmenities extends Model
     public function amenity()
     {
         return $this->belongsTo(Amenity::class);
+    }
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
     }
 }

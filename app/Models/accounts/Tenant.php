@@ -21,6 +21,7 @@ class Tenant extends Model
         'next_of_kin_name',
         'next_of_kin_phone',
         'is_active',
+        'business_id',
     ];
 
     protected function casts(): array
@@ -54,5 +55,10 @@ class Tenant extends Model
     public function leases()
     {
         return $this->hasMany(Lease::class);
+    }
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
     }
 }

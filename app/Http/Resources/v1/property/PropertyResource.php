@@ -21,11 +21,14 @@ class PropertyResource extends JsonResource
             'address' => $this->address,
             'description' => $this->description,
             'location' => $this->location,
-            'apartment_type' => $this->apartment_type,
+            'apartmentType' => $this->apartment_type,
             'bedrooms' => $this->bedrooms,
             'bathrooms' => $this->bathrooms,
-            'square_meters' => $this->square_meters,
-            'business_id' => $this->business_id,
+            'squareMeters' => $this->square_meters,
+            'businessID' => $this->business_id,
+            'amenities' => new PropertyAmenityResource($this->whenLoaded('amenities')),
+            'units' => new UnitResource($this->whenLoaded('units')),
+            'gallery' => new GalleryResource($this->whenLoaded('gallery')),
         ];
     }
 }

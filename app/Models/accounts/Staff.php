@@ -22,6 +22,7 @@ class Staff extends Model
         'salary',
         'hire_date',
         'employment_type',
+        'business_id',
     ];
 
     protected function casts(): array
@@ -52,8 +53,13 @@ class Staff extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function getRouteKeyName()
+    // public function getRouteKeyName()
+    // {
+    //     return 'id'; // or uuid
+    // }
+
+    public function business()
     {
-        return 'id'; // or uuid
+        return $this->belongsTo(Business::class);
     }
 }

@@ -20,6 +20,7 @@ class TenantResource extends JsonResource
             'nextOfKinName'=> $this->next_of_kin_name,
             'nextOfKinPhone'=> $this->next_of_kin_phone,
             'isActive'=> $this->is_active,
+            'businessID' => $this->business_id,
         ];
     }
 }

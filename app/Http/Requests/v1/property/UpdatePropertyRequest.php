@@ -4,6 +4,7 @@ namespace App\Http\Requests\v1\property;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class UpdatePropertyRequest extends FormRequest
 {
@@ -70,5 +71,17 @@ class UpdatePropertyRequest extends FormRequest
         }
 
         $this->merge($data);
+
+        if ($this->filled('slug')) {
+            return;
+        }
+
+        // If name is provided (PATCH or POST) → generate slug
+        if ($this->filled('name')) {
+            $this->merge([
+                'slug' => Str::slug($this->name),
+            ]);
+        }
+
     }
 }

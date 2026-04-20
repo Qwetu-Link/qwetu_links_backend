@@ -16,12 +16,13 @@ class UnitResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'unit_number' => $this->unit_number,
-            'unit_floor' => $this->unit_floor,
+            'unitNumber' => $this->unit_number,
+            'unitFloor' => $this->unit_floor,
             'status' => $this->status,
-            'rent_amount' => $this->rent_amount,
-            'deposit_amount' => $this->deposit_amount,
-            'property_id' => $this->property_id,
+            'rentAmount' => $this->rent_amount,
+            'depositAmount' => $this->deposit_amount,
+            'propertyID' => $this->property_id,
+            'businessID' => $this->business_id,
         ];
     }
 }

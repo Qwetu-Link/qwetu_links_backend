@@ -5,6 +5,12 @@ use App\Http\Controllers\Api\v1\accounts\BusinessController;
 use App\Http\Controllers\Api\v1\accounts\StaffController;
 use App\Http\Controllers\Api\v1\accounts\TenantController;
 use App\Http\Controllers\Api\v1\accounts\UserController;
+use App\Http\Controllers\Api\v1\property\AmenityController;
+use App\Http\Controllers\Api\v1\property\GalleryController;
+use App\Http\Controllers\Api\v1\property\PropertyAmenitiesController;
+use App\Http\Controllers\Api\v1\property\PropertyController;
+use App\Http\Controllers\Api\v1\property\UnitsController;
+use App\Http\Resources\v1\property\AmenityResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,14 +35,23 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'm
     // Table likely does have business_id
     Route::prefix('businesses/{business}')->group(function () {
         Route::apiResource('users', UserController::class);
-    });
+        Route::apiResource('properties', PropertyController::class);
+        Route::apiResource('property-amenities', PropertyAmenitiesController::class);
 
-    // Table likely does NOT have business_id
-    Route::prefix('businesses')->group(function () {
         Route::apiResource('staff', StaffController::class);
         Route::apiResource('tenants', TenantController::class);
 
-        Route::post('/logout', [AuthController::class, 'logout']);
+        Route::apiResource('units', UnitsController::class);
+        Route::apiResource('amenities', AmenityController::class);
+        Route::apiResource('gallery', GalleryController::class);
+        
 
+        Route::post('/logout', [AuthController::class, 'logout']);
     });
+
+    // Table likely does NOT have business_id
+    // Route::prefix('businesses')->group(function () {
+        
+
+    // });
 });

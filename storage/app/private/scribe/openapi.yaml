@@ -107,7 +107,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 password:
                   type: string
@@ -362,7 +362,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the business.'
-        example: a308064a7802
+        example: 23c4c1828117
         required: true
         schema:
           type: string
@@ -426,7 +426,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -548,7 +548,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -621,11 +621,378 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: '677785261077'
+        example: 0e91d517fe20
         required: true
         schema:
           type: string
-  /api/v1/businesses/staff:
+  '/api/v1/businesses/{business}/properties':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                address:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: amniihfqcoynlazghdtqt
+                location:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: qxbajwbpilpmufinllwlo
+                apartment_type:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: auydlsmsjuryvojcybzvrbyickznkygloigmkwxphlvazjrcnfbaqywuxhgjjmzuxjubqouzs
+                description:
+                  type: array
+                  description: ''
+                  example:
+                    - consequatur
+                  items:
+                    type: string
+                    nullable: true
+                bedrooms:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+                bathrooms:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: yvojcybzvrbyickznkygl
+                square_meters:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: oigmkwxphlvazjrcnfbaqywuxhgjjmzuxjubqouzswiwxtrkimfcatbxspzmrazsroyjpxmqe
+                  nullable: true
+                title:
+                  type: array
+                  description: ''
+                  example:
+                    - consequatur
+                  items:
+                    type: string
+                    nullable: true
+                is_highlight:
+                  type: object
+                  description: ''
+                  example: null
+                  properties: {  }
+                  nullable: true
+                images:
+                  type: array
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  items:
+                    type: string
+                    format: binary
+                amenity_id:
+                  type: array
+                  description: 'The <code>id</code> of an existing record in the amenities table.'
+                  example:
+                    - consequatur
+                  items:
+                    type: string
+              required:
+                - name
+                - address
+                - location
+                - apartment_type
+                - bedrooms
+                - bathrooms
+                - amenity_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/properties/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                slug:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: amniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvojcybzvrbyickznkyg
+                address:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: loigmkwxphlvazjrcnfba
+                location:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: qywuxhgjjmzuxjubqouzs
+                apartment_type:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: wiwxtrkimfcatbxspzmrazsroyjpxmqesedyghenqcopwvownkbamlnfngefbeilfzsyuxoez
+                description:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: 'Ratione voluptas doloremque illo.'
+                bedrooms:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: ptcyyerevrljcbwkthjnescwsestcouxpqsydkigioyoyprjkfdjsneawgaavuiwlezlcraoo
+                bathrooms:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: oxrrjhbduowtbaqrrtgxi
+                square_meters:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: uvujtzcirplnfqsaymxpayeblqozckazplqjijwkuzgpjfumffsmqnmbekhsobzoqisjmbiuq
+                business_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the businesses table.'
+                  example: consequatur
+              required:
+                - name
+                - slug
+                - address
+                - location
+                - apartment_type
+                - description
+                - bedrooms
+                - bathrooms
+                - square_meters
+                - business_id
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the property.'
+        example: 5c8207d62da1
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/property-amenities':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amenity_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the amenities table.'
+                  example: consequatur
+                property_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the properties table.'
+                  example: consequatur
+              required:
+                - amenity_id
+                - property_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/property-amenities/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amenity_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the amenities table.'
+                  example: consequatur
+                property_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the properties table.'
+                  example: consequatur
+              required:
+                - amenity_id
+                - property_id
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the property amenity.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/staff':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -677,7 +1044,7 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-14'
+                  example: '2020-08-16'
                 employment_type:
                   type: string
                   description: ''
@@ -707,137 +1074,11 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
                     - staff
-                phone:
-                  type: string
-                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
-                  example: '+254771772898'
-                emergency_contact_name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: ddqamniihfqcoynlazghd
-                  nullable: true
-                emergency_contact_phone:
-                  type: string
-                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
-                  example: '+254771772898'
-                  nullable: true
-                emergency_contact_relationship:
-                  type: string
-                  description: 'Must not be greater than 100 characters.'
-                  example: ddqamniihfqcoynlazghd
-                  nullable: true
-                id_number:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: tqtqxbajwbpilpmufinll
-                  nullable: true
-                address:
-                  type: string
-                  description: 'Must not be greater than 500 characters.'
-                  example: wloauydlsmsjuryvojcyb
-                  nullable: true
-                avatar:
-                  type: string
-                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: zvrbyickznkygloigmkwx
-                  nullable: true
-                is_active:
-                  type: boolean
-                  description: ''
-                  example: true
-              required:
-                - position
-                - department
-                - salary
-                - hire_date
-                - employment_type
-                - username
-                - name
-                - email
-                - password
-                - role
-                - phone
-      security: []
-  '/api/v1/businesses/staff/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                position:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: vmqeopfuudtdsufvyvddq
-                department:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: amniihfqcoynlazghdtqt
-                salary:
-                  type: number
-                  description: 'Must be at least 0. Must not be greater than 100000000.'
-                  example: 16
-                hire_date:
-                  type: string
-                  description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-14'
-                employment_type:
-                  type: string
-                  description: ''
-                  example: full_time
-                  enum:
-                    - full_time
-                    - part_time
-                    - contract
-                    - intern
-                    - temporary
-                username:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mniihfqcoynlazghdtqtq
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ablanda@example.org
                 phone:
                   type: string
                   description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
@@ -885,7 +1126,40 @@ paths:
                 - username
                 - name
                 - email
+                - password
+                - role
                 - phone
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business_id}/staff/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -899,13 +1173,141 @@ paths:
     parameters:
       -
         in: path
+        name: business_id
+        description: 'The ID of the business.'
+        example: 23c4c1828117
+        required: true
+        schema:
+          type: string
+      -
+        in: path
         name: id
         description: 'The ID of the staff.'
+        example: 898a390007c4
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/staff/{id}':
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                position:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                department:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                salary:
+                  type: number
+                  description: 'Must be at least 0. Must not be greater than 100000000.'
+                  example: 16
+                hire_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
+                  example: '2020-08-16'
+                employment_type:
+                  type: string
+                  description: ''
+                  example: part_time
+                  enum:
+                    - full_time
+                    - part_time
+                    - contract
+                    - intern
+                    - temporary
+                username:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ablanda@example.org
+                phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                emergency_contact_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                emergency_contact_phone:
+                  type: string
+                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
+                  example: '+254771772898'
+                  nullable: true
+                emergency_contact_relationship:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: ddqamniihfqcoynlazghd
+                  nullable: true
+                id_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: tqtqxbajwbpilpmufinll
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 500 characters.'
+                  example: wloauydlsmsjuryvojcyb
+                  nullable: true
+                avatar:
+                  type: string
+                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
+                  example: zvrbyickznkygloigmkwx
+                  nullable: true
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: true
+              required:
+                - position
+                - department
+                - salary
+                - hire_date
+                - employment_type
+                - username
+                - name
+                - email
+                - phone
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
         example: consequatur
         required: true
         schema:
           type: string
-  /api/v1/businesses/tenants:
+      -
+        in: path
+        name: id
+        description: 'The ID of the staff.'
+        example: 898a390007c4
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/tenants':
     get:
       summary: 'Display a listing of the resource.'
       operationId: displayAListingOfTheResource
@@ -974,7 +1376,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: tenant
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -1023,7 +1425,16 @@ paths:
                 - role
                 - phone
       security: []
-  '/api/v1/businesses/tenants/{id}':
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business_id}/tenants/{id}':
     get:
       summary: 'Display the specified resource.'
       operationId: displayTheSpecifiedResource
@@ -1045,6 +1456,33 @@ paths:
       tags:
         - Endpoints
       security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business_id
+        description: 'The ID of the business.'
+        example: 23c4c1828117
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the tenant.'
+        example: 2caf4dadc752
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/tenants/{id}':
     put:
       summary: 'Update the specified resource in storage.'
       operationId: updateTheSpecifiedResourceInStorage
@@ -1127,6 +1565,170 @@ paths:
                 - email
                 - phone
       security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the tenant.'
+        example: 2caf4dadc752
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/units':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                rent_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 1
+                unit_floor:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                status:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: xbajwbpilpmufinllwloa
+                deposit_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 72
+                property_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the properties table.'
+                  example: consequatur
+              required:
+                - unit_number
+                - rent_amount
+                - unit_floor
+                - status
+                - deposit_amount
+                - property_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/units/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_number:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                rent_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 1
+                unit_floor:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: mniihfqcoynlazghdtqtq
+                status:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: xbajwbpilpmufinllwloa
+                deposit_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 72
+                property_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the properties table.'
+                  example: consequatur
+              required:
+                - unit_number
+                - rent_amount
+                - unit_floor
+                - status
+                - deposit_amount
+                - property_id
+      security: []
     delete:
       summary: 'Remove the specified resource from storage.'
       operationId: removeTheSpecifiedResourceFromStorage
@@ -1139,13 +1741,337 @@ paths:
     parameters:
       -
         in: path
-        name: id
-        description: 'The ID of the tenant.'
+        name: business
+        description: 'The business.'
         example: consequatur
         required: true
         schema:
           type: string
-  /api/v1/businesses/logout:
+      -
+        in: path
+        name: id
+        description: 'The ID of the unit.'
+        example: 01df064d8e45
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/amenities':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                icon:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                category:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qxbajwbpilpmufinllwlo
+                description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'Et a qui ducimus.'
+              required:
+                - name
+                - icon
+                - category
+                - description
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/amenities/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vmqeopfuudtdsufvyvddq
+                icon:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: amniihfqcoynlazghdtqt
+                category:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qxbajwbpilpmufinllwlo
+                description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'Et a qui ducimus.'
+              required:
+                - name
+                - icon
+                - category
+                - description
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the amenity.'
+        example: 6d29d42e9619
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/gallery':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image_url:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                property_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the properties table.'
+                  example: consequatur
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'Molestias ipsam sit veniam sed fuga aspernatur.'
+                  nullable: true
+                is_highlight:
+                  type: boolean
+                  description: ''
+                  example: true
+                  nullable: true
+              required:
+                - image_url
+                - property_id
+                - title
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/gallery/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image_url:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                property_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the properties table.'
+                  example: consequatur
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                description:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: 'Molestias ipsam sit veniam sed fuga aspernatur.'
+                  nullable: true
+                is_highlight:
+                  type: boolean
+                  description: ''
+                  example: false
+                  nullable: true
+              required:
+                - image_url
+                - property_id
+                - title
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the gallery.'
+        example: 0221a920057a
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/logout':
     post:
       summary: 'User Log Out.'
       operationId: userLogOut
@@ -1155,3 +2081,12 @@ paths:
       tags:
         - Endpoints
       security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string

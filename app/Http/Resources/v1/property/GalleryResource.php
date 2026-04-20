@@ -15,11 +15,12 @@ class GalleryResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'image_url' => $this->image_url,
-            'property_id' => $this->property_id,
+            'imageUrl' => $this->image_url,
+            'propertyID' => $this->property_id,
             'title' => $this->title,
             'description' => $this->description,
-            'is_highlight' => $this->is_highlight,
+            'isHighlight' => $this->is_highlight,
+            'businessID' => $this->business_id,
         ];
     }
 }

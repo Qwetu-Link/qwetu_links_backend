@@ -2,12 +2,14 @@
 
 namespace App\Models\property;
 
+use App\Models\accounts\Business;
+use Database\Factories\Property\GalleryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Gallery extends Model
 {
-    /** @use HasFactory<\Database\Factories\Property\GalleryFactory> */
+    /** @use HasFactory<GalleryFactory> */
     use HasFactory;
 
     public $incrementing = false;
@@ -20,6 +22,7 @@ class Gallery extends Model
         'title',
         'description',
         'is_highlight',
+        'business_id',
     ];
 
     protected static function boot(): void
@@ -41,5 +44,10 @@ class Gallery extends Model
     public function property()
     {
         return $this->belongsTo(Property::class);
+    }
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
     }
 }

@@ -19,7 +19,7 @@ class BusinessFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => fake()->regexify('[A-F0-9]{12}'),
+            'id' => bin2hex(random_bytes(6)),
             'name' => fake()->company(),
             'slug' => fake()->slug(),
             'email' => fake()->email(),

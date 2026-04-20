@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->integer('bedrooms')->nullable();
             $table->integer('bathrooms')->nullable();
-            $table->decimal('square_meters', 8, 2);
+            $table->decimal('square_meters', 8, 2)->nullable();
 
             $table->string('business_id');
             $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');

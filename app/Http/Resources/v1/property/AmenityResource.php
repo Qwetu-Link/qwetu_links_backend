@@ -20,6 +20,7 @@ class AmenityResource extends JsonResource
             'icon' => $this->icon,
             'category' => $this->category,
             'description' => $this->description,
+            'businessID' => $this->business_id,
         ];
     }
 }

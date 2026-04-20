@@ -2,6 +2,7 @@
 
 namespace App\Models\property;
 
+use App\Models\accounts\Business;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,6 +20,7 @@ class Amenity extends Model
         'icon',
         'category',
         'description',
+        'business_id',
     ];
 
     protected function casts(): array
@@ -42,5 +44,10 @@ class Amenity extends Model
     private static function generateRandomID()
     {
         return bin2hex(random_bytes(6));
+    }
+
+    public function business()
+    {
+        return $this->belongsTo(Business::class);
     }
 }

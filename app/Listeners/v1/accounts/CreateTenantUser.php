@@ -53,6 +53,7 @@ class CreateTenantUser
             'next_of_kin_name' => $data['next_of_kin_name'],
             'next_of_kin_phone' => $data['next_of_kin_phone'],
             'is_active' => true,
+            'business_id' => $owner->business_id,
         ]);
 
         $business = Business::findOrFail($owner->business_id);

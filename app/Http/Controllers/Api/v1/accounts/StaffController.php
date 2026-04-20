@@ -28,9 +28,9 @@ class StaffController extends Controller
         if (count($filterItems) == 0) {
             return new StaffCollection(Staff::paginate());
         } else {
-            $staff = Staff::where($filterItems)->paginate();
+            $staff = Staff::where($filterItems)->paginate(5)->withQueryString();
 
-            return new StaffCollection($staff->appends($request->query()));
+            return new StaffCollection($staff);
         }
     }
 

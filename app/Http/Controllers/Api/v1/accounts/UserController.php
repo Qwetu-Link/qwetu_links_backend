@@ -35,7 +35,9 @@ class UserController extends Controller
             $user->with('tenant');
         }
 
-        return new UserCollection($user->paginate()->appends($request->query()));
+        $user = $user->paginate(5)->withQueryString();
+
+        return new UserCollection($user);
     }
 
     /**

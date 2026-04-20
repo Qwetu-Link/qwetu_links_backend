@@ -17,9 +17,13 @@ class PropertyUpdate
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public $property;
+    public $data;
+
+    public function __construct($property, array $data)
     {
-        //
+        $this->data = $data;
+        $this->property = $data;
     }
 
     /**

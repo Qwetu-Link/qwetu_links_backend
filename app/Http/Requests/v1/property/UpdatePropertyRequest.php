@@ -37,6 +37,20 @@ class UpdatePropertyRequest extends FormRequest
                 'bathrooms' => 'required|string|max:50',
                 'square_meters' => 'required|string|min:0',
                 'business_id' => 'required|string|exists:businesses,id',
+
+                'images' => 'required|array',
+                'images.*' => 'image|mimes:jpg,jpeg,png|max:2048',
+
+                'title' => 'nullable|array',
+                'title.*' => 'nullable|string',
+
+                'description' => 'nullable|array',
+                'description.*' => 'nullable|string',
+
+                'is_highlight' => 'nullable|array',
+
+                'amenity_id' => 'nullable|array',
+                'amenity_id.*' => 'required|string|exists:amenities,id',
             ];
         } else {
             return [
@@ -50,6 +64,20 @@ class UpdatePropertyRequest extends FormRequest
                 'bathrooms' => 'sometimes|required|string|max:50',
                 'square_meters' => 'sometimes|required|string|min:0',
                 'business_id' => 'sometimes|required|string|exists:businesses,id',
+
+                'images' => 'required|array',
+                'images.*' => 'sometimes|image|mimes:jpg,jpeg,png|max:2048',
+
+                'title' => 'nullable|array',
+                'title.*' => 'sometimes|nullable|string',
+
+                'description' => 'nullable|array',
+                'description.*' => 'sometimes|nullable|string',
+
+                'is_highlight' => 'sometimes|nullable|array',
+
+                'amenity_id' => 'nullable|array',
+                'amenity_id.*' => 'sometimes|required|string|exists:amenities,id',
             ];
         }
     }

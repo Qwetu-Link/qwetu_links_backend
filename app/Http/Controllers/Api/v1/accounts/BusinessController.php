@@ -24,16 +24,16 @@ class BusinessController extends Controller
         $filter = new BusinessFilter;
         $filterItems = $filter->transform($request); // [['column', 'operator', 'value']]
 
-        $includeUsers = $request->query('includeUsers');
+        // $includeUsers = $request->query('includeUsers');
 
-        // This applies filters to your query. and Split it into pages
-        $business = Business::where($filterItems);
+        // // This applies filters to your query. and Split it into pages
+        $business = Business::where($filterItems)->with(['users', 'property'])->paginate(5)->withQueryString();
 
-        if ($includeUsers) {
-            $business->with('users');
-        }
+        // if ($includeUsers) {
+        //     $business->with('users');
+        // }
 
-        $business = $business->paginate(5)->withQueryString();
+        // $business = $business->paginate(5)->withQueryString();
 
         // Appends -> It keeps your filters when switching pages.
         return new BusinessCollection($business);
@@ -81,11 +81,12 @@ class BusinessController extends Controller
      */
     public function show(Business $business)
     {
-        $includeUsers = request()->query('includeUsers');
+        // $includeUsers = request()->query('includeUsers');
 
-        if ($includeUsers) {
-            return new BusinessResource($business->loadMissing('users'));
-        }
+        // if ($includeUsers) {
+        //     return new BusinessResource($business->loadMissing('users'));
+        // }
+        $business->load(['users', 'property']);
 
         return new BusinessResource($business);
     }

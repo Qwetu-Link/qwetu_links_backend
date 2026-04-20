@@ -29,8 +29,8 @@ class UserResource extends JsonResource
             // 'address' => $this->address,
             // 'avatar' => $this->avatar,
             'isActive' => $this->is_active,
-            'staff' => new StaffResource($this->whenLoaded('staff')),
-            'tenant' => new TenantResource($this->whenLoaded('tenant')),
+            'staff' => StaffResource::collection($this->staff),
+            'tenant' => TenantResource::collection($this->tenant),
         ];
     }
 }

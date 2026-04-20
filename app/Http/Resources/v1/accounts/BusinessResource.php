@@ -29,7 +29,7 @@ class BusinessResource extends JsonResource
             'mpesaAccountNumber' => $this->mpesa_account_number,
             'mpesaTillNo' => $this->mpesa_till_no,
             'isActive' => $this->is_active,
-            'users' => UserResource::collection($this->whenLoaded('users')),
+            'users' => UserResource::collection($this->users),
         ];
     }
 }

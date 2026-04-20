@@ -6,6 +6,7 @@ use App\Models\accounts\Business;
 use Database\Factories\Property\GalleryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Gallery extends Model
 {
@@ -50,4 +51,13 @@ class Gallery extends Model
     {
         return $this->belongsTo(Business::class);
     }
+
+    protected static function booted()
+{
+    static::deleting(function ($gallery) {
+        if ($gallery->image_url && Storage::disk('public')->exists($gallery->image_url)) {
+            Storage::disk('public')->delete($gallery->image_url);
+        }
+    });
+}
 }

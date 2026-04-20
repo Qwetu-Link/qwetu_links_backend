@@ -4,7 +4,6 @@ namespace App\Listeners\v1\property;
 
 use App\Models\property\Gallery;
 use App\Models\property\Property;
-use App\Models\property\PropertyAmenities;
 
 class PropertyCreated
 {

@@ -36,16 +36,15 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'm
     Route::prefix('businesses/{business}')->group(function () {
         Route::apiResource('users', UserController::class);
         Route::apiResource('properties', PropertyController::class);
-        Route::apiResource('property-amenities', PropertyAmenitiesController::class);
+        // Route::apiResource('property-amenities', PropertyAmenitiesController::class);
 
         Route::apiResource('staff', StaffController::class);
         Route::apiResource('tenants', TenantController::class);
 
         Route::apiResource('units', UnitsController::class);
         Route::apiResource('amenities', AmenityController::class);
-        Route::apiResource('gallery', GalleryController::class);
+        // Route::apiResource('gallery', GalleryController::class);
         
-
         Route::post('/logout', [AuthController::class, 'logout']);
     });
 

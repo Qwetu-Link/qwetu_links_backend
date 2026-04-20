@@ -4,26 +4,25 @@ namespace App\Events\v1\property;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class PropertyCreated
+class UnitUpdated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
-    public $user;
-
-    public $data;
-
-    public $property;
 
     /**
      * Create a new event instance.
      */
-    public function __construct($user, array $data)
+    public $units;
+    public $data;
+
+    public function __construct($units, array $data)
     {
-        $this->user = $user;
+        $this->units = $units;
         $this->data = $data;
     }
 

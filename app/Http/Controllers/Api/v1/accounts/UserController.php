@@ -22,20 +22,20 @@ class UserController extends Controller
         $filterItems = $filter->transform($request); //[['column', 'operator', 'value']]
 
 
-        $includeStaff = $request->query('includeStaff');
-        $includeTenant = $request->query('includeTenant');
+        // $includeStaff = $request->query('includeStaff');
+        // $includeTenant = $request->query('includeTenant');
 
-        $user = User::where($filterItems);
+        $user = User::where($filterItems)->with(['staff', 'tenant'])->paginate(5)->withQueryString();
 
-        if ($includeStaff) {
-            $user->with('staff');
-        }
+        // if ($includeStaff) {
+        //     $user->with('staff');
+        // }
 
-        if ($includeTenant) {
-            $user->with('tenant');
-        }
+        // if ($includeTenant) {
+        //     $user->with('tenant');
+        // }
 
-        $user = $user->paginate(5)->withQueryString();
+        // $user = $user->paginate(5)->withQueryString();
 
         return new UserCollection($user);
     }
@@ -68,16 +68,17 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $includeStaff = request()->query('includeStaff');
-        $includeTenant = request()->query('includeTenant');
+        // $includeStaff = request()->query('includeStaff');
+        // $includeTenant = request()->query('includeTenant');
 
-        if ($includeStaff) {
-            return new UserResource($user->loadMissing('staff'));
-        }
+        // if ($includeStaff) {
+        //     return new UserResource($user->loadMissing('staff'));
+        // }
 
-        if ($includeTenant) {
-            return new UserResource($user->loadMissing('tenant'));
-        }
+        // if ($includeTenant) {
+        //     return new UserResource($user->loadMissing('tenant'));
+        // }
+        $user->load(['staff', 'tenant']);
         
         return new UserResource($user);
     }
@@ -103,6 +104,20 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        try {
+            $user->delete();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'User Deleted successfully',
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Delete User',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1\property;
 
 use App\Events\v1\property\PropertyCreated;
+use App\Events\v1\property\PropertyUpdate;
 use App\Filters\v1\property\PropertyFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\v1\property\StorePropertyRequest;
@@ -70,7 +71,7 @@ class PropertyController extends Controller
      */
     public function show(Property $property)
     {
-        
+
         $property->load(['units', 'gallery', 'amenities']);
 
         return new PropertyResource($property);
@@ -89,7 +90,26 @@ class PropertyController extends Controller
      */
     public function update(UpdatePropertyRequest $request, Property $property)
     {
-        //
+        try {
+            return DB::transaction(function () use ($property, $request) {
+
+                $event = new PropertyUpdate($property, $request->validated());
+
+                event($event);
+
+                return response()->json([
+                    'status' => true,
+                    'property' => new PropertyResource($property->fresh()),
+                    'message' => 'Property Updated Successfully',
+                ], 200);
+            });
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Property business',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     /**
@@ -97,6 +117,20 @@ class PropertyController extends Controller
      */
     public function destroy(Property $property)
     {
-        //
+        try {
+            $property->delete();
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Property Deleted successfully',
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Failed to Delete Property',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 }

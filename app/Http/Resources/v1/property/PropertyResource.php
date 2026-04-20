@@ -26,9 +26,20 @@ class PropertyResource extends JsonResource
             'bathrooms' => $this->bathrooms,
             'squareMeters' => $this->square_meters,
             'businessID' => $this->business_id,
-            'amenities' => new PropertyAmenityResource($this->whenLoaded('amenities')),
-            'units' => new UnitResource($this->whenLoaded('units')),
-            'gallery' => new GalleryResource($this->whenLoaded('gallery')),
+            'units' => UnitResource::collection($this->units),
+            'gallery' => GalleryResource::collection($this->gallery),
+            'amenities' => AmenityResource::collection($this->amenities),
+            // 'amenities' => PropertyAmenityResource::collection(
+            //     $this->whenLoaded('amenities')
+            // ),
+
+            // 'units' => UnitResource::collection(
+            //     $this->whenLoaded('units')
+            // ),
+
+            // 'gallery' => GalleryResource::collection(
+            //     $this->whenLoaded('gallery')
+            // ),
         ];
     }
 }

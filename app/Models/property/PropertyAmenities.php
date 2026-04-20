@@ -3,12 +3,13 @@
 namespace App\Models\property;
 
 use App\Models\accounts\Business;
+use Database\Factories\Property\PropertyAmenitiesFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class PropertyAmenities extends Model
 {
-    /** @use HasFactory<\Database\Factories\Property\PropertyAmenitiesFactory> */
+    /** @use HasFactory<PropertyAmenitiesFactory> */
     use HasFactory;
 
     public $incrementing = false;
@@ -24,7 +25,7 @@ class PropertyAmenities extends Model
     protected function casts(): array
     {
         return [
-            
+
         ];
     }
 

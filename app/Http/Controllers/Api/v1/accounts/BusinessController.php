@@ -90,6 +90,7 @@ class BusinessController extends Controller
         return new BusinessResource($business);
     }
 
+
     /**
      * Show the form for editing the specified resource.
      */

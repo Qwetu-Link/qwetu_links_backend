@@ -71,13 +71,22 @@ class Property extends Model
     // {
     //     return $this->belongsToMany(PropertyAmenities::class);
     // }
+    // public function amenities()
+    // {
+    //     return $this->belongsToMany(
+    //         Amenity::class,
+    //         'property_amenities', // 👈 IMPORTANT
+    //         'property_id',
+    //         'amenity_id'
+    //     );
+    // }
     public function amenities()
     {
-        return $this->belongsToMany(
-            Amenity::class,
-            'property_amenities', // 👈 IMPORTANT
-            'property_id',
-            'amenity_id'
-        );
+        return $this->hasMany(PropertyAmenities::class);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'id';
     }
 }

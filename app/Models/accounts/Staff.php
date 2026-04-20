@@ -53,10 +53,10 @@ class Staff extends Model
         return $this->belongsTo(User::class);
     }
 
-    // public function getRouteKeyName()
-    // {
-    //     return 'id'; // or uuid
-    // }
+    public function getRouteKeyName()
+    {
+        return 'id'; // or uuid
+    }
 
     public function business()
     {

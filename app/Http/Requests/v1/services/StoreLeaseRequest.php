@@ -12,7 +12,7 @@ class StoreLeaseRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,21 +23,32 @@ class StoreLeaseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'unit_number' => 'required|string|max:50',
+            'tenant_id' => 'required|string|exists:tenants,id',
+            'unit_id' => 'required|string|exists:units,id',
+            'start_date' => 'required|date',
+            'end_date' => 'nullable|date|after_or_equal:start_date',
             'rent_amount' => 'required|numeric|min:0',
-            'lease_start' => 'required|date',
-            'lease_end' => 'required|date|after_or_equal:lease_start',
+            'deposit_amount' => 'nullable|numeric|min:0',
+            'next_due_date' => 'nullable|date|after_or_equal:start_date',
+            'grace_period_days' => 'nullable|integer|min:0',
+            'late_fee' => 'nullable|numeric|min:0',
+            'notes' => 'nullable|string',
+            'status' => 'required|in:active,terminated,expired',
         ];
     }
 
     protected function prepareForValidation()
     {
         $this->merge([
-            // 'user_id' => $this->userID,
-            'unit_number' => $this->unitNumber,
+            'tenant_id' => $this->tenantID,
+            'unit_id' => $this->unitID,
+            'start_date' => $this->startDate,
+            'end_date' => $this->endDate,
             'rent_amount' => $this->rentAmount,
-            'lease_start' => $this->leaseStart,
-            'lease_end' => $this->leaseEnd,
+            'deposit_amount' => $this->depositAmount,
+            'next_due_date' => $this->nextDueDate,
+            'grace_period_days' => $this->gracePeriodDays,
+            'late_fee' => $this->lateFee,
         ]);
     }
 }

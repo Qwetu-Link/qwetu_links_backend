@@ -5,11 +5,14 @@ use App\Http\Controllers\Api\v1\accounts\BusinessController;
 use App\Http\Controllers\Api\v1\accounts\StaffController;
 use App\Http\Controllers\Api\v1\accounts\TenantController;
 use App\Http\Controllers\Api\v1\accounts\UserController;
+use App\Http\Controllers\Api\v1\finance\PaymentController;
 use App\Http\Controllers\Api\v1\property\AmenityController;
 use App\Http\Controllers\Api\v1\property\GalleryController;
 use App\Http\Controllers\Api\v1\property\PropertyAmenitiesController;
 use App\Http\Controllers\Api\v1\property\PropertyController;
 use App\Http\Controllers\Api\v1\property\UnitsController;
+use App\Http\Controllers\Api\v1\services\LeaseController;
+use App\Http\Controllers\Api\v1\services\MaintainanceController;
 use App\Http\Resources\v1\property\AmenityResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +45,10 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'm
 
         Route::apiResource('units', UnitsController::class);
         Route::apiResource('amenities', AmenityController::class);
+
+        Route::apiResource('leases', LeaseController::class);
+        Route::apiResource('payments', PaymentController::class);
+        Route::apiResource('maintainance', MaintainanceController::class);
         
         Route::post('/logout', [AuthController::class, 'logout']);
     });

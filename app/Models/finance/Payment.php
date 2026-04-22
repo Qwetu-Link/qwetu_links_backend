@@ -3,12 +3,13 @@
 namespace App\Models\finance;
 
 use App\Models\services\Lease;
+use Database\Factories\Services\PaymentFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Payment extends Model
 {
-    /** @use HasFactory<\Database\Factories\Services\PaymentFactory> */
+    /** @use HasFactory<PaymentFactory> */
     use HasFactory;
 
     public $incrementing = false;
@@ -16,15 +17,19 @@ class Payment extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        
+        'lease_id',
+        'amount',
+        'payment_date',
+        'payment_method',
+        'transaction_code',
+        'type',
+        'notes',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            
-        ];
-    }
+    protected $casts = [
+        'payment_date' => 'date',
+        'amount' => 'decimal:2',
+    ];
 
     protected static function boot(): void
     {

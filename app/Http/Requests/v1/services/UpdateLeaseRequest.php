@@ -12,7 +12,7 @@ class UpdateLeaseRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,66 +26,31 @@ class UpdateLeaseRequest extends FormRequest
 
         if ($method == 'PUT') {
             return [
-                'unit_number' => 'required|string|max:50',
+                'tenant_id' => 'required|string|exists:tenants,id',
+                'unit_id' => 'required|string|exists:units,id',
+                'start_date' => 'required|date',
+                'end_date' => 'nullable|date|after_or_equal:start_date',
                 'rent_amount' => 'required|numeric|min:0',
-                'lease_start' => 'required|date',
-                'lease_end' => 'required|date|after_or_equal:lease_start',
-                'next_of_kin_name' => 'required|string|max:255',
-                'next_of_kin_phone' => ['required', 'regex:/^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/'],
-                'is_active' => 'nullable|boolean',
-
-                // User Details
-                'username' => 'required|string|max:255',
-                'name' => 'required|string|max:255',
-                'email' => 'required|email|max:255|unique:users,email',
-                'phone' => [
-                    'required',
-                    'regex:/^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/',
-                ],
-                'emergency_contact_name' => 'nullable|string|max:255',
-                'emergency_contact_phone' => [
-                    'nullable',
-                    'regex:/^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/',
-                ],
-                'emergency_contact_relationship' => 'nullable|string|max:100',
-                'id_number' => 'nullable|string|max:50|unique:users,id_number',
-                'address' => 'nullable|string|max:500',
-                'avatar' => 'nullable|url|max:255',
-                // 'avatar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+                'deposit_amount' => 'nullable|numeric|min:0',
+                'next_due_date' => 'nullable|date|after_or_equal:start_date',
+                'grace_period_days' => 'nullable|integer|min:0',
+                'late_fee' => 'nullable|numeric|min:0',
+                'notes' => 'nullable|string',
+                'status' => 'required|in:active,terminated,expired',
             ];
         } else {
             return [
-                'unit_number' => 'sometimes|required|string|max:50',
+                'tenant_id' => 'sometimes|required|string|exists:tenants,id',
+                'unit_id' => 'sometimes|required|string|exists:units,id',
+                'start_date' => 'sometimes|required|date',
+                'end_date' => 'sometimes|nullable|date|after_or_equal:start_date',
                 'rent_amount' => 'sometimes|required|numeric|min:0',
-                'lease_start' => 'sometimes|required|date',
-                'lease_end' => 'sometimes|required|date|after_or_equal:lease_start',
-                'next_of_kin_name' => 'sometimes|required|string|max:255',
-                'next_of_kin_phone' => [
-                    'sometimes',
-                    'required',
-                    'regex:/^(07\d{8}|01\d{8}|254\d{9}|\+254\d{9})$/',
-                ],
-                'is_active' => 'sometimes|nullable|boolean',
-
-                // User Details
-                'username' => 'sometimes|required|string|max:255',
-                'name' => 'sometimes|required|string|max:255',
-                'email' => 'sometimes|required|email|max:255|unique:users,email',
-                'phone' => [
-                    'sometimes',
-                    'required',
-                    'regex:/^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/',
-                ],
-                'emergency_contact_name' => 'sometimes|nullable|string|max:255',
-                'emergency_contact_phone' => [
-                    'sometimes',
-                    'nullable',
-                    'regex:/^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/',
-                ],
-                'emergency_contact_relationship' => 'sometimes|nullable|string|max:100',
-                'id_number' => 'sometimes|nullable|string|max:50|unique:users,id_number',
-                'address' => 'sometimes|nullable|string|max:500',
-                'avatar' => 'sometimes|nullable|url|max:255',
+                'deposit_amount' => 'sometimes|nullable|numeric|min:0',
+                'next_due_date' => 'sometimes|nullable|date|after_or_equal:start_date',
+                'grace_period_days' => 'sometimes|nullable|integer|min:0',
+                'late_fee' => 'sometimes|nullable|numeric|min:0',
+                'notes' => 'sometimes|nullable|string',
+                'status' => 'sometimes|required|in:active,terminated,expired',
             ];
         }
     }
@@ -94,52 +59,40 @@ class UpdateLeaseRequest extends FormRequest
     {
         $data = [];
 
-        if ($this->exists('userID')) {
-            $data['user_id'] = $this->userID;
+        if ($this->has('unitID')) {
+            $data['unit_id'] = $this->unitID;
         }
 
-        if ($this->exists('unitNumber')) {
-            $data['unit_number'] = $this->unitNumber;
+        if ($this->has('tenantID')) {
+            $data['tenant_id'] = $this->tenantID;
         }
 
-        if ($this->exists('rentAmount')) {
+        if ($this->has('startDate')) {
+            $data['start_date'] = $this->startDate;
+        }
+
+        if ($this->has('endDate')) {
+            $data['end_date'] = $this->endDate;
+        }
+
+        if ($this->has('rentAmount')) {
             $data['rent_amount'] = $this->rentAmount;
         }
 
-        if ($this->exists('leaseStart')) {
-            $data['lease_start'] = $this->leaseStart;
+        if ($this->has('depositAmount')) {
+            $data['deposit_amount'] = $this->depositAmount;
         }
 
-        if ($this->exists('leaseEnd')) {
-            $data['lease_end'] = $this->leaseEnd;
+         if ($this->has('nextDueDate')) {
+            $data['next_due_date'] = $this->nextDueDate;
         }
 
-        if ($this->exists('next_of_kin_name')) {
-            $data['next_of_kin_name'] = $this->nextOfKinName;
+        if ($this->has('gracePeriodDays')) {
+            $data['grace_period_days'] = $this->gracePeriodDays;
         }
 
-        if ($this->exists('nextOfKinPhone')) {
-            $data['next_of_kin_phone'] = $this->nextOfKinPhone;
-        }
-
-        if ($this->exists('emergencyContactName')) {
-            $data['emergency_contact_name'] = $this->emergencyContactName;
-        }
-
-        if ($this->exists('emergencyContactPhone')) {
-            $data['emergency_contact_phone'] = $this->emergencyContactPhone;
-        }
-
-        if ($this->exists('emergencyContactRelationship')) {
-            $data['emergency_contact_relationship'] = $this->emergencyContactRelationship;
-        }
-
-        if ($this->exists('idNumber')) {
-            $data['id_number'] = $this->idNumber;
-        }
-
-        if ($this->exists('isActive')) {
-            $data['is_active'] = $this->isActive;
+        if ($this->has('lateFee')) {
+            $data['late_fee'] = $this->lateFee;
         }
 
         $this->merge($data);

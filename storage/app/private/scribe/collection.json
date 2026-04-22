@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Qwetu Links Rental API Documentation",
-        "_postman_id": "35eea578-ae7a-4362-be96-2d7b7b877bb6",
+        "_postman_id": "857744ac-5349-481d-b935-b7b954e807d7",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -445,7 +445,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"business_id\":\"consequatur\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
+                            "raw": "{\"business_id\":\"consequatur\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"tenant\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -552,7 +552,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"businessID\":\"consequatur\",\"name\":\"mqeopfuudtdsufvyvddqa\",\"username\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"tenant\",\"phone\":\"+254771772898\",\"emergencyContactName\":\"ddqamniihfqcoynlazghd\",\"emergencyContactPhone\":\"+254771772898\",\"emergencyContactRelationship\":\"ddqamniihfqcoynlazghd\",\"idNumber\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"isActive\":false}"
+                            "raw": "{\"businessID\":\"consequatur\",\"name\":\"mqeopfuudtdsufvyvddqa\",\"username\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergencyContactName\":\"ddqamniihfqcoynlazghd\",\"emergencyContactPhone\":\"+254771772898\",\"emergencyContactRelationship\":\"ddqamniihfqcoynlazghd\",\"idNumber\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"isActive\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -1082,7 +1082,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-16\",\"employment_type\":\"temporary\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
+                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-17\",\"employment_type\":\"full_time\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -1189,7 +1189,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-16\",\"employment_type\":\"contract\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
+                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-17\",\"employment_type\":\"full_time\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -1326,7 +1326,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":false,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"password\":\"#lz.KcLcDi`wmU\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
+                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":false,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"password\":\"#lz.KcLcDi`wmU\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1950,6 +1950,738 @@
                                     "key": "id",
                                     "value": "6d29d42e9619",
                                     "description": "The ID of the amenity."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/leases",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/leases",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/leases",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/leases",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"tenant_id\":\"consequatur\",\"unit_id\":\"consequatur\",\"start_date\":\"2026-04-22T06:49:51\",\"end_date\":\"2107-05-21\",\"rent_amount\":45,\"deposit_amount\":56,\"next_due_date\":\"2107-05-21\",\"grace_period_days\":45,\"late_fee\":56,\"notes\":\"consequatur\",\"status\":\"active\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/leases\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/leases\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the lease."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/leases\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/leases\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the lease."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"tenant_id\":\"consequatur\",\"unit_id\":\"consequatur\",\"start_date\":\"2026-04-22T06:49:51\",\"end_date\":\"2107-05-21\",\"rent_amount\":45,\"deposit_amount\":56,\"next_due_date\":\"2107-05-21\",\"grace_period_days\":45,\"late_fee\":56,\"notes\":\"consequatur\",\"status\":\"active\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/leases\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/leases\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the lease."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/payments",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/payments",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/payments",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/payments",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"lease_id\":\"consequatur\",\"amount\":45,\"payment_date\":\"2026-04-22T06:49:51\",\"payment_method\":\"cash\",\"transaction_code\":\"qeopfuudtdsufvyvddqam\",\"type\":\"penalty\",\"notes\":\"consequatur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/payments\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/payments\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the payment."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/payments\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/payments\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the payment."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"lease_id\":\"consequatur\",\"amount\":45,\"payment_date\":\"2026-04-22T06:49:51\",\"payment_method\":\"mpesa\",\"transaction_code\":\"qeopfuudtdsufvyvddqam\",\"type\":\"penalty\",\"notes\":\"consequatur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/payments\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/payments\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the payment."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/maintainance",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/maintainance",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/maintainance",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/maintainance",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"unit_id\":\"consequatur\",\"tenant_id\":\"consequatur\",\"title\":\"mqeopfuudtdsufvyvddqa\",\"issue\":\"consequatur\",\"priority\":\"low\",\"status\":\"pending\",\"reported_date\":\"2026-04-22T06:49:51\",\"resolved_date\":\"2107-05-21\",\"cost\":45,\"notes\":\"consequatur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/maintainance\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/maintainance\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the maintainance."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/maintainance\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/maintainance\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the maintainance."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"unit_id\":\"consequatur\",\"tenant_id\":\"consequatur\",\"title\":\"mqeopfuudtdsufvyvddqa\",\"issue\":\"consequatur\",\"priority\":\"low\",\"status\":\"resolved\",\"reported_date\":\"2026-04-22T06:49:51\",\"resolved_date\":\"2107-05-21\",\"cost\":45,\"notes\":\"consequatur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/businesses\/:business\/maintainance\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/businesses\/:business\/maintainance\/:id",
+                            "variable": [
+                                {
+                                    "id": "business",
+                                    "key": "business",
+                                    "value": "consequatur",
+                                    "description": "The business."
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": "The ID of the maintainance."
                                 }
                             ]
                         },

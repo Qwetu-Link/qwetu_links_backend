@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('lease_id');
-
             $table->decimal('amount', 10, 2);
             $table->date('payment_date');
-            $table->string('payment_method')->nullable();
-
+            $table->enum('payment_method', ['cash', 'mpesa', 'bank'])->default('cash');
+            $table->string('transaction_code')->nullable();
+            $table->enum('type', ['rent', 'deposit', 'penalty'])->default('rent');
+            $table->text('notes')->nullable();
             $table->foreign('lease_id')->references('id')->on('leases')->onDelete('cascade');
             $table->timestamps();
         });

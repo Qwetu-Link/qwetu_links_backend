@@ -14,6 +14,19 @@ class LeaseResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'tenantID' => $this->tenant_id,
+            'unitID' => $this->unit_id,
+            'startDate' => $this->start_date,
+            'endDate' => $this->end_date,
+            'rentDmount' => $this->rent_amount,
+            'depositAmount' => $this->deposit_amount,
+            'nextDueDate' => $this->next_due_date,
+            'gracePeriodDays' => $this->grace_period_days,
+            'lateFee' => $this->late_fee,
+            'notes' => $this->notes,
+            'status' => $this->status,
+        ];
     }
 }

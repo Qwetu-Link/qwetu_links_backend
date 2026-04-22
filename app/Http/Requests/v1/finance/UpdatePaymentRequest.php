@@ -12,7 +12,7 @@ class UpdatePaymentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,8 +22,50 @@ class UpdatePaymentRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+        $method = $this->method();
+        if ($method == 'PUT') {
+            return [
+                'lease_id' => 'required|string|exists:leases,id',
+                'amount' => 'required|numeric|min:0',
+                'payment_date' => 'required|date',
+                'payment_method' => 'required|in:cash,mpesa,bank',
+                'transaction_code' => 'nullable|string|max:100',
+                'type' => 'required|in:rent,deposit,penalty',
+                'notes' => 'nullable|string',
+            ];
+        } else {
+            return [
+                'lease_id' => 'sometimes|required|string|exists:leases,id',
+                'amount' => 'sometimes|required|numeric|min:0',
+                'payment_date' => 'sometimes|required|date',
+                'payment_method' => 'sometimes|required|in:cash,mpesa,bank',
+                'transaction_code' => 'sometimes|nullable|string|max:100',
+                'type' => 'sometimes|required|in:rent,deposit,penalty',
+                'notes' => 'sometimes|nullable|string',
+            ];
+        }
+    }
+
+    protected function prepareForValidation()
+    {
+        $data = [];
+
+        if ($this->has('leaseID')) {
+            $data['lease_id'] = $this->leaseID;
+        }
+
+        if ($this->has('paymentDate')) {
+            $data['payment_date'] = $this->paymentDate;
+        }
+
+        if ($this->has('paymentMethod')) {
+            $data['payment_method'] = $this->paymentMethod;
+        }
+
+        if ($this->has('transactionCode')) {
+            $data['transaction_code'] = $this->transactionCode;
+        }
+
+        $this->merge($data);
     }
 }

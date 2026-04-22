@@ -15,8 +15,16 @@ return new class extends Migration
             $table->string('id')->primary();
             $table->string('unit_id');
             $table->string('tenant_id')->nullable();
+            $table->string('title');
             $table->text('issue');
+            $table->enum('priority', ['low', 'medium', 'high'])->default('medium');
             $table->enum('status', ['pending', 'in_progress', 'resolved'])->default('pending');
+            $table->date('reported_date')->nullable();
+            $table->date('resolved_date')->nullable(); 
+            $table->decimal('cost', 10, 2)->nullable();
+            $table->text('notes')->nullable();
+            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('set null');
             $table->timestamps();
         });
     }

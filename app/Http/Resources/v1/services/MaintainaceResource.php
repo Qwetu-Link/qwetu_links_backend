@@ -14,6 +14,18 @@ class MaintainaceResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'unitID' => $this->unit_id,
+            'tenantID' => $this->tenant_id,
+            'title' => $this->title,
+            'issue' => $this->issue,
+            'priority' => $this->priority,
+            'status' => $this->status,
+            'reportedDate' => $this->reported_date,
+            'resolvedDate' => $this->resolved_date,
+            'cost' => $this->cost,
+            'notes' => $this->notes,
+        ];
     }
 }

@@ -426,7 +426,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: tenant
                   enum:
                     - owner
                     - tenant
@@ -548,7 +548,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: tenant
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -942,11 +942,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-16'
+                  example: '2020-08-17'
                 employment_type:
                   type: string
                   description: ''
-                  example: temporary
+                  example: full_time
                   enum:
                     - full_time
                     - part_time
@@ -972,7 +972,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -1014,7 +1014,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - position
                 - department
@@ -1116,11 +1116,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-16'
+                  example: '2020-08-17'
                 employment_type:
                   type: string
                   description: ''
-                  example: contract
+                  example: full_time
                   enum:
                     - full_time
                     - part_time
@@ -1176,7 +1176,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - position
                 - department
@@ -1274,7 +1274,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -1803,6 +1803,665 @@ paths:
         name: id
         description: 'The ID of the amenity.'
         example: 6d29d42e9619
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/leases':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tenant_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the tenants table.'
+                  example: consequatur
+                unit_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the units table.'
+                  example: consequatur
+                start_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T06:49:51'
+                end_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+                  example: '2107-05-21'
+                  nullable: true
+                rent_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 45
+                deposit_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 56
+                  nullable: true
+                next_due_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+                  example: '2107-05-21'
+                  nullable: true
+                grace_period_days:
+                  type: integer
+                  description: 'Must be at least 0.'
+                  example: 45
+                  nullable: true
+                late_fee:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 56
+                  nullable: true
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                  nullable: true
+                status:
+                  type: string
+                  description: ''
+                  example: active
+                  enum:
+                    - active
+                    - terminated
+                    - expired
+              required:
+                - tenant_id
+                - unit_id
+                - start_date
+                - rent_amount
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/leases/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tenant_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the tenants table.'
+                  example: consequatur
+                unit_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the units table.'
+                  example: consequatur
+                start_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T06:49:51'
+                end_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+                  example: '2107-05-21'
+                  nullable: true
+                rent_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 45
+                deposit_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 56
+                  nullable: true
+                next_due_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+                  example: '2107-05-21'
+                  nullable: true
+                grace_period_days:
+                  type: integer
+                  description: 'Must be at least 0.'
+                  example: 45
+                  nullable: true
+                late_fee:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 56
+                  nullable: true
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                  nullable: true
+                status:
+                  type: string
+                  description: ''
+                  example: active
+                  enum:
+                    - active
+                    - terminated
+                    - expired
+              required:
+                - tenant_id
+                - unit_id
+                - start_date
+                - rent_amount
+                - status
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the lease.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/payments':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lease_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the leases table.'
+                  example: consequatur
+                amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 45
+                payment_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T06:49:51'
+                payment_method:
+                  type: string
+                  description: ''
+                  example: cash
+                  enum:
+                    - cash
+                    - mpesa
+                    - bank
+                transaction_code:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: qeopfuudtdsufvyvddqam
+                  nullable: true
+                type:
+                  type: string
+                  description: ''
+                  example: penalty
+                  enum:
+                    - rent
+                    - deposit
+                    - penalty
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                  nullable: true
+              required:
+                - lease_id
+                - amount
+                - payment_date
+                - payment_method
+                - type
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/payments/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lease_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the leases table.'
+                  example: consequatur
+                amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 45
+                payment_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T06:49:51'
+                payment_method:
+                  type: string
+                  description: ''
+                  example: mpesa
+                  enum:
+                    - cash
+                    - mpesa
+                    - bank
+                transaction_code:
+                  type: string
+                  description: 'Must not be greater than 100 characters.'
+                  example: qeopfuudtdsufvyvddqam
+                  nullable: true
+                type:
+                  type: string
+                  description: ''
+                  example: penalty
+                  enum:
+                    - rent
+                    - deposit
+                    - penalty
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                  nullable: true
+              required:
+                - lease_id
+                - amount
+                - payment_date
+                - payment_method
+                - type
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the payment.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/maintainance':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the units table.'
+                  example: consequatur
+                tenant_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the tenants table.'
+                  example: consequatur
+                  nullable: true
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                issue:
+                  type: string
+                  description: ''
+                  example: consequatur
+                priority:
+                  type: string
+                  description: ''
+                  example: low
+                  enum:
+                    - low
+                    - medium
+                    - high
+                status:
+                  type: string
+                  description: ''
+                  example: pending
+                  enum:
+                    - pending
+                    - in_progress
+                    - resolved
+                reported_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T06:49:51'
+                resolved_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
+                  example: '2107-05-21'
+                  nullable: true
+                cost:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 45
+                  nullable: true
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                  nullable: true
+              required:
+                - unit_id
+                - title
+                - issue
+                - priority
+                - status
+                - reported_date
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/maintainance/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the units table.'
+                  example: consequatur
+                tenant_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the tenants table.'
+                  example: consequatur
+                  nullable: true
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                issue:
+                  type: string
+                  description: ''
+                  example: consequatur
+                priority:
+                  type: string
+                  description: ''
+                  example: low
+                  enum:
+                    - low
+                    - medium
+                    - high
+                status:
+                  type: string
+                  description: ''
+                  example: resolved
+                  enum:
+                    - pending
+                    - in_progress
+                    - resolved
+                reported_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T06:49:51'
+                resolved_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
+                  example: '2107-05-21'
+                  nullable: true
+                cost:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 45
+                  nullable: true
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                  nullable: true
+              required:
+                - unit_id
+                - title
+                - issue
+                - priority
+                - status
+                - reported_date
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the maintainance.'
+        example: consequatur
         required: true
         schema:
           type: string

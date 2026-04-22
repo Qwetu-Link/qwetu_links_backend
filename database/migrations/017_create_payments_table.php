@@ -21,6 +21,8 @@ return new class extends Migration
             $table->enum('type', ['rent', 'deposit', 'penalty'])->default('rent');
             $table->text('notes')->nullable();
             $table->string('business_id');
+            $table->string('invoice_id')->nullable();
+            $table->foreign('invoice_id')->references('id')->on('invoices')->nullOnDelete();
             $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
             $table->foreign('lease_id')->references('id')->on('leases')->onDelete('cascade');
             $table->timestamps();

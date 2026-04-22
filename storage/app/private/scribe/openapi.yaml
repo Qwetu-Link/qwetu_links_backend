@@ -328,7 +328,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: true
                 username:
                   type: string
@@ -362,7 +362,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the business.'
-        example: 23c4c1828117
+        example: a34f733fda33
         required: true
         schema:
           type: string
@@ -426,7 +426,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: tenant
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -468,7 +468,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - business_id
                 - username
@@ -548,7 +548,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -621,7 +621,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: 0e91d517fe20
+        example: 534a78a988d7
         required: true
         schema:
           type: string
@@ -886,7 +886,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the property.'
-        example: 5c8207d62da1
+        example: 09686830bf3a
         required: true
         schema:
           type: string
@@ -942,11 +942,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-17'
+                  example: '2020-08-18'
                 employment_type:
                   type: string
                   description: ''
-                  example: full_time
+                  example: temporary
                   enum:
                     - full_time
                     - part_time
@@ -972,7 +972,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: tenant
                   enum:
                     - owner
                     - tenant
@@ -1014,7 +1014,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - position
                 - department
@@ -1073,7 +1073,7 @@ paths:
         in: path
         name: business_id
         description: 'The ID of the business.'
-        example: 23c4c1828117
+        example: a34f733fda33
         required: true
         schema:
           type: string
@@ -1081,7 +1081,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the staff.'
-        example: 898a390007c4
+        example: b9ece24fff4b
         required: true
         schema:
           type: string
@@ -1116,7 +1116,7 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-17'
+                  example: '2020-08-18'
                 employment_type:
                   type: string
                   description: ''
@@ -1176,7 +1176,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - position
                 - department
@@ -1201,7 +1201,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the staff.'
-        example: 898a390007c4
+        example: b9ece24fff4b
         required: true
         schema:
           type: string
@@ -1253,7 +1253,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 username:
                   type: string
@@ -1368,7 +1368,7 @@ paths:
         in: path
         name: business_id
         description: 'The ID of the business.'
-        example: 23c4c1828117
+        example: a34f733fda33
         required: true
         schema:
           type: string
@@ -1376,7 +1376,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the tenant.'
-        example: 2caf4dadc752
+        example: 0dc7861f6248
         required: true
         schema:
           type: string
@@ -1476,7 +1476,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the tenant.'
-        example: 2caf4dadc752
+        example: 0dc7861f6248
         required: true
         schema:
           type: string
@@ -1649,7 +1649,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the unit.'
-        example: 01df064d8e45
+        example: 05fb7b32da8b
         required: true
         schema:
           type: string
@@ -1802,7 +1802,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the amenity.'
-        example: 6d29d42e9619
+        example: 010a13f701ea
         required: true
         schema:
           type: string
@@ -1854,11 +1854,11 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T06:49:51'
+                  example: '2026-04-22T15:32:40'
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-21'
+                  example: '2107-05-22'
                   nullable: true
                 rent_amount:
                   type: number
@@ -1872,7 +1872,7 @@ paths:
                 next_due_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-21'
+                  example: '2107-05-22'
                   nullable: true
                 grace_period_days:
                   type: integer
@@ -1961,11 +1961,11 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T06:49:51'
+                  example: '2026-04-22T15:32:40'
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-21'
+                  example: '2107-05-22'
                   nullable: true
                 rent_amount:
                   type: number
@@ -1979,7 +1979,7 @@ paths:
                 next_due_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-21'
+                  example: '2107-05-22'
                   nullable: true
                 grace_period_days:
                   type: integer
@@ -1999,7 +1999,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: active
+                  example: terminated
                   enum:
                     - active
                     - terminated
@@ -2033,6 +2033,339 @@ paths:
         in: path
         name: id
         description: 'The ID of the lease.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/invoices':
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lease_id:
+                  type: string
+                  description: ''
+                  example: consequatur
+                0:
+                  type: string
+                  description: ''
+                  example: consequatur
+                tenant_id:
+                  type: string
+                  description: ''
+                  example: consequatur
+                1:
+                  type: string
+                  description: ''
+                  example: partial
+                  enum:
+                    - pending
+                    - paid
+                    - partial
+                    - overdue
+                invoice_number:
+                  type: string
+                  description: ''
+                  example: consequatur
+                2:
+                  type: string
+                  description: 'Must be a date after or equal to <code>issue_date</code>.'
+                  example: '2107-05-22'
+                3:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T15:32:40'
+                4:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T15:32:40'
+                amount:
+                  type: string
+                  description: ''
+                  example: consequatur
+                5:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+                6:
+                  type: number
+                  description: ''
+                  example: 11613.31890586
+                paid_amount:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: true
+                7:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: opfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvo
+                8:
+                  type: number
+                  description: ''
+                  example: 11613.31890586
+                balance:
+                  type: string
+                  description: ''
+                  example: consequatur
+                9:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+                10:
+                  type: number
+                  description: ''
+                  example: 11613.31890586
+                issue_date:
+                  type: string
+                  description: ''
+                  example: consequatur
+                11:
+                  type: string
+                  description: ''
+                  example: null
+                due_date:
+                  type: string
+                  description: ''
+                  example: consequatur
+                12:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                13:
+                  type: string
+                  description: ''
+                  example: consequatur
+                status:
+                  type: string
+                  description: ''
+                  example: consequatur
+                14:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the tenants table.'
+                  example: null
+                notes:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: true
+                15:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the leases table.'
+                  example: null
+              required:
+                - lease_id
+                - tenant_id
+                - invoice_number
+                - amount
+                - balance
+                - issue_date
+                - due_date
+                - status
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  '/api/v1/businesses/{business}/invoices/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                invoice_number:
+                  type: string
+                  description: ''
+                  example: consequatur
+                0:
+                  type: string
+                  description: ''
+                  example: consequatur
+                1:
+                  type: string
+                  description: ''
+                  example: paid
+                  enum:
+                    - pending
+                    - paid
+                    - partial
+                    - overdue
+                2:
+                  type: string
+                  description: 'Must be a date after or equal to <code>issue_date</code>.'
+                  example: '2107-05-22'
+                amount:
+                  type: string
+                  description: ''
+                  example: consequatur
+                3:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T15:32:40'
+                4:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2026-04-22T15:32:40'
+                paid_amount:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: true
+                5:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+                6:
+                  type: number
+                  description: ''
+                  example: 11613.31890586
+                balance:
+                  type: string
+                  description: ''
+                  example: consequatur
+                7:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+                8:
+                  type: number
+                  description: ''
+                  example: 11613.31890586
+                issue_date:
+                  type: string
+                  description: ''
+                  example: consequatur
+                9:
+                  type: string
+                  description: 'Must be at least 0 characters.'
+                  example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+                due_date:
+                  type: string
+                  description: ''
+                  example: consequatur
+                10:
+                  type: number
+                  description: ''
+                  example: 11613.31890586
+                11:
+                  type: string
+                  description: ''
+                  example: null
+                status:
+                  type: string
+                  description: ''
+                  example: consequatur
+                12:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: mqeopfuudtdsufvyvddqa
+                notes:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: true
+                13:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - invoice_number
+                - amount
+                - balance
+                - issue_date
+                - due_date
+                - status
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: business
+        description: 'The business.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the invoice.'
         example: consequatur
         required: true
         schema:
@@ -2078,6 +2411,10 @@ paths:
                   type: string
                   description: 'The <code>id</code> of an existing record in the leases table.'
                   example: consequatur
+                invoice_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the invoices table.'
+                  example: consequatur
                 amount:
                   type: number
                   description: 'Must be at least 0.'
@@ -2085,7 +2422,7 @@ paths:
                 payment_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T06:49:51'
+                  example: '2026-04-22T15:32:40'
                 payment_method:
                   type: string
                   description: ''
@@ -2114,6 +2451,7 @@ paths:
                   nullable: true
               required:
                 - lease_id
+                - invoice_id
                 - amount
                 - payment_date
                 - payment_method
@@ -2169,6 +2507,10 @@ paths:
                   type: string
                   description: 'The <code>id</code> of an existing record in the leases table.'
                   example: consequatur
+                invoice_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the invoices table.'
+                  example: consequatur
                 amount:
                   type: number
                   description: 'Must be at least 0.'
@@ -2176,11 +2518,11 @@ paths:
                 payment_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T06:49:51'
+                  example: '2026-04-22T15:32:40'
                 payment_method:
                   type: string
                   description: ''
-                  example: mpesa
+                  example: bank
                   enum:
                     - cash
                     - mpesa
@@ -2205,6 +2547,7 @@ paths:
                   nullable: true
               required:
                 - lease_id
+                - invoice_id
                 - amount
                 - payment_date
                 - payment_method
@@ -2309,11 +2652,11 @@ paths:
                 reported_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T06:49:51'
+                  example: '2026-04-22T15:32:40'
                 resolved_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
-                  example: '2107-05-21'
+                  example: '2107-05-22'
                   nullable: true
                 cost:
                   type: number
@@ -2415,11 +2758,11 @@ paths:
                 reported_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T06:49:51'
+                  example: '2026-04-22T15:32:40'
                 resolved_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
-                  example: '2107-05-21'
+                  example: '2107-05-22'
                   nullable: true
                 cost:
                   type: number

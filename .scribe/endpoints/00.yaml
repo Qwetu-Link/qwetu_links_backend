@@ -423,14 +423,14 @@ endpoints:
         name: id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 23c4c1828117
+      id: a34f733fda33
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -476,14 +476,14 @@ endpoints:
         name: id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 23c4c1828117
+      id: a34f733fda33
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -668,7 +668,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -713,7 +713,7 @@ endpoints:
       mpesa_till_no: efbeilfzsyuxoezbd
       industry: tabptcyyerevrljcbwkth
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      is_active: true
+      is_active: false
       username: dtdsufvyvddqamniihfqc
       avatar: oynlazghdtqtqxbajwbpi
     fileParameters: []
@@ -747,14 +747,14 @@ endpoints:
         name: id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 23c4c1828117
+      id: a34f733fda33
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -913,7 +913,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: tenant
+        example: owner
         type: string
         enumValues:
           - owner
@@ -1004,7 +1004,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -1016,7 +1016,7 @@ endpoints:
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: tenant
+      role: owner
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -1024,7 +1024,7 @@ endpoints:
       id_number: tqtqxbajwbpilpmufinll
       address: wloauydlsmsjuryvojcyb
       avatar: zvrbyickznkygloigmkwx
-      is_active: true
+      is_active: false
     fileParameters: []
     responses: []
     responseFields: []
@@ -1067,7 +1067,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 0e91d517fe20
+        example: 534a78a988d7
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1075,7 +1075,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 0e91d517fe20
+      id: 534a78a988d7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1132,7 +1132,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 0e91d517fe20
+        example: 534a78a988d7
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1140,7 +1140,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 0e91d517fe20
+      id: 534a78a988d7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1204,7 +1204,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: owner
+        example: staff
         type: string
         enumValues:
           - owner
@@ -1307,7 +1307,7 @@ endpoints:
       username: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: owner
+      role: staff
       phone: '+254771772898'
       emergencyContactName: ddqamniihfqcoynlazghd
       emergencyContactPhone: '+254771772898'
@@ -1358,7 +1358,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 0e91d517fe20
+        example: 534a78a988d7
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1366,7 +1366,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 0e91d517fe20
+      id: 534a78a988d7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1659,7 +1659,7 @@ endpoints:
         name: id
         description: 'The ID of the property.'
         required: true
-        example: 5c8207d62da1
+        example: 09686830bf3a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1667,7 +1667,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 5c8207d62da1
+      id: 09686830bf3a
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1724,7 +1724,7 @@ endpoints:
         name: id
         description: 'The ID of the property.'
         required: true
-        example: 5c8207d62da1
+        example: 09686830bf3a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1732,7 +1732,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 5c8207d62da1
+      id: 09686830bf3a
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1954,7 +1954,7 @@ endpoints:
         name: id
         description: 'The ID of the property.'
         required: true
-        example: 5c8207d62da1
+        example: 09686830bf3a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1962,7 +1962,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 5c8207d62da1
+      id: 09686830bf3a
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2099,7 +2099,7 @@ endpoints:
         name: hire_date
         description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
         required: true
-        example: '2020-08-17'
+        example: '2020-08-18'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2110,7 +2110,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: full_time
+        example: temporary
         type: string
         enumValues:
           - full_time
@@ -2170,7 +2170,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: owner
+        example: tenant
         type: string
         enumValues:
           - owner
@@ -2261,7 +2261,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2271,13 +2271,13 @@ endpoints:
       position: vmqeopfuudtdsufvyvddq
       department: amniihfqcoynlazghdtqt
       salary: 16
-      hire_date: '2020-08-17'
-      employment_type: full_time
+      hire_date: '2020-08-18'
+      employment_type: temporary
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: owner
+      role: tenant
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -2285,7 +2285,7 @@ endpoints:
       id_number: tqtqxbajwbpilpmufinll
       address: wloauydlsmsjuryvojcyb
       avatar: zvrbyickznkygloigmkwx
-      is_active: true
+      is_active: false
     fileParameters: []
     responses: []
     responseFields: []
@@ -2317,7 +2317,7 @@ endpoints:
         name: business_id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2328,15 +2328,15 @@ endpoints:
         name: id
         description: 'The ID of the staff.'
         required: true
-        example: 898a390007c4
+        example: b9ece24fff4b
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      business_id: 23c4c1828117
-      id: 898a390007c4
+      business_id: a34f733fda33
+      id: b9ece24fff4b
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2393,7 +2393,7 @@ endpoints:
         name: id
         description: 'The ID of the staff.'
         required: true
-        example: 898a390007c4
+        example: b9ece24fff4b
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2401,7 +2401,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 898a390007c4
+      id: b9ece24fff4b
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -2443,7 +2443,7 @@ endpoints:
         name: hire_date
         description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
         required: true
-        example: '2020-08-17'
+        example: '2020-08-18'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2580,7 +2580,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2590,7 +2590,7 @@ endpoints:
       position: vmqeopfuudtdsufvyvddq
       department: amniihfqcoynlazghdtqt
       salary: 16
-      hire_date: '2020-08-17'
+      hire_date: '2020-08-18'
       employment_type: full_time
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
@@ -2602,7 +2602,7 @@ endpoints:
       id_number: tqtqxbajwbpilpmufinll
       address: wloauydlsmsjuryvojcyb
       avatar: zvrbyickznkygloigmkwx
-      is_active: true
+      is_active: false
     fileParameters: []
     responses: []
     responseFields: []
@@ -2634,7 +2634,7 @@ endpoints:
         name: business_id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2645,15 +2645,15 @@ endpoints:
         name: id
         description: 'The ID of the staff.'
         required: true
-        example: 898a390007c4
+        example: b9ece24fff4b
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      business_id: 23c4c1828117
-      id: 898a390007c4
+      business_id: a34f733fda33
+      id: b9ece24fff4b
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2779,7 +2779,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2923,7 +2923,7 @@ endpoints:
     cleanBodyParameters:
       next_of_kin_name: vmqeopfuudtdsufvyvddq
       next_of_kin_phone: '0777171772'
-      is_active: false
+      is_active: true
       username: vyvddqamniihfqcoynlaz
       name: ghdtqtqxbajwbpilpmufi
       email: hilton86@example.org
@@ -2967,7 +2967,7 @@ endpoints:
         name: business_id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2978,15 +2978,15 @@ endpoints:
         name: id
         description: 'The ID of the tenant.'
         required: true
-        example: 2caf4dadc752
+        example: 0dc7861f6248
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      business_id: 23c4c1828117
-      id: 2caf4dadc752
+      business_id: a34f733fda33
+      id: 0dc7861f6248
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3043,7 +3043,7 @@ endpoints:
         name: id
         description: 'The ID of the tenant.'
         required: true
-        example: 2caf4dadc752
+        example: 0dc7861f6248
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3051,7 +3051,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 2caf4dadc752
+      id: 0dc7861f6248
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -3243,7 +3243,7 @@ endpoints:
         name: business_id
         description: 'The ID of the business.'
         required: true
-        example: 23c4c1828117
+        example: a34f733fda33
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3254,15 +3254,15 @@ endpoints:
         name: id
         description: 'The ID of the tenant.'
         required: true
-        example: 2caf4dadc752
+        example: 0dc7861f6248
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      business_id: 23c4c1828117
-      id: 2caf4dadc752
+      business_id: a34f733fda33
+      id: 0dc7861f6248
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3476,7 +3476,7 @@ endpoints:
         name: id
         description: 'The ID of the unit.'
         required: true
-        example: 01df064d8e45
+        example: 05fb7b32da8b
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3484,7 +3484,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 01df064d8e45
+      id: 05fb7b32da8b
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3541,7 +3541,7 @@ endpoints:
         name: id
         description: 'The ID of the unit.'
         required: true
-        example: 01df064d8e45
+        example: 05fb7b32da8b
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3549,7 +3549,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 01df064d8e45
+      id: 05fb7b32da8b
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -3668,7 +3668,7 @@ endpoints:
         name: id
         description: 'The ID of the unit.'
         required: true
-        example: 01df064d8e45
+        example: 05fb7b32da8b
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3676,7 +3676,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 01df064d8e45
+      id: 05fb7b32da8b
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3866,7 +3866,7 @@ endpoints:
         name: id
         description: 'The ID of the amenity.'
         required: true
-        example: 6d29d42e9619
+        example: 010a13f701ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3874,7 +3874,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 6d29d42e9619
+      id: 010a13f701ea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3931,7 +3931,7 @@ endpoints:
         name: id
         description: 'The ID of the amenity.'
         required: true
-        example: 6d29d42e9619
+        example: 010a13f701ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3939,7 +3939,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 6d29d42e9619
+      id: 010a13f701ea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -4034,7 +4034,7 @@ endpoints:
         name: id
         description: 'The ID of the amenity.'
         required: true
-        example: 6d29d42e9619
+        example: 010a13f701ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4042,7 +4042,7 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       business: consequatur
-      id: 6d29d42e9619
+      id: 010a13f701ea
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4168,7 +4168,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T06:49:51'
+        example: '2026-04-22T15:32:40'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4179,7 +4179,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-21'
+        example: '2107-05-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4212,7 +4212,7 @@ endpoints:
         name: next_due_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-21'
+        example: '2107-05-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4268,11 +4268,11 @@ endpoints:
     cleanBodyParameters:
       tenant_id: consequatur
       unit_id: consequatur
-      start_date: '2026-04-22T06:49:51'
-      end_date: '2107-05-21'
+      start_date: '2026-04-22T15:32:40'
+      end_date: '2107-05-22'
       rent_amount: 45
       deposit_amount: 56
-      next_due_date: '2107-05-21'
+      next_due_date: '2107-05-22'
       grace_period_days: 45
       late_fee: 56
       notes: consequatur
@@ -4423,7 +4423,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T06:49:51'
+        example: '2026-04-22T15:32:40'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4434,7 +4434,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-21'
+        example: '2107-05-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4467,7 +4467,7 @@ endpoints:
         name: next_due_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-21'
+        example: '2107-05-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4511,7 +4511,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: active
+        example: terminated
         type: string
         enumValues:
           - active
@@ -4523,15 +4523,15 @@ endpoints:
     cleanBodyParameters:
       tenant_id: consequatur
       unit_id: consequatur
-      start_date: '2026-04-22T06:49:51'
-      end_date: '2107-05-21'
+      start_date: '2026-04-22T15:32:40'
+      end_date: '2107-05-22'
       rent_amount: 45
       deposit_amount: 56
-      next_due_date: '2107-05-21'
+      next_due_date: '2107-05-22'
       grace_period_days: 45
       late_fee: 56
       notes: consequatur
-      status: active
+      status: terminated
     fileParameters: []
     responses: []
     responseFields: []
@@ -4573,6 +4573,852 @@ endpoints:
         custom: []
         name: id
         description: 'The ID of the lease.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      business: consequatur
+      id: consequatur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/businesses/{business}/invoices'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      business:
+        custom: []
+        name: business
+        description: 'The business.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      business: consequatur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/v1/businesses/{business}/invoices'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      business:
+        custom: []
+        name: business
+        description: 'The business.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      business: consequatur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      lease_id:
+        custom: []
+        name: lease_id
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      0:
+        custom: []
+        name: '0'
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      tenant_id:
+        custom: []
+        name: tenant_id
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      1:
+        custom: []
+        name: '1'
+        description: ''
+        required: false
+        example: partial
+        type: string
+        enumValues:
+          - pending
+          - paid
+          - partial
+          - overdue
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      invoice_number:
+        custom: []
+        name: invoice_number
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      2:
+        custom: []
+        name: '2'
+        description: 'Must be a date after or equal to <code>issue_date</code>.'
+        required: false
+        example: '2107-05-22'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      3:
+        custom: []
+        name: '3'
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-04-22T15:32:40'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      4:
+        custom: []
+        name: '4'
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-04-22T15:32:40'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      amount:
+        custom: []
+        name: amount
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      5:
+        custom: []
+        name: '5'
+        description: 'Must be at least 0 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      6:
+        custom: []
+        name: '6'
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      paid_amount:
+        custom: []
+        name: paid_amount
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      7:
+        custom: []
+        name: '7'
+        description: 'Must be at least 0 characters.'
+        required: false
+        example: opfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      8:
+        custom: []
+        name: '8'
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      balance:
+        custom: []
+        name: balance
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      9:
+        custom: []
+        name: '9'
+        description: 'Must be at least 0 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      10:
+        custom: []
+        name: '10'
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      issue_date:
+        custom: []
+        name: issue_date
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      11:
+        custom: []
+        name: '11'
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_date:
+        custom: []
+        name: due_date
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      12:
+        custom: []
+        name: '12'
+        description: 'Must not be greater than 50 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      13:
+        custom: []
+        name: '13'
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      14:
+        custom: []
+        name: '14'
+        description: 'The <code>id</code> of an existing record in the tenants table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      notes:
+        custom: []
+        name: notes
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      15:
+        custom: []
+        name: '15'
+        description: 'The <code>id</code> of an existing record in the leases table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      lease_id: consequatur
+      0: consequatur
+      tenant_id: consequatur
+      1: partial
+      invoice_number: consequatur
+      2: '2107-05-22'
+      3: '2026-04-22T15:32:40'
+      4: '2026-04-22T15:32:40'
+      amount: consequatur
+      5: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+      6: 11613.31890586
+      7: opfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvo
+      8: 11613.31890586
+      balance: consequatur
+      9: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+      10: 11613.31890586
+      issue_date: consequatur
+      due_date: consequatur
+      12: mqeopfuudtdsufvyvddqa
+      13: consequatur
+      status: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/businesses/{business}/invoices/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      business:
+        custom: []
+        name: business
+        description: 'The business.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the invoice.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      business: consequatur
+      id: consequatur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/businesses/{business}/invoices/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      business:
+        custom: []
+        name: business
+        description: 'The business.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the invoice.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      business: consequatur
+      id: consequatur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      invoice_number:
+        custom: []
+        name: invoice_number
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      0:
+        custom: []
+        name: '0'
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      1:
+        custom: []
+        name: '1'
+        description: ''
+        required: false
+        example: paid
+        type: string
+        enumValues:
+          - pending
+          - paid
+          - partial
+          - overdue
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      2:
+        custom: []
+        name: '2'
+        description: 'Must be a date after or equal to <code>issue_date</code>.'
+        required: false
+        example: '2107-05-22'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      amount:
+        custom: []
+        name: amount
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      3:
+        custom: []
+        name: '3'
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-04-22T15:32:40'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      4:
+        custom: []
+        name: '4'
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-04-22T15:32:40'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      paid_amount:
+        custom: []
+        name: paid_amount
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      5:
+        custom: []
+        name: '5'
+        description: 'Must be at least 0 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      6:
+        custom: []
+        name: '6'
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      balance:
+        custom: []
+        name: balance
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      7:
+        custom: []
+        name: '7'
+        description: 'Must be at least 0 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      8:
+        custom: []
+        name: '8'
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      issue_date:
+        custom: []
+        name: issue_date
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      9:
+        custom: []
+        name: '9'
+        description: 'Must be at least 0 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_date:
+        custom: []
+        name: due_date
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      10:
+        custom: []
+        name: '10'
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      11:
+        custom: []
+        name: '11'
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      12:
+        custom: []
+        name: '12'
+        description: 'Must not be greater than 50 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      notes:
+        custom: []
+        name: notes
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      13:
+        custom: []
+        name: '13'
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      invoice_number: consequatur
+      0: consequatur
+      1: paid
+      2: '2107-05-22'
+      amount: consequatur
+      3: '2026-04-22T15:32:40'
+      4: '2026-04-22T15:32:40'
+      5: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+      6: 11613.31890586
+      balance: consequatur
+      7: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+      8: 11613.31890586
+      issue_date: consequatur
+      9: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
+      due_date: consequatur
+      10: 11613.31890586
+      status: consequatur
+      12: mqeopfuudtdsufvyvddqa
+      13: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/businesses/{business}/invoices/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      business:
+        custom: []
+        name: business
+        description: 'The business.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the invoice.'
         required: true
         example: consequatur
         type: string
@@ -4692,6 +5538,17 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      invoice_id:
+        custom: []
+        name: invoice_id
+        description: 'The <code>id</code> of an existing record in the invoices table.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       amount:
         custom: []
         name: amount
@@ -4708,7 +5565,7 @@ endpoints:
         name: payment_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T06:49:51'
+        example: '2026-04-22T15:32:40'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4766,8 +5623,9 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       lease_id: consequatur
+      invoice_id: consequatur
       amount: 45
-      payment_date: '2026-04-22T06:49:51'
+      payment_date: '2026-04-22T15:32:40'
       payment_method: cash
       transaction_code: qeopfuudtdsufvyvddqam
       type: penalty
@@ -4902,6 +5760,17 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      invoice_id:
+        custom: []
+        name: invoice_id
+        description: 'The <code>id</code> of an existing record in the invoices table.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       amount:
         custom: []
         name: amount
@@ -4918,7 +5787,7 @@ endpoints:
         name: payment_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T06:49:51'
+        example: '2026-04-22T15:32:40'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4929,7 +5798,7 @@ endpoints:
         name: payment_method
         description: ''
         required: true
-        example: mpesa
+        example: bank
         type: string
         enumValues:
           - cash
@@ -4976,9 +5845,10 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       lease_id: consequatur
+      invoice_id: consequatur
       amount: 45
-      payment_date: '2026-04-22T06:49:51'
-      payment_method: mpesa
+      payment_date: '2026-04-22T15:32:40'
+      payment_method: bank
       transaction_code: qeopfuudtdsufvyvddqam
       type: penalty
       notes: consequatur
@@ -5208,7 +6078,7 @@ endpoints:
         name: reported_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T06:49:51'
+        example: '2026-04-22T15:32:40'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5219,7 +6089,7 @@ endpoints:
         name: resolved_date
         description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
         required: false
-        example: '2107-05-21'
+        example: '2107-05-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5254,8 +6124,8 @@ endpoints:
       issue: consequatur
       priority: low
       status: pending
-      reported_date: '2026-04-22T06:49:51'
-      resolved_date: '2107-05-21'
+      reported_date: '2026-04-22T15:32:40'
+      resolved_date: '2107-05-22'
       cost: 45
       notes: consequatur
     fileParameters: []
@@ -5454,7 +6324,7 @@ endpoints:
         name: reported_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T06:49:51'
+        example: '2026-04-22T15:32:40'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5465,7 +6335,7 @@ endpoints:
         name: resolved_date
         description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
         required: false
-        example: '2107-05-21'
+        example: '2107-05-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5500,8 +6370,8 @@ endpoints:
       issue: consequatur
       priority: low
       status: resolved
-      reported_date: '2026-04-22T06:49:51'
-      resolved_date: '2107-05-21'
+      reported_date: '2026-04-22T15:32:40'
+      resolved_date: '2107-05-22'
       cost: 45
       notes: consequatur
     fileParameters: []

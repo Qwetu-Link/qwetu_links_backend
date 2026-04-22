@@ -24,6 +24,7 @@ class StorePaymentRequest extends FormRequest
     {
         return [
             'lease_id' => 'required|string|exists:leases,id',
+            'invoice_id' => 'required|string|exists:invoices,id',
             'amount' => 'required|numeric|min:0',
             'payment_date' => 'required|date',
             'payment_method' => 'required|in:cash,mpesa,bank',
@@ -37,6 +38,7 @@ class StorePaymentRequest extends FormRequest
     {
         $this->merge([
             'lease_id' => $this->leaseID,
+            'invoice_id' => $this->invoiceID,
             'payment_date' => $this->paymentDate,
             'payment_method' => $this->paymentMethod,
             'transaction_code' => $this->transactionCode,

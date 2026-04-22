@@ -26,6 +26,7 @@ class UpdatePaymentRequest extends FormRequest
         if ($method == 'PUT') {
             return [
                 'lease_id' => 'required|string|exists:leases,id',
+                'invoice_id' => 'required|string|exists:invoices,id',
                 'amount' => 'required|numeric|min:0',
                 'payment_date' => 'required|date',
                 'payment_method' => 'required|in:cash,mpesa,bank',
@@ -36,6 +37,7 @@ class UpdatePaymentRequest extends FormRequest
         } else {
             return [
                 'lease_id' => 'sometimes|required|string|exists:leases,id',
+                'invoice_id' => 'sometimes|required|string|exists:invoices,id',
                 'amount' => 'sometimes|required|numeric|min:0',
                 'payment_date' => 'sometimes|required|date',
                 'payment_method' => 'sometimes|required|in:cash,mpesa,bank',
@@ -52,6 +54,10 @@ class UpdatePaymentRequest extends FormRequest
 
         if ($this->has('leaseID')) {
             $data['lease_id'] = $this->leaseID;
+        }
+
+        if ($this->has('invoiceID')) {
+            $data['invoice_id'] = $this->invoiceID;
         }
 
         if ($this->has('paymentDate')) {

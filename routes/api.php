@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\v1\accounts\BusinessController;
 use App\Http\Controllers\Api\v1\accounts\StaffController;
 use App\Http\Controllers\Api\v1\accounts\TenantController;
 use App\Http\Controllers\Api\v1\accounts\UserController;
+use App\Http\Controllers\Api\v1\finance\InvoiceController;
 use App\Http\Controllers\Api\v1\finance\PaymentController;
 use App\Http\Controllers\Api\v1\property\AmenityController;
 use App\Http\Controllers\Api\v1\property\GalleryController;
@@ -47,6 +48,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'm
         Route::apiResource('amenities', AmenityController::class);
 
         Route::apiResource('leases', LeaseController::class);
+        Route::apiResource('invoices', InvoiceController::class);
         Route::apiResource('payments', PaymentController::class);
         Route::apiResource('maintainance', MaintainanceController::class);
         

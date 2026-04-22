@@ -30,9 +30,11 @@ class CreatePayment
             'payment_date' => $data['payment_date'],
             'payment_method' => $data['payment_method'],
             'transaction_code' => $data['transaction_code'],
+            'invoice_id' => $data['invoice_id'],
             'type' => $data['type'],
             'notes' => $data['type'],
             'business_id' => $owner->business_id,
+
         ]);
 
         $event->payment = $payment;

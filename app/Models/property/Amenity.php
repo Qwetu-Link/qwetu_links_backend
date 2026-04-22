@@ -3,12 +3,13 @@
 namespace App\Models\property;
 
 use App\Models\accounts\Business;
+use Database\Factories\Property\AmenityFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Amenity extends Model
 {
-    /** @use HasFactory<\Database\Factories\Property\AmenityFactory> */
+    /** @use HasFactory<AmenityFactory> */
     use HasFactory;
 
     public $incrementing = false;
@@ -26,7 +27,7 @@ class Amenity extends Model
     protected function casts(): array
     {
         return [
-            
+
         ];
     }
 
@@ -49,5 +50,15 @@ class Amenity extends Model
     public function business()
     {
         return $this->belongsTo(Business::class);
+    }
+
+    public function properties()
+    {
+        return $this->belongsToMany(
+            Property::class,
+            'property_amenities',
+            'amenity_id',
+            'property_id'
+        );
     }
 }

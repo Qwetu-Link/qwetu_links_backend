@@ -16,6 +16,7 @@ class PaymentResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'businessID' => $this->business_id,
             'lease_id' => $this->lease_id,
             'amount' => $this->amount,
             'payment_date' => $this->payment_date,

@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('transaction_code')->nullable();
             $table->enum('type', ['rent', 'deposit', 'penalty'])->default('rent');
             $table->text('notes')->nullable();
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
             $table->foreign('lease_id')->references('id')->on('leases')->onDelete('cascade');
             $table->timestamps();
         });

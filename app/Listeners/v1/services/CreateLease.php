@@ -37,6 +37,7 @@ class CreateLease
             'late_fee' => $data['late_fee'],
             'notes' => $data['notes'],
             'status' => $data['status'],
+            'business_id' => $owner->business_id,
         ]);
 
         $event->lease = $lease;

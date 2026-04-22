@@ -24,6 +24,7 @@ class Payment extends Model
         'transaction_code',
         'type',
         'notes',
+        'business_id',
     ];
 
     protected $casts = [

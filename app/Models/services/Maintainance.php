@@ -27,6 +27,7 @@ class Maintainance extends Model
         'resolved_date',
         'cost',
         'notes',
+        'business_id',
     ];
 
     protected $casts = [

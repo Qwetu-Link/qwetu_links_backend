@@ -23,6 +23,8 @@ return new class extends Migration
             $table->date('resolved_date')->nullable(); 
             $table->decimal('cost', 10, 2)->nullable();
             $table->text('notes')->nullable();
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
             $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
             $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('set null');
             $table->timestamps();

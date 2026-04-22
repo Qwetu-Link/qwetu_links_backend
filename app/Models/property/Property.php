@@ -80,9 +80,18 @@ class Property extends Model
     //         'amenity_id'
     //     );
     // }
+    // public function amenities()
+    // {
+    //     return $this->hasMany(PropertyAmenities::class);
+    // }
     public function amenities()
     {
-        return $this->hasMany(PropertyAmenities::class);
+        return $this->belongsToMany(
+            Amenity::class,
+            'property_amenities', // pivot table
+            'property_id',
+            'amenity_id'
+        );
     }
 
     public function getRouteKeyName()

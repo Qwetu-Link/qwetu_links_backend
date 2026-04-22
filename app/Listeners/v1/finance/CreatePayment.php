@@ -32,6 +32,7 @@ class CreatePayment
             'transaction_code' => $data['transaction_code'],
             'type' => $data['type'],
             'notes' => $data['type'],
+            'business_id' => $owner->business_id,
         ]);
 
         $event->payment = $payment;

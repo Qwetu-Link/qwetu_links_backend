@@ -24,6 +24,8 @@ return new class extends Migration
             $table->decimal('late_fee', 10, 2)->default(0);
             $table->text('notes')->nullable();
             $table->enum('status', ['active', 'terminated', 'expired'])->default('active');
+            $table->string('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses')->onDelete('cascade');
             $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
             $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
             $table->timestamps();

@@ -35,6 +35,7 @@ class CreateMaintainance
             'resolved_date' => $data['resolved_date'],
             'cost' => $data['cost'],
             'notes' => $data['notes'],
+            'business_id' => $owner->business_id,
         ]);
 
         $event->maintainance = $maintainance;

@@ -30,6 +30,7 @@ class Lease extends Model
         'late_fee',
         'notes',
         'status',
+        'business_id',
     ];
 
     protected $casts = [

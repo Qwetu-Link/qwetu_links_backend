@@ -16,6 +16,7 @@ class MaintainaceResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'businessID' => $this->business_id,
             'unitID' => $this->unit_id,
             'tenantID' => $this->tenant_id,
             'title' => $this->title,

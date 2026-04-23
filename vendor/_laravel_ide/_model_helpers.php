@@ -345,10 +345,42 @@ namespace App\Models\finance {
     /**
      * App\Models\finance\Invoice
      *
+     * @property \Illuminate\Support\Carbon|null $updated_at
+     * @property \Illuminate\Support\Carbon|null $created_at
+     * @property bool $is_sent
+     * @property string|null $file_path
+     * @property string|null $notes
+     * @property mixed $status
+     * @property string $due_date
+     * @property string $issue_date
+     * @property float $balance
+     * @property float $paid_amount
+     * @property float $amount
+     * @property string $invoice_number
+     * @property string $business_id
+     * @property string $tenant_id
+     * @property string $lease_id
+     * @property string $id
      * @property-read \App\Models\services\Lease $lease
      * @property-read \App\Models\accounts\Tenant $tenant
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\finance\Payment> $payments
      * @property-read int|null $payments_count
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereLeaseId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereTenantId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereBusinessId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereInvoiceNumber($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereAmount($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice wherePaidAmount($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereBalance($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereIssueDate($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereDueDate($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereNotes($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereFilePath($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereIsSent($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereCreatedAt($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice newModelQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice newQuery()
      * @method static \Illuminate\Database\Eloquent\Builder<Invoice>|Invoice query()
@@ -669,6 +701,7 @@ namespace App\Models\finance {
      *
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
+     * @property string|null $invoice_id
      * @property string $business_id
      * @property string|null $notes
      * @property mixed $type
@@ -689,6 +722,7 @@ namespace App\Models\finance {
      * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment whereType($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment whereNotes($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment whereBusinessId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment whereInvoiceId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Payment>|Payment newModelQuery()

@@ -75,23 +75,12 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      slug:
-        custom: []
-        name: slug
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: amniihfqcoynlazghdtqt
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
       email:
         custom: []
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: andreanne00@example.org
+        example: kunde.eloisa@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -108,23 +97,12 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      country:
-        custom: []
-        name: country
-        description: 'Must not be greater than 100 characters.'
-        required: false
-        example: sufvyvddqamniihfqcoyn
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
       city:
         custom: []
         name: city
         description: 'Must not be greater than 100 characters.'
         required: true
-        example: lazghdtqtqxbajwbpilpm
+        example: sufvyvddqamniihfqcoyn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,62 +113,7 @@ endpoints:
         name: address
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: ufinllwloauydlsmsjury
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      bank_name:
-        custom: []
-        name: bank_name
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: vojcybzvrbyickznkyglo
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      bank_account_number:
-        custom: []
-        name: bank_account_number
-        description: 'Must not be greater than 50 characters.'
-        required: false
-        example: igmkwxphlvazjrcnfbaqy
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      mpesa_paybill:
-        custom: []
-        name: mpesa_paybill
-        description: 'Must not be greater than 20 characters.'
-        required: false
-        example: wuxhgjjmzuxjubqou
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      mpesa_account_number:
-        custom: []
-        name: mpesa_account_number
-        description: 'Must not be greater than 50 characters.'
-        required: false
-        example: zswiwxtrkimfcatbxspzm
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        deprecated: false
-      mpesa_till_no:
-        custom: []
-        name: mpesa_till_no
-        description: 'Must not be greater than 20 characters.'
-        required: false
-        example: razsroyjpxmqesedy
+        example: lazghdtqtqxbajwbpilpm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -212,7 +135,7 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: ;0R\+UYpo
+        example: '4>SJIrIV#lz.KcLcD'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -220,19 +143,12 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       name: vmqeopfuudtdsufvyvddq
-      slug: amniihfqcoynlazghdtqt
-      email: andreanne00@example.org
+      email: kunde.eloisa@example.com
       phone: '+254756277171'
-      country: sufvyvddqamniihfqcoyn
-      city: lazghdtqtqxbajwbpilpm
-      address: ufinllwloauydlsmsjury
-      bank_name: vojcybzvrbyickznkyglo
-      bank_account_number: igmkwxphlvazjrcnfbaqy
-      mpesa_paybill: wuxhgjjmzuxjubqou
-      mpesa_account_number: zswiwxtrkimfcatbxspzm
-      mpesa_till_no: razsroyjpxmqesedy
+      city: sufvyvddqamniihfqcoyn
+      address: lazghdtqtqxbajwbpilpm
       is_active: false
-      password: ;0R\+UYpo
+      password: '4>SJIrIV#lz.KcLcD'
     fileParameters: []
     responses: []
     responseFields: []
@@ -913,7 +829,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: owner
+        example: staff
         type: string
         enumValues:
           - owner
@@ -1016,7 +932,7 @@ endpoints:
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: owner
+      role: staff
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -1295,7 +1211,7 @@ endpoints:
         name: isActive
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -1315,7 +1231,7 @@ endpoints:
       idNumber: tqtqxbajwbpilpmufinll
       address: wloauydlsmsjuryvojcyb
       avatar: zvrbyickznkygloigmkwx
-      isActive: false
+      isActive: true
     fileParameters: []
     responses: []
     responseFields: []
@@ -2099,7 +2015,7 @@ endpoints:
         name: hire_date
         description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
         required: true
-        example: '2020-08-18'
+        example: '2020-08-19'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2110,7 +2026,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: temporary
+        example: intern
         type: string
         enumValues:
           - full_time
@@ -2170,7 +2086,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: tenant
+        example: owner
         type: string
         enumValues:
           - owner
@@ -2271,13 +2187,13 @@ endpoints:
       position: vmqeopfuudtdsufvyvddq
       department: amniihfqcoynlazghdtqt
       salary: 16
-      hire_date: '2020-08-18'
-      employment_type: temporary
+      hire_date: '2020-08-19'
+      employment_type: intern
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
       password: "'YAKYLk4>SJIrIV#lz."
-      role: tenant
+      role: owner
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -2443,7 +2359,7 @@ endpoints:
         name: hire_date
         description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
         required: true
-        example: '2020-08-18'
+        example: '2020-08-19'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2454,7 +2370,7 @@ endpoints:
         name: employment_type
         description: ''
         required: true
-        example: full_time
+        example: temporary
         type: string
         enumValues:
           - full_time
@@ -2580,7 +2496,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -2590,8 +2506,8 @@ endpoints:
       position: vmqeopfuudtdsufvyvddq
       department: amniihfqcoynlazghdtqt
       salary: 16
-      hire_date: '2020-08-18'
-      employment_type: full_time
+      hire_date: '2020-08-19'
+      employment_type: temporary
       username: mqeopfuudtdsufvyvddqa
       name: mniihfqcoynlazghdtqtq
       email: ablanda@example.org
@@ -2602,7 +2518,7 @@ endpoints:
       id_number: tqtqxbajwbpilpmufinll
       address: wloauydlsmsjuryvojcyb
       avatar: zvrbyickznkygloigmkwx
-      is_active: false
+      is_active: true
     fileParameters: []
     responses: []
     responseFields: []
@@ -2834,7 +2750,7 @@ endpoints:
         name: role
         description: ''
         required: true
-        example: staff
+        example: tenant
         type: string
         enumValues:
           - owner
@@ -2928,7 +2844,7 @@ endpoints:
       name: ghdtqtqxbajwbpilpmufi
       email: hilton86@example.org
       password: '#lz.KcLcDi`wmU'
-      role: staff
+      role: tenant
       phone: '+254771772898'
       emergency_contact_name: ddqamniihfqcoynlazghd
       emergency_contact_phone: '+254771772898'
@@ -3082,7 +2998,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -3201,7 +3117,7 @@ endpoints:
     cleanBodyParameters:
       next_of_kin_name: vmqeopfuudtdsufvyvddq
       next_of_kin_phone: '0777171772'
-      is_active: true
+      is_active: false
       username: vyvddqamniihfqcoynlaz
       name: ghdtqtqxbajwbpilpmufi
       email: hilton86@example.org
@@ -4168,7 +4084,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4179,7 +4095,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4212,7 +4128,7 @@ endpoints:
         name: next_due_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4256,7 +4172,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: active
+        example: terminated
         type: string
         enumValues:
           - active
@@ -4268,15 +4184,15 @@ endpoints:
     cleanBodyParameters:
       tenant_id: consequatur
       unit_id: consequatur
-      start_date: '2026-04-22T15:32:40'
-      end_date: '2107-05-22'
+      start_date: '2026-04-23T14:19:52'
+      end_date: '2107-05-23'
       rent_amount: 45
       deposit_amount: 56
-      next_due_date: '2107-05-22'
+      next_due_date: '2107-05-23'
       grace_period_days: 45
       late_fee: 56
       notes: consequatur
-      status: active
+      status: terminated
     fileParameters: []
     responses: []
     responseFields: []
@@ -4423,7 +4339,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4434,7 +4350,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4467,7 +4383,7 @@ endpoints:
         name: next_due_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4523,11 +4439,11 @@ endpoints:
     cleanBodyParameters:
       tenant_id: consequatur
       unit_id: consequatur
-      start_date: '2026-04-22T15:32:40'
-      end_date: '2107-05-22'
+      start_date: '2026-04-23T14:19:52'
+      end_date: '2107-05-23'
       rent_amount: 45
       deposit_amount: 56
-      next_due_date: '2107-05-22'
+      next_due_date: '2107-05-23'
       grace_period_days: 45
       late_fee: 56
       notes: consequatur
@@ -4745,7 +4661,7 @@ endpoints:
         name: '2'
         description: 'Must be a date after or equal to <code>issue_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4756,7 +4672,7 @@ endpoints:
         name: '3'
         description: 'Must be a valid date.'
         required: false
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4767,7 +4683,7 @@ endpoints:
         name: '4'
         description: 'Must be a valid date.'
         required: false
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4977,9 +4893,9 @@ endpoints:
       tenant_id: consequatur
       1: partial
       invoice_number: consequatur
-      2: '2107-05-22'
-      3: '2026-04-22T15:32:40'
-      4: '2026-04-22T15:32:40'
+      2: '2107-05-23'
+      3: '2026-04-23T14:19:52'
+      4: '2026-04-23T14:19:52'
       amount: consequatur
       5: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
       6: 11613.31890586
@@ -5154,7 +5070,7 @@ endpoints:
         name: '2'
         description: 'Must be a date after or equal to <code>issue_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5176,7 +5092,7 @@ endpoints:
         name: '3'
         description: 'Must be a valid date.'
         required: false
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5187,7 +5103,7 @@ endpoints:
         name: '4'
         description: 'Must be a valid date.'
         required: false
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5362,10 +5278,10 @@ endpoints:
       invoice_number: consequatur
       0: consequatur
       1: paid
-      2: '2107-05-22'
+      2: '2107-05-23'
       amount: consequatur
-      3: '2026-04-22T15:32:40'
-      4: '2026-04-22T15:32:40'
+      3: '2026-04-23T14:19:52'
+      4: '2026-04-23T14:19:52'
       5: mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur
       6: 11613.31890586
       balance: consequatur
@@ -5565,7 +5481,7 @@ endpoints:
         name: payment_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5576,7 +5492,7 @@ endpoints:
         name: payment_method
         description: ''
         required: true
-        example: cash
+        example: mpesa
         type: string
         enumValues:
           - cash
@@ -5601,7 +5517,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: penalty
+        example: deposit
         type: string
         enumValues:
           - rent
@@ -5625,10 +5541,10 @@ endpoints:
       lease_id: consequatur
       invoice_id: consequatur
       amount: 45
-      payment_date: '2026-04-22T15:32:40'
-      payment_method: cash
+      payment_date: '2026-04-23T14:19:52'
+      payment_method: mpesa
       transaction_code: qeopfuudtdsufvyvddqam
-      type: penalty
+      type: deposit
       notes: consequatur
     fileParameters: []
     responses: []
@@ -5787,7 +5703,7 @@ endpoints:
         name: payment_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -5798,7 +5714,7 @@ endpoints:
         name: payment_method
         description: ''
         required: true
-        example: bank
+        example: cash
         type: string
         enumValues:
           - cash
@@ -5823,7 +5739,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: penalty
+        example: deposit
         type: string
         enumValues:
           - rent
@@ -5847,10 +5763,10 @@ endpoints:
       lease_id: consequatur
       invoice_id: consequatur
       amount: 45
-      payment_date: '2026-04-22T15:32:40'
-      payment_method: bank
+      payment_date: '2026-04-23T14:19:52'
+      payment_method: cash
       transaction_code: qeopfuudtdsufvyvddqam
-      type: penalty
+      type: deposit
       notes: consequatur
     fileParameters: []
     responses: []
@@ -6064,7 +5980,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: pending
+        example: in_progress
         type: string
         enumValues:
           - pending
@@ -6078,7 +5994,7 @@ endpoints:
         name: reported_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -6089,7 +6005,7 @@ endpoints:
         name: resolved_date
         description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -6123,9 +6039,9 @@ endpoints:
       title: mqeopfuudtdsufvyvddqa
       issue: consequatur
       priority: low
-      status: pending
-      reported_date: '2026-04-22T15:32:40'
-      resolved_date: '2107-05-22'
+      status: in_progress
+      reported_date: '2026-04-23T14:19:52'
+      resolved_date: '2107-05-23'
       cost: 45
       notes: consequatur
     fileParameters: []
@@ -6296,7 +6212,7 @@ endpoints:
         name: priority
         description: ''
         required: true
-        example: low
+        example: medium
         type: string
         enumValues:
           - low
@@ -6324,7 +6240,7 @@ endpoints:
         name: reported_date
         description: 'Must be a valid date.'
         required: true
-        example: '2026-04-22T15:32:40'
+        example: '2026-04-23T14:19:52'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -6335,7 +6251,7 @@ endpoints:
         name: resolved_date
         description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
         required: false
-        example: '2107-05-22'
+        example: '2107-05-23'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -6368,10 +6284,10 @@ endpoints:
       tenant_id: consequatur
       title: mqeopfuudtdsufvyvddqa
       issue: consequatur
-      priority: low
+      priority: medium
       status: resolved
-      reported_date: '2026-04-22T15:32:40'
-      resolved_date: '2107-05-22'
+      reported_date: '2026-04-23T14:19:52'
+      resolved_date: '2107-05-23'
       cost: 45
       notes: consequatur
     fileParameters: []

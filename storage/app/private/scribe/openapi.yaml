@@ -53,56 +53,22 @@ paths:
                   type: string
                   description: 'Must not be greater than 255 characters.'
                   example: vmqeopfuudtdsufvyvddq
-                slug:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: amniihfqcoynlazghdtqt
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: andreanne00@example.org
+                  example: kunde.eloisa@example.com
                 phone:
                   type: string
                   description: 'Must match the regex /^\+254[71]\d{8}$/.'
                   example: '+254756277171'
-                country:
-                  type: string
-                  description: 'Must not be greater than 100 characters.'
-                  example: sufvyvddqamniihfqcoyn
-                  nullable: true
                 city:
                   type: string
                   description: 'Must not be greater than 100 characters.'
-                  example: lazghdtqtqxbajwbpilpm
+                  example: sufvyvddqamniihfqcoyn
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ufinllwloauydlsmsjury
-                  nullable: true
-                bank_name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: vojcybzvrbyickznkyglo
-                  nullable: true
-                bank_account_number:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: igmkwxphlvazjrcnfbaqy
-                  nullable: true
-                mpesa_paybill:
-                  type: string
-                  description: 'Must not be greater than 20 characters.'
-                  example: wuxhgjjmzuxjubqou
-                  nullable: true
-                mpesa_account_number:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: zswiwxtrkimfcatbxspzm
-                  nullable: true
-                mpesa_till_no:
-                  type: string
-                  description: 'Must not be greater than 20 characters.'
-                  example: razsroyjpxmqesedy
+                  example: lazghdtqtqxbajwbpilpm
                   nullable: true
                 is_active:
                   type: boolean
@@ -112,10 +78,9 @@ paths:
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: ;0R\+UYpo
+                  example: '4>SJIrIV#lz.KcLcD'
               required:
                 - name
-                - slug
                 - email
                 - phone
                 - city
@@ -426,7 +391,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -590,7 +555,7 @@ paths:
                 isActive:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - businessID
                 - name
@@ -942,11 +907,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-18'
+                  example: '2020-08-19'
                 employment_type:
                   type: string
                   description: ''
-                  example: temporary
+                  example: intern
                   enum:
                     - full_time
                     - part_time
@@ -972,7 +937,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: tenant
+                  example: owner
                   enum:
                     - owner
                     - tenant
@@ -1116,11 +1081,11 @@ paths:
                 hire_date:
                   type: string
                   description: 'Must be a valid date. Must be a date before or equal to <code>today</code>.'
-                  example: '2020-08-18'
+                  example: '2020-08-19'
                 employment_type:
                   type: string
                   description: ''
-                  example: full_time
+                  example: temporary
                   enum:
                     - full_time
                     - part_time
@@ -1176,7 +1141,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - position
                 - department
@@ -1274,7 +1239,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: staff
+                  example: tenant
                   enum:
                     - owner
                     - tenant
@@ -1407,7 +1372,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                   nullable: true
                 username:
                   type: string
@@ -1854,11 +1819,11 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                   nullable: true
                 rent_amount:
                   type: number
@@ -1872,7 +1837,7 @@ paths:
                 next_due_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                   nullable: true
                 grace_period_days:
                   type: integer
@@ -1892,7 +1857,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: active
+                  example: terminated
                   enum:
                     - active
                     - terminated
@@ -1961,11 +1926,11 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                   nullable: true
                 rent_amount:
                   type: number
@@ -1979,7 +1944,7 @@ paths:
                 next_due_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                   nullable: true
                 grace_period_days:
                   type: integer
@@ -2102,15 +2067,15 @@ paths:
                 2:
                   type: string
                   description: 'Must be a date after or equal to <code>issue_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                 3:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 4:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 amount:
                   type: string
                   description: ''
@@ -2261,7 +2226,7 @@ paths:
                 2:
                   type: string
                   description: 'Must be a date after or equal to <code>issue_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                 amount:
                   type: string
                   description: ''
@@ -2269,11 +2234,11 @@ paths:
                 3:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 4:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 paid_amount:
                   type: string
                   description: ''
@@ -2422,11 +2387,11 @@ paths:
                 payment_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 payment_method:
                   type: string
                   description: ''
-                  example: cash
+                  example: mpesa
                   enum:
                     - cash
                     - mpesa
@@ -2439,7 +2404,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: penalty
+                  example: deposit
                   enum:
                     - rent
                     - deposit
@@ -2518,11 +2483,11 @@ paths:
                 payment_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 payment_method:
                   type: string
                   description: ''
-                  example: bank
+                  example: cash
                   enum:
                     - cash
                     - mpesa
@@ -2535,7 +2500,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: penalty
+                  example: deposit
                   enum:
                     - rent
                     - deposit
@@ -2644,7 +2609,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: pending
+                  example: in_progress
                   enum:
                     - pending
                     - in_progress
@@ -2652,11 +2617,11 @@ paths:
                 reported_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 resolved_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                   nullable: true
                 cost:
                   type: number
@@ -2742,7 +2707,7 @@ paths:
                 priority:
                   type: string
                   description: ''
-                  example: low
+                  example: medium
                   enum:
                     - low
                     - medium
@@ -2758,11 +2723,11 @@ paths:
                 reported_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-22T15:32:40'
+                  example: '2026-04-23T14:19:52'
                 resolved_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
-                  example: '2107-05-22'
+                  example: '2107-05-23'
                   nullable: true
                 cost:
                   type: number

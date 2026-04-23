@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Qwetu Links Rental API Documentation",
-        "_postman_id": "c9d4c04c-494e-41f7-9277-29245662b036",
+        "_postman_id": "86e9c388-62ab-45fa-b35b-c3642bcc4382",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -89,7 +89,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"vmqeopfuudtdsufvyvddq\",\"slug\":\"amniihfqcoynlazghdtqt\",\"email\":\"andreanne00@example.org\",\"phone\":\"+254756277171\",\"country\":\"sufvyvddqamniihfqcoyn\",\"city\":\"lazghdtqtqxbajwbpilpm\",\"address\":\"ufinllwloauydlsmsjury\",\"bank_name\":\"vojcybzvrbyickznkyglo\",\"bank_account_number\":\"igmkwxphlvazjrcnfbaqy\",\"mpesa_paybill\":\"wuxhgjjmzuxjubqou\",\"mpesa_account_number\":\"zswiwxtrkimfcatbxspzm\",\"mpesa_till_no\":\"razsroyjpxmqesedy\",\"is_active\":false,\"password\":\";0R\\\\+UYpo\"}"
+                            "raw": "{\"name\":\"vmqeopfuudtdsufvyvddq\",\"email\":\"kunde.eloisa@example.com\",\"phone\":\"+254756277171\",\"city\":\"sufvyvddqamniihfqcoyn\",\"address\":\"lazghdtqtqxbajwbpilpm\",\"is_active\":false,\"password\":\"4>SJIrIV#lz.KcLcD\"}"
                         },
                         "description": "",
                         "auth": {
@@ -445,7 +445,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"business_id\":\"consequatur\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
+                            "raw": "{\"business_id\":\"consequatur\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -552,7 +552,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"businessID\":\"consequatur\",\"name\":\"mqeopfuudtdsufvyvddqa\",\"username\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergencyContactName\":\"ddqamniihfqcoynlazghd\",\"emergencyContactPhone\":\"+254771772898\",\"emergencyContactRelationship\":\"ddqamniihfqcoynlazghd\",\"idNumber\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"isActive\":false}"
+                            "raw": "{\"businessID\":\"consequatur\",\"name\":\"mqeopfuudtdsufvyvddqa\",\"username\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergencyContactName\":\"ddqamniihfqcoynlazghd\",\"emergencyContactPhone\":\"+254771772898\",\"emergencyContactRelationship\":\"ddqamniihfqcoynlazghd\",\"idNumber\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"isActive\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -1082,7 +1082,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-18\",\"employment_type\":\"temporary\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"tenant\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
+                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-19\",\"employment_type\":\"intern\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"password\":\"'YAKYLk4>SJIrIV#lz.\",\"role\":\"owner\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -1189,7 +1189,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-18\",\"employment_type\":\"full_time\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":false}"
+                            "raw": "{\"position\":\"vmqeopfuudtdsufvyvddq\",\"department\":\"amniihfqcoynlazghdtqt\",\"salary\":16,\"hire_date\":\"2020-08-19\",\"employment_type\":\"temporary\",\"username\":\"mqeopfuudtdsufvyvddqa\",\"name\":\"mniihfqcoynlazghdtqtq\",\"email\":\"ablanda@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\",\"is_active\":true}"
                         },
                         "description": "",
                         "auth": {
@@ -1326,7 +1326,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":true,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"password\":\"#lz.KcLcDi`wmU\",\"role\":\"staff\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
+                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":true,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"password\":\"#lz.KcLcDi`wmU\",\"role\":\"tenant\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1433,7 +1433,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":true,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
+                            "raw": "{\"next_of_kin_name\":\"vmqeopfuudtdsufvyvddq\",\"next_of_kin_phone\":\"0777171772\",\"is_active\":false,\"username\":\"vyvddqamniihfqcoynlaz\",\"name\":\"ghdtqtqxbajwbpilpmufi\",\"email\":\"hilton86@example.org\",\"phone\":\"+254771772898\",\"emergency_contact_name\":\"ddqamniihfqcoynlazghd\",\"emergency_contact_phone\":\"+254771772898\",\"emergency_contact_relationship\":\"ddqamniihfqcoynlazghd\",\"id_number\":\"tqtqxbajwbpilpmufinll\",\"address\":\"wloauydlsmsjuryvojcyb\",\"avatar\":\"zvrbyickznkygloigmkwx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2058,7 +2058,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"tenant_id\":\"consequatur\",\"unit_id\":\"consequatur\",\"start_date\":\"2026-04-22T15:32:40\",\"end_date\":\"2107-05-22\",\"rent_amount\":45,\"deposit_amount\":56,\"next_due_date\":\"2107-05-22\",\"grace_period_days\":45,\"late_fee\":56,\"notes\":\"consequatur\",\"status\":\"active\"}"
+                            "raw": "{\"tenant_id\":\"consequatur\",\"unit_id\":\"consequatur\",\"start_date\":\"2026-04-23T14:19:52\",\"end_date\":\"2107-05-23\",\"rent_amount\":45,\"deposit_amount\":56,\"next_due_date\":\"2107-05-23\",\"grace_period_days\":45,\"late_fee\":56,\"notes\":\"consequatur\",\"status\":\"terminated\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2165,7 +2165,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"tenant_id\":\"consequatur\",\"unit_id\":\"consequatur\",\"start_date\":\"2026-04-22T15:32:40\",\"end_date\":\"2107-05-22\",\"rent_amount\":45,\"deposit_amount\":56,\"next_due_date\":\"2107-05-22\",\"grace_period_days\":45,\"late_fee\":56,\"notes\":\"consequatur\",\"status\":\"terminated\"}"
+                            "raw": "{\"tenant_id\":\"consequatur\",\"unit_id\":\"consequatur\",\"start_date\":\"2026-04-23T14:19:52\",\"end_date\":\"2107-05-23\",\"rent_amount\":45,\"deposit_amount\":56,\"next_due_date\":\"2107-05-23\",\"grace_period_days\":45,\"late_fee\":56,\"notes\":\"consequatur\",\"status\":\"terminated\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2302,7 +2302,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"lease_id\":\"consequatur\",\"0\":\"consequatur\",\"tenant_id\":\"consequatur\",\"1\":\"partial\",\"invoice_number\":\"consequatur\",\"2\":\"2107-05-22\",\"3\":\"2026-04-22T15:32:40\",\"4\":\"2026-04-22T15:32:40\",\"amount\":\"consequatur\",\"5\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"6\":11613.31890586,\"7\":\"opfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvo\",\"8\":11613.31890586,\"balance\":\"consequatur\",\"9\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"10\":11613.31890586,\"issue_date\":\"consequatur\",\"due_date\":\"consequatur\",\"12\":\"mqeopfuudtdsufvyvddqa\",\"13\":\"consequatur\",\"status\":\"consequatur\"}"
+                            "raw": "{\"lease_id\":\"consequatur\",\"0\":\"consequatur\",\"tenant_id\":\"consequatur\",\"1\":\"partial\",\"invoice_number\":\"consequatur\",\"2\":\"2107-05-23\",\"3\":\"2026-04-23T14:19:52\",\"4\":\"2026-04-23T14:19:52\",\"amount\":\"consequatur\",\"5\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"6\":11613.31890586,\"7\":\"opfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjuryvo\",\"8\":11613.31890586,\"balance\":\"consequatur\",\"9\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"10\":11613.31890586,\"issue_date\":\"consequatur\",\"due_date\":\"consequatur\",\"12\":\"mqeopfuudtdsufvyvddqa\",\"13\":\"consequatur\",\"status\":\"consequatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2409,7 +2409,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"invoice_number\":\"consequatur\",\"0\":\"consequatur\",\"1\":\"paid\",\"2\":\"2107-05-22\",\"amount\":\"consequatur\",\"3\":\"2026-04-22T15:32:40\",\"4\":\"2026-04-22T15:32:40\",\"5\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"6\":11613.31890586,\"balance\":\"consequatur\",\"7\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"8\":11613.31890586,\"issue_date\":\"consequatur\",\"9\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"due_date\":\"consequatur\",\"10\":11613.31890586,\"status\":\"consequatur\",\"12\":\"mqeopfuudtdsufvyvddqa\",\"13\":\"consequatur\"}"
+                            "raw": "{\"invoice_number\":\"consequatur\",\"0\":\"consequatur\",\"1\":\"paid\",\"2\":\"2107-05-23\",\"amount\":\"consequatur\",\"3\":\"2026-04-23T14:19:52\",\"4\":\"2026-04-23T14:19:52\",\"5\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"6\":11613.31890586,\"balance\":\"consequatur\",\"7\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"8\":11613.31890586,\"issue_date\":\"consequatur\",\"9\":\"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",\"due_date\":\"consequatur\",\"10\":11613.31890586,\"status\":\"consequatur\",\"12\":\"mqeopfuudtdsufvyvddqa\",\"13\":\"consequatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2546,7 +2546,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"lease_id\":\"consequatur\",\"invoice_id\":\"consequatur\",\"amount\":45,\"payment_date\":\"2026-04-22T15:32:40\",\"payment_method\":\"cash\",\"transaction_code\":\"qeopfuudtdsufvyvddqam\",\"type\":\"penalty\",\"notes\":\"consequatur\"}"
+                            "raw": "{\"lease_id\":\"consequatur\",\"invoice_id\":\"consequatur\",\"amount\":45,\"payment_date\":\"2026-04-23T14:19:52\",\"payment_method\":\"mpesa\",\"transaction_code\":\"qeopfuudtdsufvyvddqam\",\"type\":\"deposit\",\"notes\":\"consequatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2653,7 +2653,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"lease_id\":\"consequatur\",\"invoice_id\":\"consequatur\",\"amount\":45,\"payment_date\":\"2026-04-22T15:32:40\",\"payment_method\":\"bank\",\"transaction_code\":\"qeopfuudtdsufvyvddqam\",\"type\":\"penalty\",\"notes\":\"consequatur\"}"
+                            "raw": "{\"lease_id\":\"consequatur\",\"invoice_id\":\"consequatur\",\"amount\":45,\"payment_date\":\"2026-04-23T14:19:52\",\"payment_method\":\"cash\",\"transaction_code\":\"qeopfuudtdsufvyvddqam\",\"type\":\"deposit\",\"notes\":\"consequatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2790,7 +2790,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"unit_id\":\"consequatur\",\"tenant_id\":\"consequatur\",\"title\":\"mqeopfuudtdsufvyvddqa\",\"issue\":\"consequatur\",\"priority\":\"low\",\"status\":\"pending\",\"reported_date\":\"2026-04-22T15:32:40\",\"resolved_date\":\"2107-05-22\",\"cost\":45,\"notes\":\"consequatur\"}"
+                            "raw": "{\"unit_id\":\"consequatur\",\"tenant_id\":\"consequatur\",\"title\":\"mqeopfuudtdsufvyvddqa\",\"issue\":\"consequatur\",\"priority\":\"low\",\"status\":\"in_progress\",\"reported_date\":\"2026-04-23T14:19:52\",\"resolved_date\":\"2107-05-23\",\"cost\":45,\"notes\":\"consequatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2897,7 +2897,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"unit_id\":\"consequatur\",\"tenant_id\":\"consequatur\",\"title\":\"mqeopfuudtdsufvyvddqa\",\"issue\":\"consequatur\",\"priority\":\"low\",\"status\":\"resolved\",\"reported_date\":\"2026-04-22T15:32:40\",\"resolved_date\":\"2107-05-22\",\"cost\":45,\"notes\":\"consequatur\"}"
+                            "raw": "{\"unit_id\":\"consequatur\",\"tenant_id\":\"consequatur\",\"title\":\"mqeopfuudtdsufvyvddqa\",\"issue\":\"consequatur\",\"priority\":\"medium\",\"status\":\"resolved\",\"reported_date\":\"2026-04-23T14:19:52\",\"resolved_date\":\"2107-05-23\",\"cost\":45,\"notes\":\"consequatur\"}"
                         },
                         "description": "",
                         "auth": {

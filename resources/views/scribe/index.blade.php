@@ -259,7 +259,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 22, 2026</li>
+        <li>Last updated: April 23, 2026</li>
     </ul>
 </div>
 
@@ -427,19 +427,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"name\": \"vmqeopfuudtdsufvyvddq\",
-    \"slug\": \"amniihfqcoynlazghdtqt\",
-    \"email\": \"andreanne00@example.org\",
+    \"email\": \"kunde.eloisa@example.com\",
     \"phone\": \"+254756277171\",
-    \"country\": \"sufvyvddqamniihfqcoyn\",
-    \"city\": \"lazghdtqtqxbajwbpilpm\",
-    \"address\": \"ufinllwloauydlsmsjury\",
-    \"bank_name\": \"vojcybzvrbyickznkyglo\",
-    \"bank_account_number\": \"igmkwxphlvazjrcnfbaqy\",
-    \"mpesa_paybill\": \"wuxhgjjmzuxjubqou\",
-    \"mpesa_account_number\": \"zswiwxtrkimfcatbxspzm\",
-    \"mpesa_till_no\": \"razsroyjpxmqesedy\",
+    \"city\": \"sufvyvddqamniihfqcoyn\",
+    \"address\": \"lazghdtqtqxbajwbpilpm\",
     \"is_active\": false,
-    \"password\": \";0R\\\\+UYpo\"
+    \"password\": \"4&gt;SJIrIV#lz.KcLcD\"
 }"
 </code></pre></div>
 
@@ -456,19 +449,12 @@ const headers = {
 
 let body = {
     "name": "vmqeopfuudtdsufvyvddq",
-    "slug": "amniihfqcoynlazghdtqt",
-    "email": "andreanne00@example.org",
+    "email": "kunde.eloisa@example.com",
     "phone": "+254756277171",
-    "country": "sufvyvddqamniihfqcoyn",
-    "city": "lazghdtqtqxbajwbpilpm",
-    "address": "ufinllwloauydlsmsjury",
-    "bank_name": "vojcybzvrbyickznkyglo",
-    "bank_account_number": "igmkwxphlvazjrcnfbaqy",
-    "mpesa_paybill": "wuxhgjjmzuxjubqou",
-    "mpesa_account_number": "zswiwxtrkimfcatbxspzm",
-    "mpesa_till_no": "razsroyjpxmqesedy",
+    "city": "sufvyvddqamniihfqcoyn",
+    "address": "lazghdtqtqxbajwbpilpm",
     "is_active": false,
-    "password": ";0R\\+UYpo"
+    "password": "4&gt;SJIrIV#lz.KcLcD"
 };
 
 fetch(url, {
@@ -566,28 +552,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>Must not be greater than 255 characters. Example: <code>vmqeopfuudtdsufvyvddq</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>slug</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="slug"                data-endpoint="POSTapi-v1-businesses"
-               value="amniihfqcoynlazghdtqt"
-               data-component="body">
-    <br>
-<p>Must not be greater than 255 characters. Example: <code>amniihfqcoynlazghdtqt</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-businesses"
-               value="andreanne00@example.org"
+               value="kunde.eloisa@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>andreanne00@example.org</code></p>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>kunde.eloisa@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -602,28 +576,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>Must match the regex /^+254[71]\d{8}$/. Example: <code>+254756277171</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>country</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="country"                data-endpoint="POSTapi-v1-businesses"
-               value="sufvyvddqamniihfqcoyn"
-               data-component="body">
-    <br>
-<p>Must not be greater than 100 characters. Example: <code>sufvyvddqamniihfqcoyn</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>city</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
                               name="city"                data-endpoint="POSTapi-v1-businesses"
-               value="lazghdtqtqxbajwbpilpm"
+               value="sufvyvddqamniihfqcoyn"
                data-component="body">
     <br>
-<p>Must not be greater than 100 characters. Example: <code>lazghdtqtqxbajwbpilpm</code></p>
+<p>Must not be greater than 100 characters. Example: <code>sufvyvddqamniihfqcoyn</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -632,70 +594,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTapi-v1-businesses"
-               value="ufinllwloauydlsmsjury"
+               value="lazghdtqtqxbajwbpilpm"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>ufinllwloauydlsmsjury</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>bank_name</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="bank_name"                data-endpoint="POSTapi-v1-businesses"
-               value="vojcybzvrbyickznkyglo"
-               data-component="body">
-    <br>
-<p>Must not be greater than 255 characters. Example: <code>vojcybzvrbyickznkyglo</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>bank_account_number</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="bank_account_number"                data-endpoint="POSTapi-v1-businesses"
-               value="igmkwxphlvazjrcnfbaqy"
-               data-component="body">
-    <br>
-<p>Must not be greater than 50 characters. Example: <code>igmkwxphlvazjrcnfbaqy</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>mpesa_paybill</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="mpesa_paybill"                data-endpoint="POSTapi-v1-businesses"
-               value="wuxhgjjmzuxjubqou"
-               data-component="body">
-    <br>
-<p>Must not be greater than 20 characters. Example: <code>wuxhgjjmzuxjubqou</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>mpesa_account_number</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="mpesa_account_number"                data-endpoint="POSTapi-v1-businesses"
-               value="zswiwxtrkimfcatbxspzm"
-               data-component="body">
-    <br>
-<p>Must not be greater than 50 characters. Example: <code>zswiwxtrkimfcatbxspzm</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>mpesa_till_no</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
-<i>optional</i> &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="mpesa_till_no"                data-endpoint="POSTapi-v1-businesses"
-               value="razsroyjpxmqesedy"
-               data-component="body">
-    <br>
-<p>Must not be greater than 20 characters. Example: <code>razsroyjpxmqesedy</code></p>
+<p>Must not be greater than 255 characters. Example: <code>lazghdtqtqxbajwbpilpm</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>is_active</code></b>&nbsp;&nbsp;
@@ -726,10 +628,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-businesses"
-               value=";0R\+UYpo"
+               value="4>SJIrIV#lz.KcLcD"
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Example: <code>;0R\+UYpo</code></p>
+<p>Must be at least 8 characters. Example: <code>4&gt;SJIrIV#lz.KcLcD</code></p>
         </div>
         </form>
 
@@ -2006,7 +1908,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"name\": \"mniihfqcoynlazghdtqtq\",
     \"email\": \"ablanda@example.org\",
     \"password\": \"\'YAKYLk4&gt;SJIrIV#lz.\",
-    \"role\": \"owner\",
+    \"role\": \"staff\",
     \"phone\": \"+254771772898\",
     \"emergency_contact_name\": \"ddqamniihfqcoynlazghd\",
     \"emergency_contact_phone\": \"+254771772898\",
@@ -2035,7 +1937,7 @@ let body = {
     "name": "mniihfqcoynlazghdtqtq",
     "email": "ablanda@example.org",
     "password": "'YAKYLk4&gt;SJIrIV#lz.",
-    "role": "owner",
+    "role": "staff",
     "phone": "+254771772898",
     "emergency_contact_name": "ddqamniihfqcoynlazghd",
     "emergency_contact_phone": "+254771772898",
@@ -2208,10 +2110,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="POSTapi-v1-businesses--business--users"
-               value="owner"
+               value="staff"
                data-component="body">
     <br>
-<p>Example: <code>owner</code></p>
+<p>Example: <code>staff</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>owner</code></li> <li><code>tenant</code></li> <li><code>staff</code></li></ul>
         </div>
@@ -2505,7 +2407,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"idNumber\": \"tqtqxbajwbpilpmufinll\",
     \"address\": \"wloauydlsmsjuryvojcyb\",
     \"avatar\": \"zvrbyickznkygloigmkwx\",
-    \"isActive\": false
+    \"isActive\": true
 }"
 </code></pre></div>
 
@@ -2534,7 +2436,7 @@ let body = {
     "idNumber": "tqtqxbajwbpilpmufinll",
     "address": "wloauydlsmsjuryvojcyb",
     "avatar": "zvrbyickznkygloigmkwx",
-    "isActive": false
+    "isActive": true
 };
 
 fetch(url, {
@@ -2826,7 +2728,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
@@ -3132,7 +3034,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "square_meters=oigmkwxphlvazjrcnfbaqywuxhgjjmzuxjubqouzswiwxtrkimfcatbxspzmrazsroyjpxmqe"\
     --form "title[]=consequatur"\
     --form "amenity_id[]=consequatur"\
-    --form "images[]=@C:\Users\Jungler\AppData\Local\Temp\php74BD.tmp" </code></pre></div>
+    --form "images[]=@C:\Users\Jungler\AppData\Local\Temp\php2EA2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3587,7 +3489,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "business_id=consequatur"\
     --form "title[]=consequatur"\
     --form "amenity_id[]=consequatur"\
-    --form "images[]=@C:\Users\Jungler\AppData\Local\Temp\php755A.tmp" </code></pre></div>
+    --form "images[]=@C:\Users\Jungler\AppData\Local\Temp\php2FAC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4200,13 +4102,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"position\": \"vmqeopfuudtdsufvyvddq\",
     \"department\": \"amniihfqcoynlazghdtqt\",
     \"salary\": 16,
-    \"hire_date\": \"2020-08-18\",
-    \"employment_type\": \"temporary\",
+    \"hire_date\": \"2020-08-19\",
+    \"employment_type\": \"intern\",
     \"username\": \"mqeopfuudtdsufvyvddqa\",
     \"name\": \"mniihfqcoynlazghdtqtq\",
     \"email\": \"ablanda@example.org\",
     \"password\": \"\'YAKYLk4&gt;SJIrIV#lz.\",
-    \"role\": \"tenant\",
+    \"role\": \"owner\",
     \"phone\": \"+254771772898\",
     \"emergency_contact_name\": \"ddqamniihfqcoynlazghd\",
     \"emergency_contact_phone\": \"+254771772898\",
@@ -4233,13 +4135,13 @@ let body = {
     "position": "vmqeopfuudtdsufvyvddq",
     "department": "amniihfqcoynlazghdtqt",
     "salary": 16,
-    "hire_date": "2020-08-18",
-    "employment_type": "temporary",
+    "hire_date": "2020-08-19",
+    "employment_type": "intern",
     "username": "mqeopfuudtdsufvyvddqa",
     "name": "mniihfqcoynlazghdtqtq",
     "email": "ablanda@example.org",
     "password": "'YAKYLk4&gt;SJIrIV#lz.",
-    "role": "tenant",
+    "role": "owner",
     "phone": "+254771772898",
     "emergency_contact_name": "ddqamniihfqcoynlazghd",
     "emergency_contact_phone": "+254771772898",
@@ -4388,10 +4290,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="hire_date"                data-endpoint="POSTapi-v1-businesses--business--staff"
-               value="2020-08-18"
+               value="2020-08-19"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date before or equal to <code>today</code>. Example: <code>2020-08-18</code></p>
+<p>Must be a valid date. Must be a date before or equal to <code>today</code>. Example: <code>2020-08-19</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>employment_type</code></b>&nbsp;&nbsp;
@@ -4400,10 +4302,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="employment_type"                data-endpoint="POSTapi-v1-businesses--business--staff"
-               value="temporary"
+               value="intern"
                data-component="body">
     <br>
-<p>Example: <code>temporary</code></p>
+<p>Example: <code>intern</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>intern</code></li> <li><code>temporary</code></li></ul>
         </div>
@@ -4462,10 +4364,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="POSTapi-v1-businesses--business--staff"
-               value="tenant"
+               value="owner"
                data-component="body">
     <br>
-<p>Example: <code>tenant</code></p>
+<p>Example: <code>owner</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>owner</code></li> <li><code>tenant</code></li> <li><code>staff</code></li></ul>
         </div>
@@ -4749,8 +4651,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"position\": \"vmqeopfuudtdsufvyvddq\",
     \"department\": \"amniihfqcoynlazghdtqt\",
     \"salary\": 16,
-    \"hire_date\": \"2020-08-18\",
-    \"employment_type\": \"full_time\",
+    \"hire_date\": \"2020-08-19\",
+    \"employment_type\": \"temporary\",
     \"username\": \"mqeopfuudtdsufvyvddqa\",
     \"name\": \"mniihfqcoynlazghdtqtq\",
     \"email\": \"ablanda@example.org\",
@@ -4761,7 +4663,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"id_number\": \"tqtqxbajwbpilpmufinll\",
     \"address\": \"wloauydlsmsjuryvojcyb\",
     \"avatar\": \"zvrbyickznkygloigmkwx\",
-    \"is_active\": false
+    \"is_active\": true
 }"
 </code></pre></div>
 
@@ -4780,8 +4682,8 @@ let body = {
     "position": "vmqeopfuudtdsufvyvddq",
     "department": "amniihfqcoynlazghdtqt",
     "salary": 16,
-    "hire_date": "2020-08-18",
-    "employment_type": "full_time",
+    "hire_date": "2020-08-19",
+    "employment_type": "temporary",
     "username": "mqeopfuudtdsufvyvddqa",
     "name": "mniihfqcoynlazghdtqtq",
     "email": "ablanda@example.org",
@@ -4792,7 +4694,7 @@ let body = {
     "id_number": "tqtqxbajwbpilpmufinll",
     "address": "wloauydlsmsjuryvojcyb",
     "avatar": "zvrbyickznkygloigmkwx",
-    "is_active": false
+    "is_active": true
 };
 
 fetch(url, {
@@ -4949,10 +4851,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="hire_date"                data-endpoint="PUTapi-v1-businesses--business--staff--id-"
-               value="2020-08-18"
+               value="2020-08-19"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date before or equal to <code>today</code>. Example: <code>2020-08-18</code></p>
+<p>Must be a valid date. Must be a date before or equal to <code>today</code>. Example: <code>2020-08-19</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>employment_type</code></b>&nbsp;&nbsp;
@@ -4961,10 +4863,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="employment_type"                data-endpoint="PUTapi-v1-businesses--business--staff--id-"
-               value="full_time"
+               value="temporary"
                data-component="body">
     <br>
-<p>Example: <code>full_time</code></p>
+<p>Example: <code>temporary</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>full_time</code></li> <li><code>part_time</code></li> <li><code>contract</code></li> <li><code>intern</code></li> <li><code>temporary</code></li></ul>
         </div>
@@ -5108,7 +5010,7 @@ Must be one of:
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
@@ -5412,7 +5314,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"name\": \"ghdtqtqxbajwbpilpmufi\",
     \"email\": \"hilton86@example.org\",
     \"password\": \"#lz.KcLcDi`wmU\",
-    \"role\": \"staff\",
+    \"role\": \"tenant\",
     \"phone\": \"+254771772898\",
     \"emergency_contact_name\": \"ddqamniihfqcoynlazghd\",
     \"emergency_contact_phone\": \"+254771772898\",
@@ -5442,7 +5344,7 @@ let body = {
     "name": "ghdtqtqxbajwbpilpmufi",
     "email": "hilton86@example.org",
     "password": "#lz.KcLcDi`wmU",
-    "role": "staff",
+    "role": "tenant",
     "phone": "+254771772898",
     "emergency_contact_name": "ddqamniihfqcoynlazghd",
     "emergency_contact_phone": "+254771772898",
@@ -5648,10 +5550,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="role"                data-endpoint="POSTapi-v1-businesses--business--tenants"
-               value="staff"
+               value="tenant"
                data-component="body">
     <br>
-<p>Example: <code>staff</code></p>
+<p>Example: <code>tenant</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>owner</code></li> <li><code>tenant</code></li> <li><code>staff</code></li></ul>
         </div>
@@ -5912,7 +5814,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"next_of_kin_name\": \"vmqeopfuudtdsufvyvddq\",
     \"next_of_kin_phone\": \"0777171772\",
-    \"is_active\": true,
+    \"is_active\": false,
     \"username\": \"vyvddqamniihfqcoynlaz\",
     \"name\": \"ghdtqtqxbajwbpilpmufi\",
     \"email\": \"hilton86@example.org\",
@@ -5940,7 +5842,7 @@ const headers = {
 let body = {
     "next_of_kin_name": "vmqeopfuudtdsufvyvddq",
     "next_of_kin_phone": "0777171772",
-    "is_active": true,
+    "is_active": false,
     "username": "vyvddqamniihfqcoynlaz",
     "name": "ghdtqtqxbajwbpilpmufi",
     "email": "hilton86@example.org",
@@ -6108,7 +6010,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>username</code></b>&nbsp;&nbsp;
@@ -8219,15 +8121,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"tenant_id\": \"consequatur\",
     \"unit_id\": \"consequatur\",
-    \"start_date\": \"2026-04-22T15:32:40\",
-    \"end_date\": \"2107-05-22\",
+    \"start_date\": \"2026-04-23T14:19:52\",
+    \"end_date\": \"2107-05-23\",
     \"rent_amount\": 45,
     \"deposit_amount\": 56,
-    \"next_due_date\": \"2107-05-22\",
+    \"next_due_date\": \"2107-05-23\",
     \"grace_period_days\": 45,
     \"late_fee\": 56,
     \"notes\": \"consequatur\",
-    \"status\": \"active\"
+    \"status\": \"terminated\"
 }"
 </code></pre></div>
 
@@ -8245,15 +8147,15 @@ const headers = {
 let body = {
     "tenant_id": "consequatur",
     "unit_id": "consequatur",
-    "start_date": "2026-04-22T15:32:40",
-    "end_date": "2107-05-22",
+    "start_date": "2026-04-23T14:19:52",
+    "end_date": "2107-05-23",
     "rent_amount": 45,
     "deposit_amount": 56,
-    "next_due_date": "2107-05-22",
+    "next_due_date": "2107-05-23",
     "grace_period_days": 45,
     "late_fee": 56,
     "notes": "consequatur",
-    "status": "active"
+    "status": "terminated"
 };
 
 fetch(url, {
@@ -8382,10 +8284,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-v1-businesses--business--leases"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -8394,10 +8296,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-v1-businesses--business--leases"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>rent_amount</code></b>&nbsp;&nbsp;
@@ -8430,10 +8332,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="next_due_date"                data-endpoint="POSTapi-v1-businesses--business--leases"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>grace_period_days</code></b>&nbsp;&nbsp;
@@ -8478,10 +8380,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-v1-businesses--business--leases"
-               value="active"
+               value="terminated"
                data-component="body">
     <br>
-<p>Example: <code>active</code></p>
+<p>Example: <code>terminated</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>active</code></li> <li><code>terminated</code></li> <li><code>expired</code></li></ul>
         </div>
@@ -8658,11 +8560,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"tenant_id\": \"consequatur\",
     \"unit_id\": \"consequatur\",
-    \"start_date\": \"2026-04-22T15:32:40\",
-    \"end_date\": \"2107-05-22\",
+    \"start_date\": \"2026-04-23T14:19:52\",
+    \"end_date\": \"2107-05-23\",
     \"rent_amount\": 45,
     \"deposit_amount\": 56,
-    \"next_due_date\": \"2107-05-22\",
+    \"next_due_date\": \"2107-05-23\",
     \"grace_period_days\": 45,
     \"late_fee\": 56,
     \"notes\": \"consequatur\",
@@ -8684,11 +8586,11 @@ const headers = {
 let body = {
     "tenant_id": "consequatur",
     "unit_id": "consequatur",
-    "start_date": "2026-04-22T15:32:40",
-    "end_date": "2107-05-22",
+    "start_date": "2026-04-23T14:19:52",
+    "end_date": "2107-05-23",
     "rent_amount": 45,
     "deposit_amount": 56,
-    "next_due_date": "2107-05-22",
+    "next_due_date": "2107-05-23",
     "grace_period_days": 45,
     "late_fee": 56,
     "notes": "consequatur",
@@ -8837,10 +8739,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="PUTapi-v1-businesses--business--leases--id-"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -8849,10 +8751,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="PUTapi-v1-businesses--business--leases--id-"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>rent_amount</code></b>&nbsp;&nbsp;
@@ -8885,10 +8787,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="next_due_date"                data-endpoint="PUTapi-v1-businesses--business--leases--id-"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>grace_period_days</code></b>&nbsp;&nbsp;
@@ -9240,9 +9142,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"tenant_id\": \"consequatur\",
     \"1\": \"partial\",
     \"invoice_number\": \"consequatur\",
-    \"2\": \"2107-05-22\",
-    \"3\": \"2026-04-22T15:32:40\",
-    \"4\": \"2026-04-22T15:32:40\",
+    \"2\": \"2107-05-23\",
+    \"3\": \"2026-04-23T14:19:52\",
+    \"4\": \"2026-04-23T14:19:52\",
     \"amount\": \"consequatur\",
     \"5\": \"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",
     \"6\": 11613.31890586,
@@ -9276,9 +9178,9 @@ let body = {
     "tenant_id": "consequatur",
     "1": "partial",
     "invoice_number": "consequatur",
-    "2": "2107-05-22",
-    "3": "2026-04-22T15:32:40",
-    "4": "2026-04-22T15:32:40",
+    "2": "2107-05-23",
+    "3": "2026-04-23T14:19:52",
+    "4": "2026-04-23T14:19:52",
     "amount": "consequatur",
     "5": "mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur",
     "6": 11613.31890586,
@@ -9458,10 +9360,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="2"                data-endpoint="POSTapi-v1-businesses--business--invoices"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a date after or equal to <code>issue_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a date after or equal to <code>issue_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>3</code></b>&nbsp;&nbsp;
@@ -9470,10 +9372,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="3"                data-endpoint="POSTapi-v1-businesses--business--invoices"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>4</code></b>&nbsp;&nbsp;
@@ -9482,10 +9384,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="4"                data-endpoint="POSTapi-v1-businesses--business--invoices"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount</code></b>&nbsp;&nbsp;
@@ -9877,10 +9779,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"invoice_number\": \"consequatur\",
     \"0\": \"consequatur\",
     \"1\": \"paid\",
-    \"2\": \"2107-05-22\",
+    \"2\": \"2107-05-23\",
     \"amount\": \"consequatur\",
-    \"3\": \"2026-04-22T15:32:40\",
-    \"4\": \"2026-04-22T15:32:40\",
+    \"3\": \"2026-04-23T14:19:52\",
+    \"4\": \"2026-04-23T14:19:52\",
     \"5\": \"mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur\",
     \"6\": 11613.31890586,
     \"balance\": \"consequatur\",
@@ -9911,10 +9813,10 @@ let body = {
     "invoice_number": "consequatur",
     "0": "consequatur",
     "1": "paid",
-    "2": "2107-05-22",
+    "2": "2107-05-23",
     "amount": "consequatur",
-    "3": "2026-04-22T15:32:40",
-    "4": "2026-04-22T15:32:40",
+    "3": "2026-04-23T14:19:52",
+    "4": "2026-04-23T14:19:52",
     "5": "mqeopfuudtdsufvyvddqamniihfqcoynlazghdtqtqxbajwbpilpmufinllwloauydlsmsjur",
     "6": 11613.31890586,
     "balance": "consequatur",
@@ -10085,10 +9987,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="2"                data-endpoint="PUTapi-v1-businesses--business--invoices--id-"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a date after or equal to <code>issue_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a date after or equal to <code>issue_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount</code></b>&nbsp;&nbsp;
@@ -10109,10 +10011,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="3"                data-endpoint="PUTapi-v1-businesses--business--invoices--id-"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>4</code></b>&nbsp;&nbsp;
@@ -10121,10 +10023,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="4"                data-endpoint="PUTapi-v1-businesses--business--invoices--id-"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>paid_amount</code></b>&nbsp;&nbsp;
@@ -10604,10 +10506,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"lease_id\": \"consequatur\",
     \"invoice_id\": \"consequatur\",
     \"amount\": 45,
-    \"payment_date\": \"2026-04-22T15:32:40\",
-    \"payment_method\": \"cash\",
+    \"payment_date\": \"2026-04-23T14:19:52\",
+    \"payment_method\": \"mpesa\",
     \"transaction_code\": \"qeopfuudtdsufvyvddqam\",
-    \"type\": \"penalty\",
+    \"type\": \"deposit\",
     \"notes\": \"consequatur\"
 }"
 </code></pre></div>
@@ -10627,10 +10529,10 @@ let body = {
     "lease_id": "consequatur",
     "invoice_id": "consequatur",
     "amount": 45,
-    "payment_date": "2026-04-22T15:32:40",
-    "payment_method": "cash",
+    "payment_date": "2026-04-23T14:19:52",
+    "payment_method": "mpesa",
     "transaction_code": "qeopfuudtdsufvyvddqam",
-    "type": "penalty",
+    "type": "deposit",
     "notes": "consequatur"
 };
 
@@ -10772,10 +10674,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="payment_date"                data-endpoint="POSTapi-v1-businesses--business--payments"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>payment_method</code></b>&nbsp;&nbsp;
@@ -10784,10 +10686,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="payment_method"                data-endpoint="POSTapi-v1-businesses--business--payments"
-               value="cash"
+               value="mpesa"
                data-component="body">
     <br>
-<p>Example: <code>cash</code></p>
+<p>Example: <code>mpesa</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>cash</code></li> <li><code>mpesa</code></li> <li><code>bank</code></li></ul>
         </div>
@@ -10810,10 +10712,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="POSTapi-v1-businesses--business--payments"
-               value="penalty"
+               value="deposit"
                data-component="body">
     <br>
-<p>Example: <code>penalty</code></p>
+<p>Example: <code>deposit</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>rent</code></li> <li><code>deposit</code></li> <li><code>penalty</code></li></ul>
         </div>
@@ -11003,10 +10905,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"lease_id\": \"consequatur\",
     \"invoice_id\": \"consequatur\",
     \"amount\": 45,
-    \"payment_date\": \"2026-04-22T15:32:40\",
-    \"payment_method\": \"bank\",
+    \"payment_date\": \"2026-04-23T14:19:52\",
+    \"payment_method\": \"cash\",
     \"transaction_code\": \"qeopfuudtdsufvyvddqam\",
-    \"type\": \"penalty\",
+    \"type\": \"deposit\",
     \"notes\": \"consequatur\"
 }"
 </code></pre></div>
@@ -11026,10 +10928,10 @@ let body = {
     "lease_id": "consequatur",
     "invoice_id": "consequatur",
     "amount": 45,
-    "payment_date": "2026-04-22T15:32:40",
-    "payment_method": "bank",
+    "payment_date": "2026-04-23T14:19:52",
+    "payment_method": "cash",
     "transaction_code": "qeopfuudtdsufvyvddqam",
-    "type": "penalty",
+    "type": "deposit",
     "notes": "consequatur"
 };
 
@@ -11187,10 +11089,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="payment_date"                data-endpoint="PUTapi-v1-businesses--business--payments--id-"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>payment_method</code></b>&nbsp;&nbsp;
@@ -11199,10 +11101,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="payment_method"                data-endpoint="PUTapi-v1-businesses--business--payments--id-"
-               value="bank"
+               value="cash"
                data-component="body">
     <br>
-<p>Example: <code>bank</code></p>
+<p>Example: <code>cash</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>cash</code></li> <li><code>mpesa</code></li> <li><code>bank</code></li></ul>
         </div>
@@ -11225,10 +11127,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="type"                data-endpoint="PUTapi-v1-businesses--business--payments--id-"
-               value="penalty"
+               value="deposit"
                data-component="body">
     <br>
-<p>Example: <code>penalty</code></p>
+<p>Example: <code>deposit</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>rent</code></li> <li><code>deposit</code></li> <li><code>penalty</code></li></ul>
         </div>
@@ -11544,9 +11446,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"title\": \"mqeopfuudtdsufvyvddqa\",
     \"issue\": \"consequatur\",
     \"priority\": \"low\",
-    \"status\": \"pending\",
-    \"reported_date\": \"2026-04-22T15:32:40\",
-    \"resolved_date\": \"2107-05-22\",
+    \"status\": \"in_progress\",
+    \"reported_date\": \"2026-04-23T14:19:52\",
+    \"resolved_date\": \"2107-05-23\",
     \"cost\": 45,
     \"notes\": \"consequatur\"
 }"
@@ -11569,9 +11471,9 @@ let body = {
     "title": "mqeopfuudtdsufvyvddqa",
     "issue": "consequatur",
     "priority": "low",
-    "status": "pending",
-    "reported_date": "2026-04-22T15:32:40",
-    "resolved_date": "2107-05-22",
+    "status": "in_progress",
+    "reported_date": "2026-04-23T14:19:52",
+    "resolved_date": "2107-05-23",
     "cost": 45,
     "notes": "consequatur"
 };
@@ -11740,10 +11642,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-v1-businesses--business--maintainance"
-               value="pending"
+               value="in_progress"
                data-component="body">
     <br>
-<p>Example: <code>pending</code></p>
+<p>Example: <code>in_progress</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>pending</code></li> <li><code>in_progress</code></li> <li><code>resolved</code></li></ul>
         </div>
@@ -11754,10 +11656,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="reported_date"                data-endpoint="POSTapi-v1-businesses--business--maintainance"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>resolved_date</code></b>&nbsp;&nbsp;
@@ -11766,10 +11668,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="resolved_date"                data-endpoint="POSTapi-v1-businesses--business--maintainance"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>reported_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>reported_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cost</code></b>&nbsp;&nbsp;
@@ -11970,10 +11872,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"tenant_id\": \"consequatur\",
     \"title\": \"mqeopfuudtdsufvyvddqa\",
     \"issue\": \"consequatur\",
-    \"priority\": \"low\",
+    \"priority\": \"medium\",
     \"status\": \"resolved\",
-    \"reported_date\": \"2026-04-22T15:32:40\",
-    \"resolved_date\": \"2107-05-22\",
+    \"reported_date\": \"2026-04-23T14:19:52\",
+    \"resolved_date\": \"2107-05-23\",
     \"cost\": 45,
     \"notes\": \"consequatur\"
 }"
@@ -11995,10 +11897,10 @@ let body = {
     "tenant_id": "consequatur",
     "title": "mqeopfuudtdsufvyvddqa",
     "issue": "consequatur",
-    "priority": "low",
+    "priority": "medium",
     "status": "resolved",
-    "reported_date": "2026-04-22T15:32:40",
-    "resolved_date": "2107-05-22",
+    "reported_date": "2026-04-23T14:19:52",
+    "resolved_date": "2107-05-23",
     "cost": 45,
     "notes": "consequatur"
 };
@@ -12169,10 +12071,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="priority"                data-endpoint="PUTapi-v1-businesses--business--maintainance--id-"
-               value="low"
+               value="medium"
                data-component="body">
     <br>
-<p>Example: <code>low</code></p>
+<p>Example: <code>medium</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>low</code></li> <li><code>medium</code></li> <li><code>high</code></li></ul>
         </div>
@@ -12197,10 +12099,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="reported_date"                data-endpoint="PUTapi-v1-businesses--business--maintainance--id-"
-               value="2026-04-22T15:32:40"
+               value="2026-04-23T14:19:52"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2026-04-22T15:32:40</code></p>
+<p>Must be a valid date. Example: <code>2026-04-23T14:19:52</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>resolved_date</code></b>&nbsp;&nbsp;
@@ -12209,10 +12111,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="resolved_date"                data-endpoint="PUTapi-v1-businesses--business--maintainance--id-"
-               value="2107-05-22"
+               value="2107-05-23"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>reported_date</code>. Example: <code>2107-05-22</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>reported_date</code>. Example: <code>2107-05-23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cost</code></b>&nbsp;&nbsp;

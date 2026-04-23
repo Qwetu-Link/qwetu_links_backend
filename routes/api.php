@@ -38,7 +38,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1', 'm
 
     // Table likely does have business_id
     Route::prefix('businesses/{business}')->group(function () {
-        Route::apiResource('users', UserController::class);
+        // Route::apiResource('users', UserController::class);
         Route::apiResource('properties', PropertyController::class);
 
         Route::apiResource('staff', StaffController::class);

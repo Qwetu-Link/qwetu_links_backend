@@ -25,17 +25,10 @@ class StoreBusinessRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            // 'slug' => 'required|string|max:255|unique:businesses,slug',
             'email' => 'required|email|max:255',
             'phone' => 'required|regex:/^\+254[71]\d{8}$/',
-            // 'country' => 'nullable|string|max:100',
             'city' => 'required|string|max:100',
             'address' => 'nullable|string|max:255',
-            // 'bank_name' => 'nullable|string|max:255',
-            // 'bank_account_number' => 'nullable|string|max:50',
-            // 'mpesa_paybill' => 'nullable|string|max:20',
-            // 'mpesa_account_number' => 'nullable|string|max:50',
-            // 'mpesa_till_no' => 'nullable|string|max:20',
             'is_active' => 'nullable|boolean',
             'password' => 'required|string|min:8',
         ];

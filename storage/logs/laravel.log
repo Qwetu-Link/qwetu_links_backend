@@ -10668,3 +10668,5 @@ Stack trace:
 #12 Command line code(1): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
 #13 {main}
 "} 
+[2026-04-23 14:41:21] local.INFO: API Request {"url":"http://localhost/api/v1/verify-email","client":null,"ip":"127.0.0.1"} 
+[2026-04-23 17:15:03] local.INFO: API Request {"url":"http://localhost/api/v1/verify-email","client":null,"ip":"127.0.0.1"} 

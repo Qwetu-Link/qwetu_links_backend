@@ -73,7 +73,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 password:
                   type: string
@@ -293,7 +293,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                   nullable: true
                 username:
                   type: string
@@ -328,265 +328,6 @@ paths:
         name: id
         description: 'The ID of the business.'
         example: a34f733fda33
-        required: true
-        schema:
-          type: string
-  '/api/v1/businesses/{business}/users':
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                business_id:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the businesses table.'
-                  example: consequatur
-                username:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mniihfqcoynlazghdtqtq
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ablanda@example.org
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters.'
-                  example: "'YAKYLk4>SJIrIV#lz."
-                role:
-                  type: string
-                  description: ''
-                  example: staff
-                  enum:
-                    - owner
-                    - tenant
-                    - staff
-                phone:
-                  type: string
-                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
-                  example: '+254771772898'
-                emergency_contact_name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: ddqamniihfqcoynlazghd
-                  nullable: true
-                emergency_contact_phone:
-                  type: string
-                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
-                  example: '+254771772898'
-                  nullable: true
-                emergency_contact_relationship:
-                  type: string
-                  description: 'Must not be greater than 100 characters.'
-                  example: ddqamniihfqcoynlazghd
-                  nullable: true
-                id_number:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: tqtqxbajwbpilpmufinll
-                  nullable: true
-                address:
-                  type: string
-                  description: 'Must not be greater than 500 characters.'
-                  example: wloauydlsmsjuryvojcyb
-                  nullable: true
-                avatar:
-                  type: string
-                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: zvrbyickznkygloigmkwx
-                  nullable: true
-                is_active:
-                  type: boolean
-                  description: ''
-                  example: false
-              required:
-                - business_id
-                - username
-                - name
-                - email
-                - password
-                - role
-                - phone
-      security: []
-    parameters:
-      -
-        in: path
-        name: business
-        description: 'The business.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-  '/api/v1/businesses/{business}/users/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                businessID:
-                  type: string
-                  description: 'The <code>id</code> of an existing record in the businesses table.'
-                  example: consequatur
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mqeopfuudtdsufvyvddqa
-                username:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: mniihfqcoynlazghdtqtq
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ablanda@example.org
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters.'
-                  example: "'YAKYLk4>SJIrIV#lz."
-                  nullable: true
-                role:
-                  type: string
-                  description: ''
-                  example: staff
-                  enum:
-                    - owner
-                    - tenant
-                    - staff
-                phone:
-                  type: string
-                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
-                  example: '+254771772898'
-                emergencyContactName:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: ddqamniihfqcoynlazghd
-                  nullable: true
-                emergencyContactPhone:
-                  type: string
-                  description: 'Must match the regex /^(07\d{8}|01\d{8}|7\d{8}|1\d{8}|\+254[71]\d{8}|254[71]\d{8})$/.'
-                  example: '+254771772898'
-                  nullable: true
-                emergencyContactRelationship:
-                  type: string
-                  description: 'Must not be greater than 100 characters.'
-                  example: ddqamniihfqcoynlazghd
-                  nullable: true
-                idNumber:
-                  type: string
-                  description: 'Must not be greater than 50 characters.'
-                  example: tqtqxbajwbpilpmufinll
-                  nullable: true
-                address:
-                  type: string
-                  description: 'Must not be greater than 500 characters.'
-                  example: wloauydlsmsjuryvojcyb
-                  nullable: true
-                avatar:
-                  type: string
-                  description: 'Must be a valid URL. Must not be greater than 255 characters.'
-                  example: zvrbyickznkygloigmkwx
-                  nullable: true
-                isActive:
-                  type: boolean
-                  description: ''
-                  example: true
-              required:
-                - businessID
-                - name
-                - username
-                - email
-                - role
-                - phone
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: business
-        description: 'The business.'
-        example: consequatur
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: id
-        description: 'The ID of the user.'
-        example: 534a78a988d7
         required: true
         schema:
           type: string
@@ -911,7 +652,7 @@ paths:
                 employment_type:
                   type: string
                   description: ''
-                  example: intern
+                  example: part_time
                   enum:
                     - full_time
                     - part_time
@@ -937,7 +678,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: owner
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -979,7 +720,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - position
                 - department
@@ -1085,7 +826,7 @@ paths:
                 employment_type:
                   type: string
                   description: ''
-                  example: temporary
+                  example: intern
                   enum:
                     - full_time
                     - part_time
@@ -1141,7 +882,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - position
                 - department
@@ -1239,7 +980,7 @@ paths:
                 role:
                   type: string
                   description: ''
-                  example: tenant
+                  example: staff
                   enum:
                     - owner
                     - tenant
@@ -1819,7 +1560,7 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:03'
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
@@ -1857,7 +1598,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: terminated
+                  example: expired
                   enum:
                     - active
                     - terminated
@@ -1926,7 +1667,7 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:03'
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
@@ -1964,7 +1705,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: terminated
+                  example: active
                   enum:
                     - active
                     - terminated
@@ -2054,7 +1795,7 @@ paths:
                 1:
                   type: string
                   description: ''
-                  example: partial
+                  example: pending
                   enum:
                     - pending
                     - paid
@@ -2071,11 +1812,11 @@ paths:
                 3:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 4:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 amount:
                   type: string
                   description: ''
@@ -2234,11 +1975,11 @@ paths:
                 3:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 4:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 paid_amount:
                   type: string
                   description: ''
@@ -2387,7 +2128,7 @@ paths:
                 payment_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 payment_method:
                   type: string
                   description: ''
@@ -2404,7 +2145,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: deposit
+                  example: rent
                   enum:
                     - rent
                     - deposit
@@ -2483,11 +2224,11 @@ paths:
                 payment_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 payment_method:
                   type: string
                   description: ''
-                  example: cash
+                  example: mpesa
                   enum:
                     - cash
                     - mpesa
@@ -2500,7 +2241,7 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: deposit
+                  example: penalty
                   enum:
                     - rent
                     - deposit
@@ -2601,7 +2342,7 @@ paths:
                 priority:
                   type: string
                   description: ''
-                  example: low
+                  example: high
                   enum:
                     - low
                     - medium
@@ -2609,7 +2350,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: in_progress
+                  example: pending
                   enum:
                     - pending
                     - in_progress
@@ -2617,7 +2358,7 @@ paths:
                 reported_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 resolved_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
@@ -2707,7 +2448,7 @@ paths:
                 priority:
                   type: string
                   description: ''
-                  example: medium
+                  example: low
                   enum:
                     - low
                     - medium
@@ -2715,7 +2456,7 @@ paths:
                 status:
                   type: string
                   description: ''
-                  example: resolved
+                  example: in_progress
                   enum:
                     - pending
                     - in_progress
@@ -2723,7 +2464,7 @@ paths:
                 reported_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2026-04-23T14:19:52'
+                  example: '2026-04-23T17:15:04'
                 resolved_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>reported_date</code>.'
